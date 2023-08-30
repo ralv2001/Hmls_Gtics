@@ -9,38 +9,33 @@
     <meta name="author" content="AdminKit">
     <meta name="keywords"
           content="adminkit, bootstrap, bootstrap 5, admin, dashboard, template, responsive, css, sass, html, theme, front-end, ui kit, web">
-
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link rel="shortcut icon" href="img/icons/icon-48x48.png"/>
+    <link rel="shortcut icon" href="/Springles_html/img/icons/icon-48x48.png"/>
 
     <link rel="canonical" href="https://demo-basic.adminkit.io/"/>
 
-    <title>AdminKit Demo - Bootstrap 5 Admin Template</title>
-
-    <link href="css/app.css" rel="stylesheet">
+    <title>Analista</title>
+    <link href="../css/searchBar.css" rel="stylesheet">
+    <link href="../css/app.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
-
 <body>
 <div class="wrapper">
     <nav id="sidebar" class="sidebar js-sidebar">
         <div class="sidebar-content js-simplebar">
             <a class="sidebar-brand" href="index.html">
-                <span class="align-middle">AdminKit</span>
+                <span class="align-middle">Springles</span>
             </a>
 
             <ul class="sidebar-nav">
-                <li class="sidebar-header">
-                    Pages
-                </li>
-
 
                 <!--DESPLEGABLE -->
                 <li class="sidebar-item active">
                     <a class="sidebar-link" data-bs-toggle="collapse" href="#collapseExample" role="button"
                        aria-expanded="false" aria-controls="collapseExample">
 
-                        <i class="align-middle" data-feather="sliders"></i> <span class="align-middle">Dashboard</span>
+                        <i class="align-middle" data-feather="sliders"></i> <span
+                            class="align-middle">Lista de sitios</span>
                         <i data-feather="chevron-down" style="margin-left: auto;"></i>
                     </a>
 
@@ -48,12 +43,12 @@
                         <ul class="sidebar-nav">
                             <li class="sidebar-item" style="padding: 0 0 0 2.5rem;">
                                 <a class="sidebar-link" href="pages-profile.html">
-                                    <span class="align-middle">Profile</span>
+                                    <span class="align-middle">Editar sitio</span>
                                 </a>
                             </li>
                             <li class="sidebar-item" style="padding: 0 0 0 2.5rem;">
                                 <a class="sidebar-link" href="pages-profile.html">
-                                    <span class="align-middle">Profile</span>
+                                    <span class="align-middle">Agregar sitio</span>
                                 </a>
                             </li>
                         </ul>
@@ -61,94 +56,47 @@
                 </li>
                 <!--DESPLEGABLE -->
 
-
                 <li class="sidebar-item">
                     <a class="sidebar-link" href="pages-profile.html">
-                        <i class="align-middle" data-feather="user"></i> <span class="align-middle">Profile</span>
+                        <i class="align-middle" data-feather="user"></i> <span
+                            class="align-middle">Lista de equipos</span>
                     </a>
+                    <ul class="sub-menu">
+                        <li><a href="listaEquiposInventario.html">Inventario de equipos</a></li>
+                        <li><a href="listaEquiposAgregar.html">Agregar equipos</a></li>
+                    </ul>
                 </li>
 
                 <li class="sidebar-item">
                     <a class="sidebar-link" href="pages-sign-in.html">
-                        <i class="align-middle" data-feather="log-in"></i> <span class="align-middle">Sign In</span>
+                        <i class="align-middle" data-feather="log-in"></i> <span
+                            class="align-middle">Lista de tickets</span>
                     </a>
                 </li>
 
                 <li class="sidebar-item">
                     <a class="sidebar-link" href="pages-sign-up.html">
-                        <i class="align-middle" data-feather="user-plus"></i> <span class="align-middle">Sign Up</span>
+                        <i class="align-middle" data-feather="user-plus"></i> <span
+                            class="align-middle">Lista de mapas</span>
                     </a>
                 </li>
 
                 <li class="sidebar-item">
                     <a class="sidebar-link" href="pages-blank.html">
-                        <i class="align-middle" data-feather="book"></i> <span class="align-middle">Blank</span>
+                        <i class="align-middle" data-feather="book"></i> <span class="align-middle">Dashboard</span>
                     </a>
                 </li>
 
-                <li class="sidebar-header">
-                    Tools & Components
-                </li>
 
                 <li class="sidebar-item">
                     <a class="sidebar-link" href="ui-buttons.html">
-                        <i class="align-middle" data-feather="square"></i> <span class="align-middle">Buttons</span>
+                        <i class="align-middle" data-feather="square"></i> <span class="align-middle">Bitácora de comentarios</span>
                     </a>
                 </li>
 
-                <li class="sidebar-item">
-                    <a class="sidebar-link" href="ui-forms.html">
-                        <i class="align-middle" data-feather="check-square"></i> <span class="align-middle">Forms</span>
-                    </a>
-                </li>
 
-                <li class="sidebar-item">
-                    <a class="sidebar-link" href="ui-cards.html">
-                        <i class="align-middle" data-feather="grid"></i> <span class="align-middle">Cards</span>
-                    </a>
-                </li>
-
-                <li class="sidebar-item">
-                    <a class="sidebar-link" href="ui-typography.html">
-                        <i class="align-middle" data-feather="align-left"></i> <span
-                            class="align-middle">Typography</span>
-                    </a>
-                </li>
-
-                <li class="sidebar-item">
-                    <a class="sidebar-link" href="icons-feather.html">
-                        <i class="align-middle" data-feather="coffee"></i> <span class="align-middle">Icons</span>
-                    </a>
-                </li>
-
-                <li class="sidebar-header">
-                    Plugins & Addons
-                </li>
-
-                <li class="sidebar-item">
-                    <a class="sidebar-link" href="charts-chartjs.html">
-                        <i class="align-middle" data-feather="bar-chart-2"></i> <span class="align-middle">Charts</span>
-                    </a>
-                </li>
-
-                <li class="sidebar-item">
-                    <a class="sidebar-link" href="maps-google.html">
-                        <i class="align-middle" data-feather="map"></i> <span class="align-middle">Maps</span>
-                    </a>
-                </li>
             </ul>
 
-            <div class="sidebar-cta">
-                <div class="sidebar-cta-content">
-                    <strong class="d-inline-block mb-2">Upgrade to Pro</strong>
-                    <div class="mb-3 text-sm">
-                        Are you looking for more components? Check out our premium version.
-                    </div>
-                    <div class="d-grid">
-                        <a href="upgrade-to-pro.html" class="btn btn-primary">Upgrade to Pro</a>
-                    </div>
-                </div>
-            </div>
         </div>
     </nav>
 
@@ -322,6 +270,7 @@
                             <a class="dropdown-item" href="#"><i class="align-middle me-1" data-feather="pie-chart"></i>
                                 Analytics</a>
                             <div class="dropdown-divider"></div>
+
                             <a class="dropdown-item" href="index.html"><i class="align-middle me-1"
                                                                           data-feather="settings"></i> Settings &
                                 Privacy</a>
@@ -337,268 +286,175 @@
 
         <main class="content">
             <div class="container-fluid p-0">
-
-                <h1 class="h3 mb-3"><strong>Analytics</strong> Dashboard</h1>
-
-                <div class="row">
-                    <div class="col-xl-6 col-xxl-5 d-flex">
-                        <div class="w-100">
-                            <div class="row">
-                                <div class="col-sm-6">
-                                    <div class="card">
-                                        <div class="card-body">
-                                            <div class="row">
-                                                <div class="col mt-0">
-                                                    <h5 class="card-title">Sales</h5>
-                                                </div>
-
-                                                <div class="col-auto">
-                                                    <div class="stat text-primary">
-                                                        <i class="align-middle" data-feather="truck"></i>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <h1 class="mt-1 mb-3">2.382</h1>
-                                            <div class="mb-0">
-                                                <span class="text-danger"> <i class="mdi mdi-arrow-bottom-right"></i> -3.65% </span>
-                                                <span class="text-muted">Since last week</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="card">
-                                        <div class="card-body">
-                                            <div class="row">
-                                                <div class="col mt-0">
-                                                    <h5 class="card-title">Visitors</h5>
-                                                </div>
-
-                                                <div class="col-auto">
-                                                    <div class="stat text-primary">
-                                                        <i class="align-middle" data-feather="users"></i>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <h1 class="mt-1 mb-3">14.212</h1>
-                                            <div class="mb-0">
-                                                <span class="text-success"> <i class="mdi mdi-arrow-bottom-right"></i> 5.25% </span>
-                                                <span class="text-muted">Since last week</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-sm-6">
-                                    <div class="card">
-                                        <div class="card-body">
-                                            <div class="row">
-                                                <div class="col mt-0">
-                                                    <h5 class="card-title">Earnings</h5>
-                                                </div>
-
-                                                <div class="col-auto">
-                                                    <div class="stat text-primary">
-                                                        <i class="align-middle" data-feather="dollar-sign"></i>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <h1 class="mt-1 mb-3">$21.300</h1>
-                                            <div class="mb-0">
-                                                <span class="text-success"> <i class="mdi mdi-arrow-bottom-right"></i> 6.65% </span>
-                                                <span class="text-muted">Since last week</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="card">
-                                        <div class="card-body">
-                                            <div class="row">
-                                                <div class="col mt-0">
-                                                    <h5 class="card-title">Orders</h5>
-                                                </div>
-
-                                                <div class="col-auto">
-                                                    <div class="stat text-primary">
-                                                        <i class="align-middle" data-feather="shopping-cart"></i>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <h1 class="mt-1 mb-3">64</h1>
-                                            <div class="mb-0">
-                                                <span class="text-danger"> <i class="mdi mdi-arrow-bottom-right"></i> -2.25% </span>
-                                                <span class="text-muted">Since last week</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-xl-6 col-xxl-7">
-                        <div class="card flex-fill w-100">
-                            <div class="card-header">
-
-                                <h5 class="card-title mb-0">Recent Movement</h5>
-                            </div>
-                            <div class="card-body py-3">
-                                <div class="chart chart-sm">
-                                    <canvas id="chartjs-dashboard-line"></canvas>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                <div class="card-body">
+                    <h1 class="h1"><strong>Lista de Sitios</strong></h1>
                 </div>
 
-                <div class="row">
-                    <div class="col-12 col-md-6 col-xxl-3 d-flex order-2 order-xxl-3">
-                        <div class="card flex-fill w-100">
-                            <div class="card-header">
-
-                                <h5 class="card-title mb-0">Browser Usage</h5>
-                            </div>
-                            <div class="card-body d-flex">
-                                <div class="align-self-center w-100">
-                                    <div class="py-3">
-                                        <div class="chart chart-xs">
-                                            <canvas id="chartjs-dashboard-pie"></canvas>
-                                        </div>
-                                    </div>
-
-                                    <table class="table mb-0">
-                                        <tbody>
-                                        <tr>
-                                            <td>Chrome</td>
-                                            <td class="text-end">4306</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Firefox</td>
-                                            <td class="text-end">3801</td>
-                                        </tr>
-                                        <tr>
-                                            <td>IE</td>
-                                            <td class="text-end">1689</td>
-                                        </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
+                <!--Barra de busqueda-->
+                <div class="container py-2">
+                    <!--Barra de busqueda-->
+                    <div class="">
+                        <div class="col-md-5 mx-3">
+                            <div class="fw-light h5">Busca sitios por departamento o provincia</div>
+                            <div class="input-group input-group-lg mb-3">
+                                <input class="form-control border rounded-pill" type="search" value="Buscar"
+                                       id="example-search-input" >
                             </div>
                         </div>
                     </div>
-                    <div class="col-12 col-md-12 col-xxl-6 d-flex order-3 order-xxl-2">
-                        <div class="card flex-fill w-100">
-                            <div class="card-header">
-
-                                <h5 class="card-title mb-0">Real-Time</h5>
-                            </div>
-                            <div class="card-body px-4">
-                                <div id="world_map" style="height:350px;"></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-12 col-md-6 col-xxl-3 d-flex order-1 order-xxl-1">
-                        <div class="card flex-fill">
-                            <div class="card-header">
-
-                                <h5 class="card-title mb-0">Calendar</h5>
-                            </div>
-                            <div class="card-body d-flex">
-                                <div class="align-self-center w-100">
-                                    <div class="chart">
-                                        <div id="datetimepicker-dashboard"></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    <!--Barra de busqueda-->
                 </div>
+                <!--Barra de busqueda-->
+
 
                 <div class="row">
-                    <div class="col-12 col-lg-8 col-xxl-9 d-flex">
+                    <div class="col-12 col-lg-12">
                         <div class="card flex-fill">
-                            <div class="card-header">
-
-                                <h5 class="card-title mb-0">Latest Projects</h5>
-                            </div>
-                            <table class="table table-hover my-0">
+                            <table class="table table-hover m-1">
                                 <thead>
                                 <tr>
-                                    <th>Name</th>
-                                    <th class="d-none d-xl-table-cell">Start Date</th>
-                                    <th class="d-none d-xl-table-cell">End Date</th>
-                                    <th>Status</th>
-                                    <th class="d-none d-md-table-cell">Assignee</th>
+                                    <th>#</th>
+                                    <th>Sitio</th>
+                                    <th class="d-none d-xl-table-cell">Departamento</th>
+                                    <th class="d-none d-xl-table-cell">Provincia</th>
+                                    <th>Distrito</th>
+                                    <th>Ubicación</th>
+                                    <th>Ubigeo</th>
+                                    <th>Zona</th>
+                                    <th>Tipo de sitio</th>
                                 </tr>
                                 </thead>
                                 <tbody>
                                 <tr>
-                                    <td>Project Apollo</td>
-                                    <td class="d-none d-xl-table-cell">01/01/2023</td>
-                                    <td class="d-none d-xl-table-cell">31/06/2023</td>
-                                    <td><span class="badge bg-success">Done</span></td>
-                                    <td class="d-none d-md-table-cell">Vanessa Tucker</td>
+                                    <td>1</td>
+                                    <td>1234</td>
+                                    <td class="d-none d-xl-table-cell">Lima</td>
+                                    <td class="d-none d-xl-table-cell">Lima</td>
+                                    <td class="d-none d-md-table-cell">San Miguel</td>
+                                    <td class="d-none d-md-table-cell">
+                                        <a class="btn btn-info align-content-center">
+                                        <i class="align-middle" data-feather="map-pin"></i>
+                                        <span>Ubicar en mapa</span>
+                                        </a>
+                                    </td>
+                                    <td>150137</td>
+                                    <td>Urbana</td>
+                                    <td>Movil</td>
                                 </tr>
                                 <tr>
-                                    <td>Project Fireball</td>
-                                    <td class="d-none d-xl-table-cell">01/01/2023</td>
-                                    <td class="d-none d-xl-table-cell">31/06/2023</td>
-                                    <td><span class="badge bg-danger">Cancelled</span></td>
-                                    <td class="d-none d-md-table-cell">William Harris</td>
+                                    <td>2</td>
+                                    <td>1234</td>
+                                    <td class="d-none d-xl-table-cell">Lima</td>
+                                    <td class="d-none d-xl-table-cell">Lima</td>
+                                    <td class="d-none d-md-table-cell">San Borja</td>
+                                    <td class="d-none d-md-table-cell">
+                                        <a class="btn btn-info align-content-center">
+                                            <i class="align-middle" data-feather="map-pin"></i>
+                                            <span>Ubicar en mapa</span>
+                                        </a>
+                                    </td>
+                                    <td>150137</td>
+                                    <td>Urbana</td>
+                                    <td>Movil</td>
                                 </tr>
                                 <tr>
-                                    <td>Project Hades</td>
-                                    <td class="d-none d-xl-table-cell">01/01/2023</td>
-                                    <td class="d-none d-xl-table-cell">31/06/2023</td>
-                                    <td><span class="badge bg-success">Done</span></td>
-                                    <td class="d-none d-md-table-cell">Sharon Lessman</td>
+                                    <td>3</td>
+                                    <td>1234</td>
+                                    <td class="d-none d-xl-table-cell">Lima</td>
+                                    <td class="d-none d-xl-table-cell">Lima</td>
+                                    <td class="d-none d-md-table-cell">San Bartolo</td>
+                                    <td class="d-none d-md-table-cell">
+                                        <a class="btn btn-info align-content-center">
+                                            <i class="align-middle" data-feather="map-pin"></i>
+                                            <span>Ubicar en mapa</span>
+                                        </a>
+                                    </td>
+                                    <td>150137</td>
+                                    <td>Urbana</td>
+                                    <td>Movil</td>
                                 </tr>
                                 <tr>
-                                    <td>Project Nitro</td>
-                                    <td class="d-none d-xl-table-cell">01/01/2023</td>
-                                    <td class="d-none d-xl-table-cell">31/06/2023</td>
-                                    <td><span class="badge bg-warning">In progress</span></td>
-                                    <td class="d-none d-md-table-cell">Vanessa Tucker</td>
+                                    <td>4</td>
+                                    <td>1234</td>
+                                    <td class="d-none d-xl-table-cell">Lima</td>
+                                    <td class="d-none d-xl-table-cell">Yauyos</td>
+                                    <td class="d-none d-md-table-cell">Yauyos</td>
+                                    <td class="d-none d-md-table-cell">
+                                        <a class="btn btn-info align-content-center">
+                                            <i class="align-middle" data-feather="map-pin"></i>
+                                            <span>Ubicar en mapa</span>
+                                        </a>
+                                    </td>
+                                    <td>150137</td>
+                                    <td>Urbana</td>
+                                    <td>Movil</td>
                                 </tr>
                                 <tr>
-                                    <td>Project Phoenix</td>
-                                    <td class="d-none d-xl-table-cell">01/01/2023</td>
-                                    <td class="d-none d-xl-table-cell">31/06/2023</td>
-                                    <td><span class="badge bg-success">Done</span></td>
-                                    <td class="d-none d-md-table-cell">William Harris</td>
+                                    <td>5</td>
+                                    <td>1234</td>
+                                    <td class="d-none d-xl-table-cell">Lima</td>
+                                    <td class="d-none d-xl-table-cell">Lima</td>
+                                    <td class="d-none d-md-table-cell">Miraflores</td>
+                                    <td class="d-none d-md-table-cell">
+                                        <a class="btn btn-info align-content-center">
+                                            <i class="align-middle" data-feather="map-pin"></i>
+                                            <span>Ubicar en mapa</span>
+                                        </a>
+                                    </td>
+                                    <td>150137</td>
+                                    <td>Urbana</td>
+                                    <td>Movil</td>
                                 </tr>
                                 <tr>
-                                    <td>Project X</td>
-                                    <td class="d-none d-xl-table-cell">01/01/2023</td>
-                                    <td class="d-none d-xl-table-cell">31/06/2023</td>
-                                    <td><span class="badge bg-success">Done</span></td>
-                                    <td class="d-none d-md-table-cell">Sharon Lessman</td>
+                                    <td>6</td>
+                                    <td>1234</td>
+                                    <td class="d-none d-xl-table-cell">Lima</td>
+                                    <td class="d-none d-xl-table-cell">Lima</td>
+                                    <td class="d-none d-md-table-cell">San Juan de Lurigancho</td>
+                                    <td class="d-none d-md-table-cell">
+                                        <a class="btn btn-info align-content-center">
+                                            <i class="align-middle" data-feather="map-pin"></i>
+                                            <span>Ubicar en mapa</span>
+                                        </a>
+                                    </td>
+                                    <td>150137</td>
+                                    <td>Urbana</td>
+                                    <td>Movil</td>
                                 </tr>
                                 <tr>
-                                    <td>Project Romeo</td>
-                                    <td class="d-none d-xl-table-cell">01/01/2023</td>
-                                    <td class="d-none d-xl-table-cell">31/06/2023</td>
-                                    <td><span class="badge bg-success">Done</span></td>
-                                    <td class="d-none d-md-table-cell">Christina Mason</td>
+                                    <td>7</td>
+                                    <td>1234</td>
+                                    <td class="d-none d-xl-table-cell">Lima</td>
+                                    <td class="d-none d-xl-table-cell">Lima</td>
+                                    <td class="d-none d-md-table-cell">Breña</td>
+                                    <td class="d-none d-md-table-cell">
+                                        <a class="btn btn-info align-content-center">
+                                            <i class="align-middle" data-feather="map-pin"></i>
+                                            <span>Ubicar en mapa</span>
+                                        </a>
+                                    </td>
+                                    <td>150137</td>
+                                    <td>Urbana</td>
+                                    <td>Movil</td>
                                 </tr>
                                 <tr>
-                                    <td>Project Wombat</td>
-                                    <td class="d-none d-xl-table-cell">01/01/2023</td>
-                                    <td class="d-none d-xl-table-cell">31/06/2023</td>
-                                    <td><span class="badge bg-warning">In progress</span></td>
-                                    <td class="d-none d-md-table-cell">William Harris</td>
+                                    <td>8</td>
+                                    <td>1239</td>
+                                    <td class="d-none d-xl-table-cell">Lima</td>
+                                    <td class="d-none d-xl-table-cell">Lima</td>
+                                    <td class="d-none d-md-table-cell">Surco</td>
+                                    <td class="d-none d-md-table-cell">
+                                        <a class="btn btn-info align-content-center">
+                                            <i class="align-middle" data-feather="map-pin"></i>
+                                            <span>Ubicar en mapa</span>
+                                        </a>
+                                    </td>
+                                    <td>150137</td>
+                                    <td>Urbana</td>
+                                    <td>Movil</td>
                                 </tr>
                                 </tbody>
                             </table>
-                        </div>
-                    </div>
-                    <div class="col-12 col-lg-4 col-xxl-3 d-flex">
-                        <div class="card flex-fill w-100">
-                            <div class="card-header">
-
-                                <h5 class="card-title mb-0">Monthly Sales</h5>
-                            </div>
-                            <div class="card-body d-flex w-100">
-                                <div class="align-self-center chart chart-lg">
-                                    <canvas id="chartjs-dashboard-bar"></canvas>
-                                </div>
-                            </div>
                         </div>
                     </div>
                 </div>
@@ -638,7 +494,8 @@
     </div>
 </div>
 
-<script src="js/app.js"></script>
+<script src="/Springles_html/js/app.js"></script>
+
 
 <script>
     document.addEventListener("DOMContentLoaded", function () {
