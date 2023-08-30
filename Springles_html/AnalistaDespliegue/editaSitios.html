@@ -39,9 +39,9 @@
                         <i data-feather="chevron-down" style="margin-left: auto;"></i>
                     </a>
 
-                    <div class="collapse" id="collapseExample">
+                    <div class="collapse show" id="collapseExample">
                         <ul class="sidebar-nav">
-                            <li class="sidebar-item" style="padding: 0 0 0 2.5rem;">
+                            <li class="sidebar-item active" style="padding: 0 0 0 2.5rem;">
                                 <a class="sidebar-link" href="pages-profile.html">
                                     <span class="align-middle">Editar sitio</span>
                                 </a>
@@ -287,174 +287,15 @@
         <main class="content">
             <div class="container-fluid p-0">
                 <div class="card-body">
-                    <h1 class="h1"><strong>Lista de Sitios</strong></h1>
+                    <h1 class="h1"><strong>Editar Sitio</strong></h1>
                 </div>
 
-                <!--Barra de busqueda-->
-                <div class="container py-2">
-                    <!--Barra de busqueda-->
-                    <div class="">
-                        <div class="col-md-5 mx-3">
-                            <div class="fw-light h5">Busca sitios por departamento o provincia</div>
-                            <div class="input-group input-group-lg mb-3">
-                                <input class="form-control border rounded-pill" type="search" value="Buscar"
-                                       id="example-search-input" >
-                            </div>
-                        </div>
-                    </div>
-                    <!--Barra de busqueda-->
-                </div>
-                <!--Barra de busqueda-->
 
 
                 <div class="row">
                     <div class="col-12 col-lg-12">
                         <div class="card flex-fill">
-                            <table class="table table-hover m-1">
-                                <thead>
-                                <tr>
-                                    <th>#</th>
-                                    <th>Sitio</th>
-                                    <th class="d-none d-xl-table-cell">Departamento</th>
-                                    <th class="d-none d-xl-table-cell">Provincia</th>
-                                    <th>Distrito</th>
-                                    <th>Ubicación</th>
-                                    <th>Ubigeo</th>
-                                    <th>Zona</th>
-                                    <th>Tipo de sitio</th>
-                                </tr>
-                                </thead>
-                                <tbody>
-                                <tr>
-                                    <td>1</td>
-                                    <td>1234</td>
-                                    <td class="d-none d-xl-table-cell">Lima</td>
-                                    <td class="d-none d-xl-table-cell">Lima</td>
-                                    <td class="d-none d-md-table-cell">San Miguel</td>
-                                    <td class="d-none d-md-table-cell">
-                                        <a class="btn btn-info align-content-center">
-                                        <i class="align-middle" data-feather="map-pin"></i>
-                                        <span>Ubicar en mapa</span>
-                                        </a>
-                                    </td>
-                                    <td>150137</td>
-                                    <td>Urbana</td>
-                                    <td>Fijo</td>
-                                </tr>
-                                <tr>
-                                    <td>2</td>
-                                    <td>1234</td>
-                                    <td class="d-none d-xl-table-cell">Lima</td>
-                                    <td class="d-none d-xl-table-cell">Lima</td>
-                                    <td class="d-none d-md-table-cell">San Borja</td>
-                                    <td class="d-none d-md-table-cell">
-                                        <a class="btn btn-info align-content-center">
-                                            <i class="align-middle" data-feather="map-pin"></i>
-                                            <span>Ubicar en mapa</span>
-                                        </a>
-                                    </td>
-                                    <td>150137</td>
-                                    <td>Urbana</td>
-                                    <td>Movil</td>
-                                </tr>
-                                <tr>
-                                    <td>3</td>
-                                    <td>1234</td>
-                                    <td class="d-none d-xl-table-cell">Lima</td>
-                                    <td class="d-none d-xl-table-cell">Lima</td>
-                                    <td class="d-none d-md-table-cell">San Bartolo</td>
-                                    <td class="d-none d-md-table-cell">
-                                        <a class="btn btn-info align-content-center">
-                                            <i class="align-middle" data-feather="map-pin"></i>
-                                            <span>Ubicar en mapa</span>
-                                        </a>
-                                    </td>
-                                    <td>150137</td>
-                                    <td>Rural</td>
-                                    <td>Fijo</td>
-                                </tr>
-                                <tr>
-                                    <td>4</td>
-                                    <td>1234</td>
-                                    <td class="d-none d-xl-table-cell">Lima</td>
-                                    <td class="d-none d-xl-table-cell">Yauyos</td>
-                                    <td class="d-none d-md-table-cell">Yauyos</td>
-                                    <td class="d-none d-md-table-cell">
-                                        <a class="btn btn-info align-content-center">
-                                            <i class="align-middle" data-feather="map-pin"></i>
-                                            <span>Ubicar en mapa</span>
-                                        </a>
-                                    </td>
-                                    <td>150137</td>
-                                    <td>Urbana</td>
-                                    <td>Fijo</td>
-                                </tr>
-                                <tr>
-                                    <td>5</td>
-                                    <td>1234</td>
-                                    <td class="d-none d-xl-table-cell">Lima</td>
-                                    <td class="d-none d-xl-table-cell">Lima</td>
-                                    <td class="d-none d-md-table-cell">Miraflores</td>
-                                    <td class="d-none d-md-table-cell">
-                                        <a class="btn btn-info align-content-center">
-                                            <i class="align-middle" data-feather="map-pin"></i>
-                                            <span>Ubicar en mapa</span>
-                                        </a>
-                                    </td>
-                                    <td>150137</td>
-                                    <td>Rural</td>
-                                    <td>Movil</td>
-                                </tr>
-                                <tr>
-                                    <td>6</td>
-                                    <td>1234</td>
-                                    <td class="d-none d-xl-table-cell">Lima</td>
-                                    <td class="d-none d-xl-table-cell">Lima</td>
-                                    <td class="d-none d-md-table-cell">San Juan de Lurigancho</td>
-                                    <td class="d-none d-md-table-cell">
-                                        <a class="btn btn-info align-content-center">
-                                            <i class="align-middle" data-feather="map-pin"></i>
-                                            <span>Ubicar en mapa</span>
-                                        </a>
-                                    </td>
-                                    <td>150137</td>
-                                    <td>Urbana</td>
-                                    <td>Movil</td>
-                                </tr>
-                                <tr>
-                                    <td>7</td>
-                                    <td>1234</td>
-                                    <td class="d-none d-xl-table-cell">Lima</td>
-                                    <td class="d-none d-xl-table-cell">Lima</td>
-                                    <td class="d-none d-md-table-cell">Breña</td>
-                                    <td class="d-none d-md-table-cell">
-                                        <a class="btn btn-info align-content-center">
-                                            <i class="align-middle" data-feather="map-pin"></i>
-                                            <span>Ubicar en mapa</span>
-                                        </a>
-                                    </td>
-                                    <td>150137</td>
-                                    <td>Urbana</td>
-                                    <td>Fijo</td>
-                                </tr>
-                                <tr>
-                                    <td>8</td>
-                                    <td>1239</td>
-                                    <td class="d-none d-xl-table-cell">Lima</td>
-                                    <td class="d-none d-xl-table-cell">Lima</td>
-                                    <td class="d-none d-md-table-cell">Surco</td>
-                                    <td class="d-none d-md-table-cell">
-                                        <a class="btn btn-info align-content-center">
-                                            <i class="align-middle" data-feather="map-pin"></i>
-                                            <span>Ubicar en mapa</span>
-                                        </a>
-                                    </td>
-                                    <td>150137</td>
-                                    <td>Rural</td>
-                                    <td>Movil</td>
-                                </tr>
-                                </tbody>
-                            </table>
+                            
                         </div>
                     </div>
                 </div>
