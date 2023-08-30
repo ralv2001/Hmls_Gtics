@@ -61,8 +61,8 @@
               <i class="align-middle" data-feather="user"></i> <span class="align-middle">Lista de equipos</span>
             </a>
 					<ul class="sub-menu">
-						<li><a href="listaEquiposInventario.html">Inventario de equipos</a></li>
-						<li><a href="listaEquiposAgregar.html">Agregar equipos</a> </li>
+						<li><a href="#">Inventario de equipos</a></li>
+						<li><a href="#">Agregar equipos</a> </li>
 					</ul>
 					</li>
 
@@ -261,88 +261,58 @@
 			</nav>
 
 			<main class="content">
-
 				<div class="container-fluid p-0">
+					<div class="container text-center mt-1">
+						<h1 class="h3 mb-3"><strong>Agregar un nuevo equipo al inventario</strong></h1>
+					</div>
 
-					<h1 class="h3 mb-3"><strong>Lista de Sitios</strong></h1>
-
-
-					<div class="row">
-						<div class="col-12 col-lg-8 col-xxl-9 d-flex">
 							<div class="card flex-fill">
 
-								<table class="table table-hover my-0">
-									<thead>
-										<tr>
-											<th>Sitio</th>
-											<th class="d-none d-xl-table-cell">Departamento</th>
-											<th class="d-none d-xl-table-cell">Provincia</th>
-											<th>Distrito</th>
-											<th>Ubicación</th>
-										</tr>
-									</thead>
-									<tbody>
-										<tr>
-											<td>1</td>
-											<td class="d-none d-xl-table-cell">Lima</td>
-											<td class="d-none d-xl-table-cell">Lima</td>
-											<td class="d-none d-md-table-cell">San Miguel</td>
-											<td class="d-none d-md-table-cell"></td>
-										</tr>
-										<tr>
-											<td>2</td>
-											<td class="d-none d-xl-table-cell">Lima</td>
-											<td class="d-none d-xl-table-cell">Lima</td>
-											<td class="d-none d-md-table-cell">San Borja</td>
-											<td class="d-none d-md-table-cell"></td>
-										</tr>
-										<tr>
-											<td>3</td>
-											<td class="d-none d-xl-table-cell">Lima</td>
-											<td class="d-none d-xl-table-cell">Lima</td>
-											<td class="d-none d-md-table-cell">San Bartolo</td>
-											<td class="d-none d-md-table-cell"></td>
-										</tr>
-										<tr>
-											<td>4</td>
-											<td class="d-none d-xl-table-cell">Lima</td>
-											<td class="d-none d-xl-table-cell">Yauyos</td>
-											<td class="d-none d-md-table-cell">Yauyos</td>
-											<td class="d-none d-md-table-cell"></td>
-										</tr>
-										<tr>
-											<td>5</td>
-											<td class="d-none d-xl-table-cell">Lima</td>
-											<td class="d-none d-xl-table-cell">Lima</td>
-											<td class="d-none d-md-table-cell">Miraflores</td>
-											<td class="d-none d-md-table-cell"></td>
-										</tr>
-										<tr>
-											<td>6</td>
-											<td class="d-none d-xl-table-cell">Lima</td>
-											<td class="d-none d-xl-table-cell">Lima</td>
-											<td class="d-none d-md-table-cell">San Juan de Lurigancho</td>
-											<td class="d-none d-md-table-cell"></td>
-										</tr>
-										<tr>
-											<td>7</td>
-											<td class="d-none d-xl-table-cell">Lima</td>
-											<td class="d-none d-xl-table-cell">Lima</td>
-											<td class="d-none d-md-table-cell">Breña</td>
-											<td class="d-none d-md-table-cell"></td>
-										</tr>
-										<tr>
-											<td>8</td>
-											<td class="d-none d-xl-table-cell">Lima</td>
-											<td class="d-none d-xl-table-cell">Lima</td>
-											<td class="d-none d-md-table-cell">Surco</td>
-											<td class="d-none d-md-table-cell"></td>
-										</tr>
-									</tbody>
-								</table>
+								<form class="row g-3">
+									<div class="col-12">
+										<label for="inputAddress1" class="form-label fw-bold fs-5">Tipo de Equipo:</label>
+										<input type="text" class="form-control" id="inputAddress1">
+									</div>
+									<div class="col-12">
+										<label for="inputAddress2" class="form-label fw-bold fs-5">Número de Serie:</label>
+										<input type="text" class="form-control" id="inputAddress2">
+									</div>
+									<div class="col-12">
+										<label for="inputAddress3" class="form-label fw-bold fs-5">Marca:</label>
+										<input type="text" class="form-control" id="inputAddress3" >
+									</div>
+									<div class="col-12">
+										<label for="inputAddress4" class="form-label fw-bold fs-5">Modelo:</label>
+										<input type="text" class="form-control" id="inputAddress4">
+									</div>
+									<div class="col-12">
+										<label for="inputAddress5" class="form-label fw-bold fs-5">Velocidad de Conexión:</label>
+										<input type="text" class="form-control" id="inputAddress5">
+									</div>
+									<div class="mb-3">
+										<label for="formFile" class="form-label fw-bold fs-5">Imagen del equipo:</label>
+										<input class="form-control" type="file" id="formFile">
+									</div>
+
+									<!--<div class="col-md-4">
+										<label for="inputState" class="form-label">State</label>
+										<select id="inputState" class="form-select">
+											<option selected>Choose...</option>
+											<option>...</option>
+										</select>
+									</div-->
+
+									<div class="row justify-content-center mt-4">
+										<div class="col-md-6 text-center">
+											<button type="submit" class="btn btn-primary">Agregar nuevo equipo</button>
+										</div>
+										<div class="col-md-6 text-center">
+											<button type="submit" class="btn btn-primary">Cancelar</button>
+										</div>
+									</div>
+								</form>
 							</div>
-						</div>
-					</div>
+
 
 				</div>
 			</main>
