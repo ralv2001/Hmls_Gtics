@@ -303,34 +303,34 @@
 							<div class="card flex-fill">
 
 								<form class="row g-3">
-									<div class="d-flex justify-content-end">
+									<div class="col-12 text-center">
 										<img src="../img/photos/router.jpg"  alt="router" width="200" class="mx-auto">
-									</div>
-									<div class="text-end">
-										<button type="submit" class="btn btn-danger mr-14" onclick="window.location.href='Springles_html/AnalistaDespliegue/editarEquipo.html'">Editar datos</button>
 									</div>
 									<br>
 									<div class="col-12">
 										<label for="inputAddress1" class="form-label fw-bold fs-5">Tipo de Equipo:</label>
-										<input type="text" class="form-control" id="inputAddress1" placeholder="Router" readonly>
+										<input type="text" class="form-control" id="inputAddress1" placeholder="Router">
 									</div>
 									<div class="col-12">
 										<label for="inputAddress2" class="form-label fw-bold fs-5">Número de Serie:</label>
-										<input type="text" class="form-control" id="inputAddress2" placeholder="196608" readonly>
+										<input type="text" class="form-control" id="inputAddress2" placeholder="196608" >
 									</div>
 									<div class="col-12">
 										<label for="inputAddress3" class="form-label fw-bold fs-5">Marca:</label>
-										<input type="text" class="form-control" id="inputAddress3" placeholder="Cisco" readonly>
+										<input type="text" class="form-control" id="inputAddress3" placeholder="Cisco" >
 									</div>
 									<div class="col-12">
 										<label for="inputAddress4" class="form-label fw-bold fs-5">Modelo:</label>
-										<input type="text" class="form-control" id="inputAddress4" placeholder="AC-1400" readonly>
+										<input type="text" class="form-control" id="inputAddress4" placeholder="AC-1400">
 									</div>
 									<div class="col-12">
 										<label for="inputAddress5" class="form-label fw-bold fs-5">Velocidad de Conexión:</label>
-										<input type="text" class="form-control" id="inputAddress5" placeholder="300 Mbps" readonly>
+										<input type="text" class="form-control" id="inputAddress5" placeholder="300 Mbps" >
 									</div>
-
+									<div class="mb-3">
+										<label for="formFile" class="form-label fw-bold fs-5">Imagen del equipo:</label>
+										<input class="form-control" type="file" id="formFile">
+									</div>
 
 									<!--<div class="col-md-4">
 										<label for="inputState" class="form-label">State</label>
@@ -340,6 +340,14 @@
 										</select>
 									</div-->
 
+									<div class="row justify-content-center mt-4">
+										<div class="col-md-6 text-center">
+											<button type="submit" class="btn btn-primary">Guardar cambios</button>
+										</div>
+										<div class="col-md-6 text-center">
+											<button type="submit" class="btn btn-primary">Cancelar</button>
+										</div>
+									</div>
 								</form>
 							</div>
 
