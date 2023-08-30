@@ -30271,7 +30271,7 @@ define(
 
         uri = new URI(uri, { base_uri: self });
 
-        // Not on same domain/port or protocol
+        // Not on same entity/port or protocol
         if ((uri.host != 'mce_host' && self.host != uri.host && uri.host) || self.port != uri.port ||
           (self.protocol != uri.protocol && uri.protocol !== "")) {
           return uri.getURI();
@@ -44699,8 +44699,8 @@ define(
     };
 
     var relaxDomain = function (editor, ifr) {
-      // Domain relaxing is required since the user has messed around with document.domain
-      // This only applies to IE 11 other browsers including Edge seems to handle document.domain
+      // Domain relaxing is required since the user has messed around with document.entity
+      // This only applies to IE 11 other browsers including Edge seems to handle document.entity
       if (document.domain !== window.location.hostname && Env.ie && Env.ie < 12) {
         var bodyUuid = Uuid.uuid('mce');
 
@@ -44710,7 +44710,7 @@ define(
 
         /*eslint no-script-url:0 */
         var domainRelaxUrl = 'javascript:(function(){' +
-          'document.open();document.domain="' + document.domain + '";' +
+          'document.open();document.entity="' + document.domain + '";' +
           'var ed = window.parent.tinymce.get("' + editor.id + '");document.write(ed.iframeHTML);' +
           'document.close();ed.' + bodyUuid + '(true);})()';
 

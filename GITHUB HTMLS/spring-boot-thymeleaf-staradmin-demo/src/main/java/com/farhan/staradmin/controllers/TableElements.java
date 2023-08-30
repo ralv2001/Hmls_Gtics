@@ -1,4 +1,4 @@
-package com.farhan.staradmin.controller;
+package com.farhan.staradmin.controllers;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
