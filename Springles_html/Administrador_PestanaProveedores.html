@@ -21,6 +21,8 @@
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
         <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
 
+
+
     </head>
 
     <body>
@@ -69,13 +71,13 @@
 
                         <!--DESPLEGABLE DE DASHBOARD (EJEMPLO)-->
 
-                        <li class="sidebar-item active">
+                        <li class="sidebar-item">
                             <a class="sidebar-link" href="Administrador_PestanaUsuarios.html">
                                 <i class="align-middle" data-feather="users"></i> <span class="align-middle">Usuarios</span>
                             </a>
                         </li>
 
-                        <li class="sidebar-item">
+                        <li class="sidebar-item active">
                             <a class="sidebar-link" href="Administrador_PestanaProveedores.html">
                                 <i class="align-middle" data-feather="archive"></i> <span class="align-middle">Proveedores</span>
                             </a>
@@ -329,6 +331,78 @@
                 <!--CONTENIDO DE LA PÁGINA (EMPIEZA CON EL MAIN CLASS CONTENT) : -->
                 <!--<main class="content">-->
 
+                <main class="content">
+                    <section>
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between align-items-center mb-3">
+                                    <div class="w-50 d-flex align-items-center">
+                                        <div class="mr-2 custom-flex-auto">
+                                            <div class="input-group">
+                                                <div class="input-group-prepend">
+                                                    <div class="input-group-text">
+                                                        <i data-feather="search" style="height: 20px;"></i>
+                                                    </div>
+                                                </div>
+                                                <input type="text" class="form-control form-control-lg" id="inlineFormInputGroup" placeholder="Buscar Proveedor">
+                                            </div>
+                                        </div>
+                                        <button type="button" class="btn btn-primary btn-sm">
+                                            <i data-feather="list"></i>
+                                        </button>
+                                    </div>
+                                    <div>
+                                        <button type="button" class="btn btn-light">Listar baneados</button>
+                                        <button type="button" class="btn btn-primary">
+                                            <i data-feather="plus"></i> Crear proveedor
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <table class="table table-hover table-striped table-bordered table-responsive mt-3">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">N°</th>
+                                            <th scope="col">Foto de perfil</th>
+                                            <th scope="col">Nombre</th>
+                                            <th scope="col">Slogan</th>
+                                            <th scope="col">Acciones</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <th scope="row">1</th>
+                                            <td>
+                                                <div class="custom-image-container" style="background-image: url('img/iconosbarbaros/movistar.jpg');"></div>
+                                            </td>
+                                            <td>Movistar</td>
+                                            <td class="text-limited">"Compartida la vida es más"</td>
+                                            <td>
+                                                <a href="Administrador_EditarProveedores.html" class="btn btn-primary mr-2" data-toggle="tooltip" data-placement="top" title="Editar proveedor">
+                                                    <i data-feather="edit"></i>
+                                                </a>
+                                                <button type="button" class="btn btn-danger" data-toggle="tooltip" data-placement="top" title="Desactivar proveedor" onclick="confirmDesactivar()">
+                                                    <i data-feather="slash"></i>
+                                                </button>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <nav aria-label="Page navigation example">
+                                    <ul class="pagination">
+                                        <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">1</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">Next</a></li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                    </section>
+                </main>
+
+
                 <!-- FINALIZACIÓN DEL CONTENIDO (TERMINA JUSTO ANTES DEL FOOTER) :-->
                 <!-- <footer class="footer"> -->
 
@@ -364,6 +438,16 @@
         </div>
 
         <script src="js/app.js"></script>
+
+        <script>
+            function confirmDesactivar() {
+                var confirmacion = confirm("¿Estás seguro que deseas desactivar a este proveedor?");
+                if (confirmacion) {
+                    // Aquí puedes agregar la lógica para desactivar al proveedor
+                    alert("Proveedor desactivado exitosamente.");
+                }
+            }
+        </script>
 
         <script>
             document.addEventListener("DOMContentLoaded", function () {
