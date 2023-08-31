@@ -53,88 +53,23 @@
                     Menus
                 </li>
 
-
-                <li class="sidebar-item ">
-                    <a class="sidebar-link" data-bs-toggle="collapse" href="#collapseExample" role="button"
-                       aria-expanded="false" aria-controls="collapseExample">
-
-                        <i class="align-middle" data-feather="sliders"></i> <span
-                            class="align-middle">Lista de sitios</span>
-                        <i data-feather="chevron-down" style="margin-left: auto;"></i>
-                    </a>
-
-                    <div class="collapse" id="collapseExample">
-                        <ul class="sidebar-nav">
-                            <li class="sidebar-item" style="padding: 0 0 0 2.5rem;">
-                                <a class="sidebar-link" href="editaSitios.html">
-                                    <span class="align-middle">Editar sitio</span>
-                                </a>
-                            </li>
-                            <li class="sidebar-item" style="padding: 0 0 0 2.5rem;">
-                                <a class="sidebar-link" href="listaEquiposAgregar.html">
-                                    <span class="align-middle">Agregar sitio</span>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </li>
-
-                <li class="sidebar-item ">
-                    <a class="sidebar-link" data-bs-toggle="collapse" href="#collapseExample2" role="button"
-                       aria-expanded="false" aria-controls="collapseExample2">
-
-                        <i class="align-middle" data-feather="monitor"></i> <span
-                            class="align-middle">Lista de equipos</span>
-                        <i data-feather="chevron-down" style="margin-left: auto;"></i>
-                    </a>
-
-                    <div class="collapse" id="collapseExample2">
-                        <ul class="sidebar-nav">
-                            <li class="sidebar-item" style="padding: 0 0 0 2.5rem;">
-                                <a class="sidebar-link" href="listaEquiposInventario.html">
-                                    <span class="align-middle">Inventario de equipos</span>
-                                </a>
-                            </li>
-                            <li class="sidebar-item" style="padding: 0 0 0 2.5rem;">
-                                <a class="sidebar-link" href="listaEquiposAgregar.html">
-                                    <span class="align-middle">Agregar equipos</span>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </li>
-
                 <li class="sidebar-item active">
-                    <a class="sidebar-link" href="listaTickets.html">
+                    <a class="sidebar-link" href="../tecnico/indexTecnico.html">
                         <i class="align-middle" data-feather="file"></i> <span class="align-middle">Lista de Tickets</span>
                     </a>
                 </li>
 
                 <li class="sidebar-item">
-                    <a class="sidebar-link" href="listaMapas.html">
-                        <i class="align-middle" data-feather="map"></i> <span class="align-middle">Lista de Mapas</span>
+                    <a class="sidebar-link" href="../tecnico/bitacora.html">
+                        <i class="align-middle" data-feather="map"></i> <span class="align-middle">Bitacora</span>
                     </a>
                 </li>
 
-                <li class="sidebar-item">
-                    <a class="sidebar-link" href="/Springles_html/pages-blank.html">
-                        <i class="align-middle" data-feather="book"></i> <span class="align-middle">Dashboard</span>
+                <li class="sidebar-item ">
+                    <a class="sidebar-link" href="../tecnico/formulario.html">
+                        <i class="align-middle" data-feather="book"></i> <span class="align-middle">Formulario</span>
                     </a>
                 </li>
-
-
-                <li class="sidebar-item">
-                    <a class="sidebar-link" href="crearTicket.html">
-                        <i class="align-middle" data-feather="edit-2"></i> <span class="align-middle">Crear Ticket</span>
-                    </a>
-                </li>
-
-                <li class="sidebar-item">
-                    <a class="sidebar-link" href="/Springles_html/ui-forms.html">
-                        <i class="align-middle" data-feather="check-square"></i> <span class="align-middle">Bitacora de Comentarios</span>
-                    </a>
-                </li>
-
 
             </ul>
 
@@ -290,7 +225,12 @@
                             <img src="/Springles_html/img/avatars/avatar-4.jpg" class="avatar img-fluid rounded me-1" alt="Christina Mason" /> <span class="text-dark">Christina Mason</span>
                         </a>
                         <div class="dropdown-menu dropdown-menu-end">
-                            <a class="dropdown-item" href="perfilAnalista.html"><i class="align-middle me-1" data-feather="user"></i> Profile</a>
+                            <a class="dropdown-item" href="/Springles_html/pages-profile.html"><i class="align-middle me-1" data-feather="user"></i> Profile</a>
+                            <a class="dropdown-item" href="#"><i class="align-middle me-1" data-feather="pie-chart"></i> Analytics</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="/Springles_html/index.html"><i class="align-middle me-1" data-feather="settings"></i> Settings & Privacy</a>
+                            <a class="dropdown-item" href="#"><i class="align-middle me-1" data-feather="help-circle"></i> Help Center</a>
+                            <div class="dropdown-divider"></div>
                             <a class="dropdown-item" href="#">Log out</a>
                         </div>
                     </li>
@@ -300,16 +240,7 @@
 
         <main class="content">
 
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-10">
-                        <h1 class="h3 mb-3"><strong>Lista De Tickets</strong></h1>
-                    </div>
-                    <div class="col-md-2">
-                        <a href="crearTicket.html" class="btn btn-dark mb-2">Crear Ticket</a>
-                    </div>
-                </div>
-            </div>
+            <h1 class="h3 mb-3"><strong>Lista De Tickets</strong></h1>
 
             <div class="container-fluid p-0">
 
@@ -329,7 +260,7 @@
                                     <th class="col text-center">Distrito</th>
                                     <th class="col text-center">Operadora</th>
                                     <th class="col text-center">Supervisor</th>
-                                    <th class="col text-center">Formulario</th>
+                                    <th class="col text-center">Compañeros</th>
                                     <th class="col text-center">Estado</th>
                                 </tr>
                                 </thead>
@@ -340,71 +271,104 @@
                                     <td class="col text-center">San Juan de Lurigancho</td>
                                     <td class="col text-center">Movistar</td>
                                     <td class="col text-center">Vanessa Tucker</td>
-                                    <td class="col text-center"> <a href="verTicket.html" class="btn btn-dark mb-2">Ver Ticket</a></td>
-                                    <td class="col text-center"><span class="badge bg-success">Done</span></td>
-                                </tr>
+                                    <td class="col text-center"> <a href="verTicket.html" class="btn btn-dark mb-2">Ver Cuadrilla</a></td>
+                                    <td class="col text-center">
+                                        <select class="form-select" aria-label="Default select example">
+                                            <option selected>En tecnico</option>
+                                            <option value="1">En campo</option>
+                                        </select>
+                                    </td>                                </tr>
                                 <tr>
                                     <td class="col text-center">Rodrigo Tinoco</td>
                                     <td class="col text-center">Lima</td>
                                     <td class="col text-center">Ate</td>
                                     <td class="col text-center">Movistar</td>
                                     <td class="col text-center">William Harris</td>
-                                    <td class="col text-center"> <a href="verTicket.html" class="btn btn-dark mb-2">Ver Ticket</a></td>
-                                    <td class="col text-center"><span class="badge bg-danger">Cancelled</span></td>
-                                </tr>
+                                    <td class="col text-center"> <a href="verTicket.html" class="btn btn-dark mb-2">Ver Cuadrilla</a></td>
+                                    <td class="col text-center">
+                                        <select class="form-select" aria-label="Default select example">
+                                            <option selected>En tecnico</option>
+                                            <option value="1">En campo</option>
+                                        </select>
+                                    </td>                                </tr>
                                 <tr>
                                     <td class="col text-center">Dylan Bustamante</td>
                                     <td class="col text-center">Lima</td>
                                     <td class="col text-center">San Borja</td>
                                     <td class="col text-center">Movistar</td>
                                     <td class="col text-center">Sharon Lessman</td>
-                                    <td class="col text-center"> <a href="verTicket.html" class="btn btn-dark mb-2">Ver Ticket</a></td>
-                                    <td class="col text-center"><span class="badge bg-success">Done</span></td>
-                                </tr>
+                                    <td class="col text-center"> <a href="/Hmls_Gtics/Springles_html/AnalistaDespliegue/verTicket.html" class="btn btn-dark mb-2">Ver Cuadrilla</a></td>
+                                    <td class="col text-center">
+                                        <select class="form-select" aria-label="Default select example">
+                                            <option selected>En tecnico</option>
+                                            <option value="1">En campo</option>
+                                        </select>
+                                    </td>                                </tr>
                                 <tr>
                                     <td class="col text-center">Dylan Bustamante</td>
                                     <td class="col text-center">Lima</td>
                                     <td class="col text-center">Los Olivos</td>
                                     <td class="col text-center">Movistar</td>
                                     <td class="col text-center">Vanessa Tucker</td>
-                                    <td class="col text-center"> <a href="verTicket.html" class="btn btn-dark mb-2">Ver Ticket</a></td>
-                                    <td class="col text-center"><span class="badge bg-warning">In progress</span></td>
-                                </tr>
+                                    <td class="col text-center"> <a href="/Hmls_Gtics/Springles_html/AnalistaDespliegue/verTicket.html" class="btn btn-dark mb-2">Ver Cuadrilla</a></td>
+                                    <td class="col text-center">
+                                        <select class="form-select" aria-label="Default select example">
+                                            <option selected>En tecnico</option>
+                                            <option value="1">En campo</option>
+                                        </select>
+                                    </td>                                </tr>
                                 <tr>
                                     <td class="col text-center">Jorge Romero</td>
                                     <td class="col text-center">Lima</td>
                                     <td class="col text-center">Comas</td>
                                     <td class="col text-center">Movistar</td>
                                     <td class="col text-center">William Harris</td>
-                                    <td class="col text-center"> <a href="verTicket.html" class="btn btn-dark mb-2">Ver Ticket</a></td>
-                                    <td class="col text-center"><span class="badge bg-success">Done</span></td>
-                                </tr>
+                                    <td class="col text-center"> <a href="/Hmls_Gtics/Springles_html/AnalistaDespliegue/verTicket.html" class="btn btn-dark mb-2">Ver Cuadrilla</a></td>
+                                    <td class="col text-center">
+                                        <select class="form-select" aria-label="Default select example">
+                                            <option selected>En tecnico</option>
+                                            <option value="1">En campo</option>
+                                        </select>
+                                    </td>                                </tr>
                                 <tr>
                                     <td class="col text-center">Sebastian Fuentes</td>
                                     <td class="col text-center">Lima</td>
                                     <td class="col text-center">San Isidro</td>
                                     <td class="col text-center">Movistar</td>
                                     <td class="col text-center">Sharon Lessman</td>
-                                    <td class="col text-center"> <a href="verTicket.html" class="btn btn-dark mb-2">Ver Ticket</a></td>
-                                    <td class="col text-center"><span class="badge bg-success">Done</span></td>
-                                </tr>
+                                    <td class="col text-center"> <a href="/Hmls_Gtics/Springles_html/AnalistaDespliegue/verTicket.html" class="btn btn-dark mb-2">Ver Cuadrilla</a></td>
+                                    <td class="col text-center">
+                                        <select class="form-select" aria-label="Default select example">
+                                            <option selected>En tecnico</option>
+                                            <option value="1">En campo</option>
+                                        </select>
+                                    </td>                                </tr>
                                 <tr>
                                     <td class="col text-center">Sebastian Fuentes</td>
                                     <td class="col text-center">Lima</td>
                                     <td class="col text-center">San Miguel</td>
                                     <td class="col text-center">Movistar</td>
                                     <td class="col text-center">Christina Mason</td>
-                                    <td class="col text-center"> <a href="verTicket.html" class="btn btn-dark mb-2">Ver Ticket</a></td>
-                                    <td class="col text-center"><span class="badge bg-danger">Cancelled</span></td>
-                                </tr>
+                                    <td class="col text-center"> <a href="/Hmls_Gtics/Springles_html/AnalistaDespliegue/verTicket.html" class="btn btn-dark mb-2">Ver Cuadrilla</a></td>
+                                    <td class="col text-center">
+                                        <select class="form-select" aria-label="Default select example">
+                                            <option selected>En tecnico</option>
+                                            <option value="1">En campo</option>
+                                        </select>
+                                    </td>                                </tr>
                                 <tr>
                                     <td class="col text-center">Carla Lopez</td>
                                     <td class="col text-center">Lima</td>
                                     <td class="col text-center">Pueblo Libre</td>
                                     <td class="col text-center">Movistar</td>
                                     <td class="col text-center">William Harris</td>
-                                    <td class="col text-center"> <a href="verTicket.html" class="btn btn-dark mb-2">Ver Ticket</a></td>
-                                    <td class="col text-center"><span class="badge bg-warning">In progress</span></td>
+                                    <td class="col text-center"> <a href="/Hmls_Gtics/Springles_html/AnalistaDespliegue/verTicket.html" class="btn btn-dark mb-2">Ver Cuadrilla</a></td>
+                                    <td class="col text-center">
+                                        <select class="form-select" aria-label="Default select example">
+                                            <option selected>En tecnico</option>
+                                            <option value="1">En campo</option>
+                                        </select>
+                                    </td>
                                 </tr>
                                 </tbody>
                             </table>

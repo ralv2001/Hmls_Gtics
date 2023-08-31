@@ -1,0 +1,16 @@
+.custom-image-container {
+    width: 60px;
+    height: 60px;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.tamano-tabla-slogan {
+    width: 65%;
+}
+.tamano-tabla-acciones {
+    width: 120px;
+}
+.custom-flex-auto {
+    flex: auto;
+}

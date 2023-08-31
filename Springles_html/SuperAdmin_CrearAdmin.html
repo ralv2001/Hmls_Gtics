@@ -19,7 +19,6 @@
 
     <link href="css/app.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
     <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
 
   </head>
@@ -31,12 +30,12 @@
       <nav id="sidebar" class="sidebar js-sidebar">
         <div class="sidebar-content js-simplebar">
           <a class="sidebar-brand">
-            <span class="align-middle">Administrador</span>
+            <span class="align-middle">Super Administrador</span>
           </a>
 
           <ul class="sidebar-nav">
             <li class="sidebar-header">
-              Pestañas
+              Herramientas
             </li>
 
 
@@ -70,30 +69,34 @@
 
             <!--DESPLEGABLE DE DASHBOARD (EJEMPLO)-->
 
-            <li class="sidebar-item active">
-              <a class="sidebar-link" href="Administrador_PestanaUsuarios.html">
-                <i class="align-middle" data-feather="users"></i> <span class="align-middle">Usuarios</span>
+            <li class="sidebar-item active  ">
+              <a class="sidebar-link" href="SuperAdmin_CrearAdmin.html">
+                <i class="align-middle" data-feather="users"></i> <span class="align-middle">Crear nuevo Administrador</span>
               </a>
             </li>
 
             <li class="sidebar-item">
-              <a class="sidebar-link" href="Administrador_PestanaProveedores.html">
-                <i class="align-middle" data-feather="archive"></i> <span class="align-middle">Proveedores</span>
+              <a class="sidebar-link" href="SuperAdmin_ListaBaneados.html">
+                <i class="align-middle" data-feather="archive"></i> <span class="align-middle">Lista de baneados</span>
               </a>
             </li>
 
-            <li class="sidebar-item">
-              <a class="sidebar-link" href="Administrador_PestanaSitios.html">
-                <i class="align-middle" data-feather="server"></i> <span class="align-middle">Sitios</span>
-              </a>
+            
+            <li class="sidebar-header">
+                Usuarios
             </li>
-
-            <li class="sidebar-item">
-              <a class="sidebar-link" href="Administrador_PestanaEquipos.html">
-                <i class="align-middle" data-feather="database"></i> <span class="align-middle">Equipos</span>
-              </a>
+            <li class="sidebar-item ">
+                <a class="sidebar-link" href="Superadmin_SistGestUser_adminlst.html">
+                  <i class="align-middle" data-feather="users"></i> <span class="align-middle">Lista de Administradores</span>
+                </a>
             </li>
+              <li class="sidebar-item">
+                <a class="sidebar-link" href="Superadmin_SistGestUser_usrlst.html">
+                  <i class="align-middle" data-feather="users"></i> <span class="align-middle">Lista de no administradores</span>
+                </a>
+            </li>    
 
+            
             <li class="sidebar-header">
               Perfil
             </li>
@@ -142,7 +145,7 @@
           <div class="navbar-collapse collapse">
             <ul class="navbar-nav navbar-align">
               <li class="nav-item dropdown">
-                <a class="nav-icon custom-dropdown-toggle" href="#" id="alertsDropdown" data-bs-toggle="dropdown">
+                <a class="nav-icon dropdown-toggle" href="#" id="alertsDropdown" data-bs-toggle="dropdown">
                   <div class="position-relative">
                     <i class="align-middle" data-feather="bell"></i>
                     <span class="indicator">4</span>
@@ -212,7 +215,7 @@
                 </div>
               </li>
               <li class="nav-item dropdown">
-                <a class="nav-icon custom-dropdown-toggle" href="#" id="messagesDropdown" data-bs-toggle="dropdown">
+                <a class="nav-icon dropdown-toggle" href="#" id="messagesDropdown" data-bs-toggle="dropdown">
                   <div class="position-relative">
                     <i class="align-middle" data-feather="message-square"></i>
                   </div>
@@ -289,13 +292,13 @@
                 </div>
               </li>
               <li class="nav-item dropdown">
-                <a class="nav-icon custom-dropdown-toggle d-inline-block d-sm-none" href="#" data-bs-toggle="dropdown">
+                <a class="nav-icon dropdown-toggle d-inline-block d-sm-none" href="#" data-bs-toggle="dropdown">
                   <i class="align-middle" data-feather="settings"></i>
                 </a>
 
-                <a class="nav-link custom-dropdown-toggle d-none d-sm-inline-block" href="#" data-bs-toggle="dropdown">
+                <a class="nav-link dropdown-toggle d-none d-sm-inline-block" href="#" data-bs-toggle="dropdown">
                   <img src="img/avatars/avatar.jpg" class="avatar img-fluid rounded me-1" alt="Charles Hall"/>
-                  <span class="text-dark">Ricardo Alvarado</span>
+                  <span class="text-dark">David Chavez</span>
                 </a>
                 <div class="dropdown-menu dropdown-menu-end">
                   <a class="dropdown-item" href="pages-profile.html"><i class="align-middle me-1"
@@ -308,15 +311,7 @@
                   <!--SideBar -->
 
                   <div class="dropdown-divider"></div>
-                  <a class="dropdown-item" href="Administrador_PestanaUsuarios.html"><i class="align-middle me-1"
-                                                                data-feather="users"></i> Usuarios</a>
-                  <a class="dropdown-item" href="Administrador_PestanaProveedores.html"><i class="align-middle me-1"
-                                                       data-feather="archive"></i> Proveedores</a>
-                  <a class="dropdown-item" href="Administrador_PestanaSitios.html"><i class="align-middle me-1"
-                                                       data-feather="server"></i> Sitios</a>
-                  <a class="dropdown-item" href="Administrador_PestanaEquipos.html"><i class="align-middle me-1"
-                                                       data-feather="database"></i> Equipos</a>
-                  <div class="dropdown-divider"></div>
+                  
                   <a class="dropdown-item" href="SesionCerradaExitosamente.html"><i class="align-middle me-1"
                                                        data-feather="log-out"></i>Cerrar sesión</a>
                 </div>
@@ -329,6 +324,60 @@
 
         <!--CONTENIDO DE LA PÁGINA (EMPIEZA CON EL MAIN CLASS CONTENT) : -->
         <!--<main class="content">-->
+            <main class="content">
+                <div class="container-fluid p-0">
+    
+                    <div class="mb-3">
+                        <h1 class="h3 d-inline align-middle">Crear nuevo Administrador</h1>
+                    </div>
+                    <div class="row">
+                        <div class="col-12 col-lg-6">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h5 class="card-title">Datos del Administrador</h5>
+                                    <form>
+                                        <div class="mb-3">
+                                            <label for="exampleInputPassword1" class="form-label">Nombre y Apellido</label>
+                                            <input type="text" class="form-control" id="exampleInputPassword1" required placeholder="Nombre y Apellido">
+                                          </div>
+                                          <div class="mb-3">
+                                            <label for="exampleInputEmail1" class="form-label">Correo</label>
+                                            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required placeholder="Correo">
+                                          </div>
+                                          <div class="mb-3">
+                                            <label for="exampleInputPassword1" class="form-label">Contraseña</label>
+                                            <input type="password" class="form-control" id="exampleInputPassword1" required placeholder="Contraseña">
+                                          </div>
+    
+    
+                                    </form>
+    
+                                </div>
+    
+                            </div>
+    
+                            <div class="card">
+                                <div class="card-header">
+                                    <h5 class="card-title mb-0">Profile Details</h5>
+                                </div>
+                                <div class="card-body text-center">
+                                    <img src="img/avatars/avatar-4.jpg" alt="Christina Mason" class="img-fluid rounded-circle mb-2" width="128" height="128" />
+    
+                                    <h5 class="card-title mb-0">Christina Mason</h5>
+                                    <div class="text-muted mb-2">Analista de Despliegue</div>
+                                    <br>
+                                </div>
+    
+                            </div>
+                        </div>
+    
+                    
+                    </div>
+    
+                </div>
+            </main>
+
+
 
         <!-- FINALIZACIÓN DEL CONTENIDO (TERMINA JUSTO ANTES DEL FOOTER) :-->
         <!-- <footer class="footer"> -->
@@ -341,7 +390,7 @@
               <div class="col-6 text-start">
                 <p class="mb-0">
                   <a class="text-muted" href="https://adminkit.io/" target="_blank"><strong>Springles</strong></a>
-                  - <a class="text-muted" href="https://adminkit.io/" target="_blank"><strong>Sección Administrador
+                  - <a class="text-muted" href="https://adminkit.io/" target="_blank"><strong>Sección SuperAdmin
                   </strong></a> &copy;
                 </p>
               </div>
