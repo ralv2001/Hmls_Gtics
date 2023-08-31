@@ -9,6 +9,9 @@
 	<meta name="author" content="AdminKit">
 	<meta name="keywords" content="adminkit, bootstrap, bootstrap 5, admin, dashboard, template, responsive, css, sass, html, theme, front-end, ui kit, web">
 	<style>
+		.underline-link {
+			text-decoration: underline;
+		}
 		.sidebar-item {
 			position: relative;
 		}
@@ -50,20 +53,54 @@
 
 				<ul class="sidebar-nav">
 
-					<li class="sidebar-item active">
-						<a class="sidebar-link" href="index.html">
-              <i class="align-middle" data-feather="sliders"></i> <span class="align-middle">Lista de sitios</span>
-            </a>
+					<li class="sidebar-item">
+						<a class="sidebar-link" data-bs-toggle="collapse" href="#collapseExample" role="button"
+						   aria-expanded="false" aria-controls="collapseExample">
+
+							<i class="align-middle" data-feather="sliders"></i> <span
+								class="align-middle">Lista de sitios</span>
+							<i data-feather="chevron-down" style="margin-left: auto;"></i>
+						</a>
+
+						<div class="collapse" id="collapseExample">
+							<ul class="sidebar-nav">
+								<li class="sidebar-item" style="padding: 0 0 0 2.5rem;">
+									<a class="sidebar-link" href="editaSitios.html">
+										<span class="align-middle">Editar sitio</span>
+									</a>
+								</li>
+								<li class="sidebar-item" style="padding: 0 0 0 2.5rem;">
+									<a class="sidebar-link" href="pages-profile.html">
+										<span class="align-middle">Agregar sitio</span>
+									</a>
+								</li>
+							</ul>
+						</div>
 					</li>
 
-					<li class="sidebar-item">
-						<a class="sidebar-link" href="pages-profile.html">
-              <i class="align-middle" data-feather="user"></i> <span class="align-middle">Lista de equipos</span>
-            </a>
-					<ul class="sub-menu">
-						<li><a href="#">Inventario de equipos</a></li>
-						<li><a href="#">Agregar equipos</a> </li>
-					</ul>
+					<li class="sidebar-item active">
+						<a class="sidebar-link" data-bs-toggle="collapse" href="#collapseExample1" role="button"
+						   aria-expanded="false" aria-controls="collapseExample">
+
+							<i class="align-middle" data-feather="sliders"></i> <span
+								class="align-middle">Lista de equipos</span>
+							<i data-feather="chevron-down" style="margin-left: auto;"></i>
+						</a>
+
+						<div class="collapse" id="collapseExample1">
+							<ul class="sidebar-nav">
+								<li class="sidebar-item" style="padding: 0 0 0 2.5rem;">
+									<a class="sidebar-link" href="listaEquiposInventario.html">
+										<span class="align-middle">Inventario de equipos</span>
+									</a>
+								</li>
+								<li class="sidebar-item" style="padding: 0 0 0 2.5rem;">
+									<a class="sidebar-link" href="listaEquiposAgregar.html">
+										<span class="align-middle">Agregar equipos</span>
+									</a>
+								</li>
+							</ul>
+						</div>
 					</li>
 
 					<li class="sidebar-item">
@@ -264,8 +301,21 @@
 
 				<div class="container-fluid p-0">
 
-					<div class="container text-center mt-1">
-						<h1 class="h3 mb-3"><strong>Lista de Equipos</strong></h1>
+					<div class="card-body">
+						<h1 class="h1"><strong>Lista de Equipos</strong></h1>
+					</div>
+					<div class="container py-2">
+						<!--Barra de busqueda-->
+						<div class="">
+							<div class="col-md-5 mx-3">
+								<div class="fw-light h5">Buscar equipos por tipo de equipo o marca</div>
+								<div class="input-group input-group-lg mb-3">
+									<input class="form-control border rounded-pill" type="search" placeholder="Buscar"
+										   id="example-search-input" >
+								</div>
+							</div>
+						</div>
+						<!--Barra de busqueda-->
 					</div>
 
 
@@ -285,7 +335,7 @@
 									</thead>
 									<tbody>
 										<tr>
-											<td class="d-none d-xl-table-cell">Router</td>
+											<td class="d-none d-xl-table-cell"><a href="detallesEquipo.html" class="underline-link">Router</a></td>
 											<td class="d-none d-xl-table-cell">196608</td>
 											<td class="d-none d-md-table-cell">Cisco</td>
 											<td class="d-none d-md-table-cell">AC-1400</td>
@@ -294,7 +344,7 @@
 
 										</tr>
 										<tr>
-											<td class="d-none d-xl-table-cell">Router</td>
+											<td class="d-none d-xl-table-cell"><a href="detallesEquipo.html" class="underline-link">Router</a></td>
 											<td class="d-none d-xl-table-cell">143251</td>
 											<td class="d-none d-md-table-cell">Cisco</td>
 											<td class="d-none d-md-table-cell">AC-1400</td>
@@ -302,7 +352,7 @@
 											<td class="d-none d-md-table-cell"><button class="btn btn-danger" onclick="showMessage()">Borrar equipo</button></td>
 										</tr>
 										<tr>
-											<td class="d-none d-xl-table-cell">Access Point</td>
+											<td class="d-none d-xl-table-cell"><a href="detallesEquipo.html" class="underline-link">Access Point</a></td>
 											<td class="d-none d-xl-table-cell">109761</td>
 											<td class="d-none d-md-table-cell">Cisco</td>
 											<td class="d-none d-md-table-cell">AC-1400</td>
@@ -310,7 +360,7 @@
 											<td class="d-none d-md-table-cell"><button class="btn btn-danger">Borrar equipo</button></td>
 										</tr>
 										<tr>
-											<td class="d-none d-xl-table-cell">Router</td>
+											<td class="d-none d-xl-table-cell"><a href="detallesEquipo.html" class="underline-link">Router</a></td>
 											<td class="d-none d-xl-table-cell">108721</td>
 											<td class="d-none d-md-table-cell">Cisco</td>
 											<td class="d-none d-md-table-cell">AC-1400</td>
@@ -318,7 +368,7 @@
 											<td class="d-none d-md-table-cell"><button class="btn btn-danger">Borrar equipo</button></td>
 										</tr>
 										<tr>
-											<td class="d-none d-xl-table-cell">Router</td>
+											<td class="d-none d-xl-table-cell"><a href="detallesEquipo.html" class="underline-link">Router</a></td>
 											<td class="d-none d-xl-table-cell">123046</td>
 											<td class="d-none d-md-table-cell">Huawei</td>
 											<td class="d-none d-md-table-cell">AC-1400</td>
@@ -326,7 +376,7 @@
 											<td class="d-none d-md-table-cell"><button class="btn btn-danger">Borrar equipo</button></td>
 										</tr>
 										<tr>
-											<td class="d-none d-xl-table-cell">Router</td>
+											<td class="d-none d-xl-table-cell"><a href="detallesEquipo.html" class="underline-link">Router</a></td>
 											<td class="d-none d-xl-table-cell">120973</td>
 											<td class="d-none d-md-table-cell">Cisco</td>
 											<td class="d-none d-md-table-cell">AC-1400</td>
@@ -334,7 +384,7 @@
 											<td class="d-none d-md-table-cell"><button class="btn btn-danger">Borrar equipo</button></td>
 										</tr>
 										<tr>
-											<td class="d-none d-xl-table-cell">Hub</td>
+											<td class="d-none d-xl-table-cell"><a href="detallesEquipo.html" class="underline-link">Hub</a></td>
 											<td class="d-none d-xl-table-cell">103317</td>
 											<td class="d-none d-md-table-cell">Cisco</td>
 											<td class="d-none d-md-table-cell">AC-1400</td>
@@ -342,7 +392,7 @@
 											<td class="d-none d-md-table-cell"><button class="btn btn-danger">Borrar equipo</button></td>
 										</tr>
 										<tr>
-											<td class="d-none d-xl-table-cell">Switch</td>
+											<td class="d-none d-xl-table-cell"><a href="detallesEquipo.html" class="underline-link">Switch</a></td>
 											<td class="d-none d-xl-table-cell">102156</td>
 											<td class="d-none d-md-table-cell">Cisco</td>
 											<td class="d-none d-md-table-cell">AC-1400</td>
