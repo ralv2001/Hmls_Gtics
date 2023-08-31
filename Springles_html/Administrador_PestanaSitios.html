@@ -18,9 +18,11 @@
         <title>AdminKit Demo - Bootstrap 5 Admin Template</title>
 
         <link href="css/app.css" rel="stylesheet">
+        <link href="css/estilosfinos.css" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
         <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+
 
     </head>
 
@@ -70,7 +72,7 @@
 
                         <!--DESPLEGABLE DE DASHBOARD (EJEMPLO)-->
 
-                        <li class="sidebar-item active">
+                        <li class="sidebar-item">
                             <a class="sidebar-link" href="Administrador_PestanaUsuarios.html">
                                 <i class="align-middle" data-feather="users"></i> <span class="align-middle">Usuarios</span>
                             </a>
@@ -142,7 +144,7 @@
                     <div class="navbar-collapse collapse">
                         <ul class="navbar-nav navbar-align">
                             <li class="nav-item dropdown">
-                                <a class="nav-icon dropdown-toggle" href="#" id="alertsDropdown" data-bs-toggle="dropdown">
+                                <a class="nav-icon custom-dropdown-toggle" href="#" id="alertsDropdown" data-bs-toggle="dropdown">
                                     <div class="position-relative">
                                         <i class="align-middle" data-feather="bell"></i>
                                         <span class="indicator">4</span>
@@ -212,7 +214,7 @@
                                 </div>
                             </li>
                             <li class="nav-item dropdown">
-                                <a class="nav-icon dropdown-toggle" href="#" id="messagesDropdown" data-bs-toggle="dropdown">
+                                <a class="nav-icon custom-dropdown-toggle" href="#" id="messagesDropdown" data-bs-toggle="dropdown">
                                     <div class="position-relative">
                                         <i class="align-middle" data-feather="message-square"></i>
                                     </div>
@@ -289,11 +291,11 @@
                                 </div>
                             </li>
                             <li class="nav-item dropdown">
-                                <a class="nav-icon dropdown-toggle d-inline-block d-sm-none" href="#" data-bs-toggle="dropdown">
+                                <a class="nav-icon custom-dropdown-toggle d-inline-block d-sm-none" href="#" data-bs-toggle="dropdown">
                                     <i class="align-middle" data-feather="settings"></i>
                                 </a>
 
-                                <a class="nav-link dropdown-toggle d-none d-sm-inline-block" href="#" data-bs-toggle="dropdown">
+                                <a class="nav-link custom-dropdown-toggle d-none d-sm-inline-block" href="#" data-bs-toggle="dropdown">
                                     <img src="img/avatars/avatar.jpg" class="avatar img-fluid rounded me-1" alt="Charles Hall"/>
                                     <span class="text-dark">Ricardo Alvarado</span>
                                 </a>
@@ -330,6 +332,165 @@
                 <!--CONTENIDO DE LA PÁGINA (EMPIEZA CON EL MAIN CLASS CONTENT) : -->
                 <!--<main class="content">-->
 
+                <main class="content">
+                    <section>
+                        <div class="card">
+                            <div class="card-body">
+                                <h2 class="mb-4">Lista de Sitios</h2> <!-- Título agregado -->
+
+                                <div class="d-flex justify-content-between align-items-center mb-3">
+                                    <div class="w-50 d-flex align-items-center">
+                                        <div class="mr-2 custom-flex-auto">
+                                            <div class="input-group">
+                                                <div class="input-group-prepend">
+                                                    <div class="input-group-text">
+                                                        <i data-feather="search" style="height: 20px;"></i>
+                                                    </div>
+                                                </div>
+                                                <input type="text" class="form-control form-control-lg" id="inlineFormInputGroup" placeholder="Buscar Sitio">
+                                            </div>
+                                        </div>
+                                        <button type="button" class="btn btn-primary btn-sm">
+                                            <i data-feather="list"></i>
+                                        </button>
+                                    </div>
+
+                                    <div>
+                                        <div>
+                                            <a href="Administrador_BaneadosProveedores.html" class="btn btn-light">Lista de baneados</a>
+                                            <a href="Administrador_CrearSitio.html" class="btn btn-primary">
+                                                <i data-feather="plus"></i> Crear sitio
+                                            </a>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                                <table class="table table-hover table-striped table-bordered table-responsive mt-3">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">N°</th>
+                                            <th scope="col">Foto de perfil</th>
+                                            <th scope="col">Nombre</th>
+                                            <th scope="col">Descripción</th>
+                                            <th scope="col">Acciones</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <th scope="row">1</th>
+                                            <td>
+                                                <div class="custom-image-container" style="background-image: url('img/iconosbarbaros/sitio1.jpeg');"></div>
+                                            </td>
+                                            <td>Sitio FTTH-PL</td>
+                                            <td class="text-limited tamano-tabla-slogan">Sitio Fiber to the Home en Pueblo Libre</td>
+                                            <td class="tamano-tabla-acciones">
+                                                <a href="Administrador_EditarSitios.html" class="btn btn-primary mr-2" data-toggle="tooltip" data-placement="top" title="Ver inventario">
+                                                    <i data-feather="settings"></i>
+                                                </a>
+                                                <button type="button" class="btn btn-danger" data-toggle="tooltip" data-placement="top" title="Eliminar sitio" onclick="confirmDesactivar()">
+                                                    <i data-feather="trash-2"></i>
+                                                </button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">2</th>
+                                            <td>
+                                                <div class="custom-image-container" style="background-image: url('img/iconosbarbaros/sitio2.jpeg');"></div>
+                                            </td>
+                                            <td>Sitio FTTH-SM</td>
+                                            <td class="text-limited tamano-tabla-slogan">Sitio Fiber to the Home en San Miguel</td>
+                                            <td class="tamano-tabla-acciones">
+                                                <a href="Administrador_EditarSitios.html" class="btn btn-primary mr-2" data-toggle="tooltip" data-placement="top" title="Ver inventario">
+                                                    <i data-feather="settings"></i>
+                                                </a>
+                                                <button type="button" class="btn btn-danger" data-toggle="tooltip" data-placement="top" title="Eliminar sitio" onclick="confirmDesactivar()">
+                                                    <i data-feather="trash-2"></i>
+                                                </button>
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <th scope="row">3</th>
+                                            <td>
+                                                <div class="custom-image-container" style="background-image: url('img/iconosbarbaros/sitio3.jpeg');"></div>
+                                            </td>
+                                            <td>Sitio TLF-PL</td>
+                                            <td class="text-limited tamano-tabla-slogan">Sitio de telefonía en Pueblo Libre</td>
+                                            <td class="tamano-tabla-acciones">
+                                                <a href="Administrador_EditarSitios.html" class="btn btn-primary mr-2" data-toggle="tooltip" data-placement="top" title="Ver inventario">
+                                                    <i data-feather="settings"></i>
+                                                </a>
+                                                <button type="button" class="btn btn-danger" data-toggle="tooltip" data-placement="top" title="Eliminar sitio" onclick="confirmDesactivar()">
+                                                    <i data-feather="trash-2"></i>
+                                                </button>
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <th scope="row">4</th>
+                                            <td>
+                                                <div class="custom-image-container" style="background-image: url('img/iconosbarbaros/sitio4.jpeg');"></div>
+                                            </td>
+                                            <td>Sitio TLF-SM</td>
+                                            <td class="text-limited tamano-tabla-slogan">Sitio de telefonía en San Miguel</td>
+                                            <td class="tamano-tabla-acciones">
+                                                <a href="Administrador_EditarSitios.html" class="btn btn-primary mr-2" data-toggle="tooltip" data-placement="top" title="Ver inventario">
+                                                    <i data-feather="settings"></i>
+                                                </a>
+                                                <button type="button" class="btn btn-danger" data-toggle="tooltip" data-placement="top" title="Eliminar sitio" onclick="confirmDesactivar()">
+                                                    <i data-feather="trash-2"></i>
+                                                </button>
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <th scope="row">5</th>
+                                            <td>
+                                                <div class="custom-image-container" style="background-image: url('img/iconosbarbaros/sitio5.jpeg');"></div>
+                                            </td>
+                                            <td>Sitio RADIO-SJM</td>
+                                            <td class="text-limited tamano-tabla-slogan">Sitio de Radio en San Juan de Miraflores</td>
+                                            <td class="tamano-tabla-acciones">
+                                                <a href="Administrador_EditarSitios.html" class="btn btn-primary mr-2" data-toggle="tooltip" data-placement="top" title="Ver inventario">
+                                                    <i data-feather="settings"></i>
+                                                </a>
+                                                <button type="button" class="btn btn-danger" data-toggle="tooltip" data-placement="top" title="Eliminar sitio" onclick="confirmDesactivar()">
+                                                    <i data-feather="trash-2"></i>
+                                                </button>
+                                            </td>
+                                        </tr>
+
+
+                                    </tbody>
+                                </table>
+                                <div class="d-flex justify-content-center">
+                                    <nav aria-label="Page navigation example">
+                                        <ul class="pagination">
+                                            <li class="page-item"><a class="page-link" href="#">
+                                                <i data-feather="arrow-left"></i>
+                                                Anterior</a></li>
+
+                                            <li class="page-item"><a class="page-link" href="#">1</a></li>
+                                            <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                            <li class="page-item"><a class="page-link" href="#">3</a></li>
+
+                                            <li class="page-item"><a class="page-link" href="#">
+                                                Siguiente <i data-feather="arrow-right"></i>
+                                            </a></li>
+
+
+                                        </ul>
+                                    </nav>
+                                </div>
+
+                            </div>
+                        </div>
+                    </section>
+                </main>
+
+
+
                 <!-- FINALIZACIÓN DEL CONTENIDO (TERMINA JUSTO ANTES DEL FOOTER) :-->
                 <!-- <footer class="footer"> -->
 
@@ -365,6 +526,16 @@
         </div>
 
         <script src="js/app.js"></script>
+
+        <script>
+            function confirmDesactivar() {
+                var confirmacion = confirm("¿Está seguro que desea eliminar a este sitio?");
+                if (confirmacion) {
+                    // Aquí puedes agregar la lógica para desactivar al proveedor
+                    alert("Sitio eliminado exitosamente.");
+                }
+            }
+        </script>
 
         <script>
             document.addEventListener("DOMContentLoaded", function () {
