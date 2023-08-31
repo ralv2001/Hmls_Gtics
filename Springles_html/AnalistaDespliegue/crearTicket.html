@@ -79,24 +79,39 @@
                     </div>
                 </li>
 
-                <li class="sidebar-item">
-                    <a class="sidebar-link" href="/Springles_html/pages-sign-in.html">
-                        <i class="align-middle" data-feather="monitor"></i> <span class="align-middle">Lista de Equipos</span>
+                <li class="sidebar-item ">
+                    <a class="sidebar-link" data-bs-toggle="collapse" href="#collapseExample2" role="button"
+                       aria-expanded="false" aria-controls="collapseExample2">
+
+                        <i class="align-middle" data-feather="monitor"></i> <span
+                            class="align-middle">Lista de equipos</span>
+                        <i data-feather="chevron-down" style="margin-left: auto;"></i>
                     </a>
-                    <ul class="sub-menu">
-                        <li><a href="#">Inventario de equipos</a></li>
-                        <li><a href="#">Agregar equipos</a> </li>
-                    </ul>
+
+                    <div class="collapse" id="collapseExample2">
+                        <ul class="sidebar-nav">
+                            <li class="sidebar-item" style="padding: 0 0 0 2.5rem;">
+                                <a class="sidebar-link" href="listaEquiposInventario.html">
+                                    <span class="align-middle">Inventario de equipos</span>
+                                </a>
+                            </li>
+                            <li class="sidebar-item" style="padding: 0 0 0 2.5rem;">
+                                <a class="sidebar-link" href="listaEquiposAgregar.html">
+                                    <span class="align-middle">Agregar equipos</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
                 </li>
 
                 <li class="sidebar-item">
-                    <a class="sidebar-link" href="/Hmls_Gtics/Springles_html/AnalistaDespliegue/listaTickets.html">
+                    <a class="sidebar-link" href="listaTickets.html">
                         <i class="align-middle" data-feather="file"></i> <span class="align-middle">Lista de Tickets</span>
                     </a>
                 </li>
 
                 <li class="sidebar-item">
-                    <a class="sidebar-link" href="/Springles_html/pages-sign-up.html">
+                    <a class="sidebar-link" href="listaMapas.html">
                         <i class="align-middle" data-feather="map"></i> <span class="align-middle">Lista de Mapas</span>
                     </a>
                 </li>
@@ -109,7 +124,7 @@
 
 
                 <li class="sidebar-item active">
-                    <a class="sidebar-link" href="/Hmls_Gtics/Springles_html/AnalistaDespliegue/crearTicket.html">
+                    <a class="sidebar-link" href="crearTicket.html">
                         <i class="align-middle" data-feather="edit-2"></i> <span class="align-middle">Crear Ticket</span>
                     </a>
                 </li>
@@ -275,12 +290,7 @@
                             <img src="/Springles_html/img/avatars/avatar-4.jpg" class="avatar img-fluid rounded me-1" alt="Christina Mason" /> <span class="text-dark">Christina Mason</span>
                         </a>
                         <div class="dropdown-menu dropdown-menu-end">
-                            <a class="dropdown-item" href="/Springles_html/pages-profile.html"><i class="align-middle me-1" data-feather="user"></i> Profile</a>
-                            <a class="dropdown-item" href="#"><i class="align-middle me-1" data-feather="pie-chart"></i> Analytics</a>
-                            <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="/Springles_html/index.html"><i class="align-middle me-1" data-feather="settings"></i> Settings & Privacy</a>
-                            <a class="dropdown-item" href="#"><i class="align-middle me-1" data-feather="help-circle"></i> Help Center</a>
-                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="perfilAnalista.html"><i class="align-middle me-1" data-feather="user"></i> Profile</a>
                             <a class="dropdown-item" href="#">Log out</a>
                         </div>
                     </li>
@@ -328,7 +338,7 @@
                                 <h5 class="card-title mb-0">Christina Mason</h5>
                                 <div class="text-muted mb-2">Analista de Despliegue</div>
                                 <br>
-                                <a href="/Hmls_Gtics/Springles_html/AnalistaDespliegue/verTicket.html" type="submit" class="btn btn-primary">Crear</a>
+                                <a href="verTicket.html" type="submit" class="btn btn-primary">Crear</a>
                             </div>
 
                         </div>
