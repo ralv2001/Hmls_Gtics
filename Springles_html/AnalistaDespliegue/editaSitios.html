@@ -10,10 +10,10 @@
     <meta name="keywords"
           content="adminkit, bootstrap, bootstrap 5, admin, dashboard, template, responsive, css, sass, html, theme, front-end, ui kit, web">
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link rel="shortcut icon" href="/Springles_html/img/icons/icon-48x48.png"/>
+    <link rel="shortcut icon" href="../img/icons/icon-48x48.png"/>
 
     <link rel="canonical" href="https://demo-basic.adminkit.io/"/>
-
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
     <title>Analista</title>
     <link href="../css/searchBar.css" rel="stylesheet">
     <link href="../css/app.css" rel="stylesheet">
@@ -42,12 +42,12 @@
                     <div class="collapse show" id="collapseExample">
                         <ul class="sidebar-nav">
                             <li class="sidebar-item active" style="padding: 0 0 0 2.5rem;">
-                                <a class="sidebar-link" href="pages-profile.html">
+                                <a class="sidebar-link" href="editaSitios.html">
                                     <span class="align-middle">Editar sitio</span>
                                 </a>
                             </li>
                             <li class="sidebar-item" style="padding: 0 0 0 2.5rem;">
-                                <a class="sidebar-link" href="pages-profile.html">
+                                <a class="sidebar-link" href="agregaSitios.html">
                                     <span class="align-middle">Agregar sitio</span>
                                 </a>
                             </li>
@@ -287,7 +287,17 @@
         <main class="content">
             <div class="container-fluid p-0">
                 <div class="card-body">
-                    <h1 class="h1"><strong>Editar Sitio</strong></h1>
+                    <div class="row">
+                        <div class="d-flex justify-content-end">
+                            <nav aria-label="breadcrumb">
+                                <ol class="breadcrumb">
+                                    <li class="breadcrumb-item"><a href="listaSitios.html">Lista de sitios</a></li>
+                                    <li class="breadcrumb-item active" aria-current="page">Editar sitios</li>
+                                </ol>
+                            </nav>
+                        </div>
+                        <h1 class="h1 mb-3"><strong>Editar Sitio</strong></h1>
+                    </div>
                 </div>
 
 
@@ -600,7 +610,7 @@
         });
     });
 </script>
-
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
 </body>
 
 </html>
