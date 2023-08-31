@@ -67,12 +67,12 @@
                     <div class="collapse" id="collapseExample">
                         <ul class="sidebar-nav">
                             <li class="sidebar-item" style="padding: 0 0 0 2.5rem;">
-                                <a class="sidebar-link" href="pages-profile.html">
+                                <a class="sidebar-link" href="perfilAnalista.html">
                                     <span class="align-middle">Editar sitio</span>
                                 </a>
                             </li>
                             <li class="sidebar-item" style="padding: 0 0 0 2.5rem;">
-                                <a class="sidebar-link" href="pages-profile.html">
+                                <a class="sidebar-link" href="perfilAnalista.html">
                                     <span class="align-middle">Agregar sitio</span>
                                 </a>
                             </li>
@@ -80,24 +80,39 @@
                     </div>
                 </li>
 
-                <li class="sidebar-item">
-                    <a class="sidebar-link" href="/Springles_html/pages-sign-in.html">
-                        <i class="align-middle" data-feather="monitor"></i> <span class="align-middle">Lista de Equipos</span>
+                <li class="sidebar-item ">
+                    <a class="sidebar-link" data-bs-toggle="collapse" href="#collapseExample2" role="button"
+                       aria-expanded="false" aria-controls="collapseExample2">
+
+                        <i class="align-middle" data-feather="monitor"></i> <span
+                            class="align-middle">Lista de equipos</span>
+                        <i data-feather="chevron-down" style="margin-left: auto;"></i>
                     </a>
-                    <ul class="sub-menu">
-                        <li><a href="#">Inventario de equipos</a></li>
-                        <li><a href="#">Agregar equipos</a> </li>
-                    </ul>
+
+                    <div class="collapse" id="collapseExample2">
+                        <ul class="sidebar-nav">
+                            <li class="sidebar-item" style="padding: 0 0 0 2.5rem;">
+                                <a class="sidebar-link" href="listaEquiposInventario.html">
+                                    <span class="align-middle">Inventario de equipos</span>
+                                </a>
+                            </li>
+                            <li class="sidebar-item" style="padding: 0 0 0 2.5rem;">
+                                <a class="sidebar-link" href="listaEquiposAgregar.html">
+                                    <span class="align-middle">Agregar equipos</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
                 </li>
 
                 <li class="sidebar-item">
-                    <a class="sidebar-link" href="/Hmls_Gtics/Springles_html/AnalistaDespliegue/listaTickets.html">
+                    <a class="sidebar-link" href="listaTickets.html">
                         <i class="align-middle" data-feather="file"></i> <span class="align-middle">Lista de Tickets</span>
                     </a>
                 </li>
 
                 <li class="sidebar-item">
-                    <a class="sidebar-link" href="/Springles_html/pages-sign-up.html">
+                    <a class="sidebar-link" href="listaMapas.html">
                         <i class="align-middle" data-feather="map"></i> <span class="align-middle">Lista de Mapas</span>
                     </a>
                 </li>
@@ -110,7 +125,7 @@
 
 
                 <li class="sidebar-item">
-                    <a class="sidebar-link" href="/Hmls_Gtics/Springles_html/AnalistaDespliegue/crearTicket.html">
+                    <a class="sidebar-link" href="crearTicket.html">
                         <i class="align-middle" data-feather="edit-2"></i> <span class="align-middle">Crear Ticket</span>
                     </a>
                 </li>
@@ -275,12 +290,7 @@
                             <img src="/Springles_html/img/avatars/avatar-4.jpg" class="avatar img-fluid rounded me-1" alt="Christina Mason" /> <span class="text-dark">Christina Mason</span>
                         </a>
                         <div class="dropdown-menu dropdown-menu-end">
-                            <a class="dropdown-item" href="/Springles_html/pages-profile.html"><i class="align-middle me-1" data-feather="user"></i> Profile</a>
-                            <a class="dropdown-item" href="#"><i class="align-middle me-1" data-feather="pie-chart"></i> Analytics</a>
-                            <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="/Springles_html/index.html"><i class="align-middle me-1" data-feather="settings"></i> Settings & Privacy</a>
-                            <a class="dropdown-item" href="#"><i class="align-middle me-1" data-feather="help-circle"></i> Help Center</a>
-                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="perfilAnalista.html"><i class="align-middle me-1" data-feather="user"></i> Profile</a>
                             <a class="dropdown-item" href="#">Log out</a>
                         </div>
                     </li>
@@ -321,11 +331,16 @@
                                 <h5 class="card-title mb-0">Profile Details</h5>
                             </div>
                             <div class="card-body text-center">
-                                <img src="/Springles_html/img/avatars/avatar-4.jpg" alt="Christina Mason" class="img-fluid rounded-circle mb-2" width="128" height="128" />
-
+                                <img src="/Springles_html/img/avatars/avatar-4.jpg" alt="Christina Mason" class="img-fluid rounded-circle mb-2" width="81" height="81" />
                                 <h5 class="card-title mb-0">Christina Mason</h5>
                                 <div class="text-muted mb-2">Analista de Despliegue</div>
-                                <br>
+                                <a href="verformulario.html" type="submit" class="btn btn-primary">Ver Formulario</a>
+                                <a href="bitacoraTicket.html" type="submit" class="btn btn-primary">Bitacora del Ticket</a>
+                                <br><br>
+                                <a href="tecnicosTicket.html" type="submit" class="btn btn-primary">Tecnicos Encargados</a>
+                                <button class="btn btn-danger" onclick="showConfirmation()">Finalizar Ticket</button>
+
+
                             </div>
 
                         </div>
@@ -472,6 +487,89 @@
             // Previene la acción predeterminada solo si el botón no es "Pagar"
             event.preventDefault();
         }
+    });
+</script>
+
+<script>
+    function showConfirmation() {
+        var result = window.confirm("¿Estás seguro de finalizar el ticket?");
+        if (result) {
+            // Aquí puedes realizar la acción de borrado
+            alert("¡¡¡¡¡¡Ticket Finalizado con exito!!!!!.");
+        } else {
+            alert("Cancelaste el borrado.");
+        }
+    }
+    function showMessage() {
+        alert("El equipo se encuentra en uso actualmente, no puede borrar este equipo.");
+    }
+    document.addEventListener("DOMContentLoaded", function() {
+        var ctx = document.getElementById("chartjs-dashboard-line").getContext("2d");
+        var gradient = ctx.createLinearGradient(0, 0, 0, 225);
+        gradient.addColorStop(0, "rgba(215, 227, 244, 1)");
+        gradient.addColorStop(1, "rgba(215, 227, 244, 0)");
+        // Line chart
+        new Chart(document.getElementById("chartjs-dashboard-line"), {
+            type: "line",
+            data: {
+                labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+                datasets: [{
+                    label: "Sales ($)",
+                    fill: true,
+                    backgroundColor: gradient,
+                    borderColor: window.theme.primary,
+                    data: [
+                        2115,
+                        1562,
+                        1584,
+                        1892,
+                        1587,
+                        1923,
+                        2566,
+                        2448,
+                        2805,
+                        3438,
+                        2917,
+                        3327
+                    ]
+                }]
+            },
+            options: {
+                maintainAspectRatio: false,
+                legend: {
+                    display: false
+                },
+                tooltips: {
+                    intersect: false
+                },
+                hover: {
+                    intersect: true
+                },
+                plugins: {
+                    filler: {
+                        propagate: false
+                    }
+                },
+                scales: {
+                    xAxes: [{
+                        reverse: true,
+                        gridLines: {
+                            color: "rgba(0,0,0,0.0)"
+                        }
+                    }],
+                    yAxes: [{
+                        ticks: {
+                            stepSize: 1000
+                        },
+                        display: true,
+                        borderDash: [3, 3],
+                        gridLines: {
+                            color: "rgba(0,0,0,0.0)"
+                        }
+                    }]
+                }
+            }
+        });
     });
 </script>
 </body>
