@@ -70,14 +70,14 @@
 
                         <!--DESPLEGABLE DE DASHBOARD (EJEMPLO)-->
 
-                        <li class="sidebar-item active">
-                            <a class="sidebar-link" href="Administrador_PestanaUsuarios.html">
+                        <li class="sidebar-item ">
+                            <a class="sidebar-link" href="indexSupervisor.html">
                                 <i class="align-middle" data-feather="layers"></i> <span class="align-middle">Tickets</span>
                             </a>
                         </li>
 
-                        <li class="sidebar-item">
-                            <a class="sidebar-link" href="Administrador_PestanaProveedores.html">
+                        <li class="sidebar-item active">
+                            <a class="sidebar-link" href="verValidaciones.html">
                                 <i class="align-middle" data-feather="activity"></i> <span class="align-middle">Validacion</span>
                             </a>
                         </li>
@@ -93,7 +93,7 @@
                         </li>
 
                         <li class="sidebar-item">
-                            <a class="sidebar-link" href="pages-profile.html">
+                            <a class="sidebar-link" href="verPerfil.html">
                               <i class="align-middle" data-feather="settings"></i> <span class="align-middle">Editar perfil</span>
                             </a>
 
@@ -106,13 +106,7 @@
                                 <i class="align-middle" data-feather="log-out"></i> <span class="align-middle">Cerrar Sesión</span>
                             </a>
                         </li>
-
-
-
-
                     </ul>
-
-                    
                 </div>
             </nav>
             <!--SideBar -->
@@ -313,152 +307,173 @@
 
                 <!--CONTENIDO DE LA PÁGINA (EMPIEZA CON EL MAIN CLASS CONTENT) : -->
                 <!--<main class="content">-->
+                
                     <main class="content">
                         <a href="indexSupervisor.html" class="btn btn-warning mb-2"><i class="align-middle" data-feather="chevron-left"></i> Regresar</a>
-
-                        <div class="col-md-1">
-                          <h1 class="h3 mb-3"><strong>Bitacora</strong></h1>
-                        </div>
-                        <select class="form-select" aria-label="Default select example">
-                          <option selected>Ticket XX</option>
-                          <option value="1">Foro Ticket 1</option>
-                          <option value="2">Foro Ticket 2</option>
-                          <option value="3">Foro Ticket 3</option>
-                        </select>
-                  
-                        <div class="container-fluid p-0">
-                  
-                          <br>
-                          <div class="row">
-                            <div class="col-12 col-lg-12 col-xxl-12 d-flex">
-                              <div class="card flex-fill">
-                                <div class="col-md-8 col-xl-12">
-                                  <div class="card">
-                                    <div class="card-header">
-                  
-                                      <h5 class="card-title mb-0">Actividades</h5>
-                                    </div>
-                                    <div class="card-body h-100">
-                  
-                                      <div class="d-flex align-items-start">
-                                        <img src="../img/avatars/avatar-5.jpg" width="36" height="36" class="rounded-circle me-2" alt="Vanessa Tucker">
-                                        <div class="flex-grow-1">
-                                          <small class="float-end text-navy">5m ago</small>
-                                          <strong>Vanessa Tucker</strong> started following <strong>Christina Mason</strong><br />
-                                          <small class="text-muted">Today 7:51 pm</small><br />
-                  
-                                        </div>
-                                      </div>
-                  
-                                      <hr />
-                                      <div class="d-flex align-items-start">
-                                        <img src="../img/avatars/avatar.jpg" width="36" height="36" class="rounded-circle me-2" alt="Charles Hall">
-                                        <div class="flex-grow-1">
-                                          <small class="float-end text-navy">30m ago</small>
-                                          <strong>Charles Hall</strong> posted something on <strong>Christina Mason</strong>'s timeline<br />
-                                          <small class="text-muted">Today 7:21 pm</small>
-                  
-                                          <div class="border text-sm text-muted p-2 mt-1">
-                                            Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus
-                                            pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante.
-                                          </div>
-                  
-                                          <a href="#" class="btn btn-sm btn-danger mt-1"><i class="feather-sm" data-feather="heart"></i> Like</a>
-                                        </div>
-                                      </div>
-                  
-                                      <hr />
-                                      <div class="d-flex align-items-start">
-                                        <img src="../img/avatars/avatar-4.jpg" width="36" height="36" class="rounded-circle me-2" alt="Christina Mason">
-                                        <div class="flex-grow-1">
-                                          <small class="float-end text-navy">1h ago</small>
-                                          <strong>Christina Mason</strong> posted a new blog<br />
-                  
-                                          <small class="text-muted">Today 6:35 pm</small>
-                                        </div>
-                                      </div>
-                  
-                                      <hr />
-                                      <div class="d-flex align-items-start">
-                                        <img src="../img/avatars/avatar-2.jpg" width="36" height="36" class="rounded-circle me-2" alt="William Harris">
-                                        <div class="flex-grow-1">
-                                          <small class="float-end text-navy">3h ago</small>
-                                          <strong>William Harris</strong> posted two photos on <strong>Christina Mason</strong>'s timeline<br />
-                                          <small class="text-muted">Today 5:12 pm</small>
-                  
-                                          <div class="row g-0 mt-1">
-                                            <div class="col-6 col-md-4 col-lg-4 col-xl-3">
-                                              <img src="../img/photos/unsplash-1.jpg" class="img-fluid pe-2" alt="Unsplash">
-                                            </div>
-                                            <div class="col-6 col-md-4 col-lg-4 col-xl-3">
-                                              <img src="../img/photos/unsplash-2.jpg" class="img-fluid pe-2" alt="Unsplash">
-                                            </div>
-                                          </div>
-                  
-                                          <a href="#" class="btn btn-sm btn-danger mt-1"><i class="feather-sm" data-feather="heart"></i> Like</a>
-                                        </div>
-                                      </div>
-                  
-                                      <hr />
-                                      <div class="d-flex align-items-start">
-                                        <img src="../img/avatars/avatar-2.jpg" width="36" height="36" class="rounded-circle me-2" alt="William Harris">
-                                        <div class="flex-grow-1">
-                                          <small class="float-end text-navy">1d ago</small>
-                                          <strong>William Harris</strong> started following <strong>Christina Mason</strong><br />
-                                          <small class="text-muted">Yesterday 3:12 pm</small>
-                  
-                                          <div class="d-flex align-items-start mt-1">
-                                            <a class="pe-3" href="#">
-                                              <img src="../img/avatars/avatar-4.jpg" width="36" height="36" class="rounded-circle me-2" alt="Christina Mason">
-                                            </a>
-                                            <div class="flex-grow-1">
-                                              <div class="border text-sm text-muted p-2 mt-1">
-                                                Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus.
-                                              </div>
-                                            </div>
-                                          </div>
-                                        </div>
-                                      </div>
-                  
-                                      <hr />
-                                      <div class="d-flex align-items-start">
-                                        <img src="../img/avatars/avatar-4.jpg" width="36" height="36" class="rounded-circle me-2" alt="Christina Mason">
-                                        <div class="flex-grow-1">
-                                          <small class="float-end text-navy">1d ago</small>
-                                          <strong>Christina Mason</strong> posted a new blog<br />
-                                          <small class="text-muted">Yesterday 2:43 pm</small>
-                                        </div>
-                                      </div>
-                  
-                                      <hr />
-                                      <div class="d-flex align-items-start">
-                                        <img src="../img/avatars/avatar.jpg" width="36" height="36" class="rounded-circle me-2" alt="Charles Hall">
-                                        <div class="flex-grow-1">
-                                          <small class="float-end text-navy">1d ago</small>
-                                          <strong>Charles Hall</strong> started following <strong>Christina Mason</strong><br />
-                                          <small class="text-muted">Yesterdag 1:51 pm</small>
-                                        </div>
-                                      </div>
-                  
-                                      <hr />
-                                      <div class="d-grid">
-                                        <form>
-                                          <div class="input-group mb-3">
-                                            <input type="text" class="form-control" placeholder="Escribe un comentario" aria-label="Recipient's username" aria-describedby="button-addon2">
-                                            <button class="btn btn-outline-secondary" type="button" id="button-addon2">Enviar</button>
-                                          </div>
-                                        </form>
-                                      </div>
-                                    </div>
-                                  </div>
+                        <div class="container">
+                            <div class="row">
+                                <div class="col">
+                                    <h1 class="h3 mb-3">
+                                        <strong>Lista de formularios</strong>
+                                    </h1>
+                                    
                                 </div>
-                              </div>
+                                
                             </div>
-                  
-                          </div>
-                  
                         </div>
-                      </main>
+                        
+                        <div class="container-fluid p-0">
+                            
+                            <div class="row">
+                                <div class="col-12 col-lg-12 col-xxl-9 d-flex">
+                                    <div class="card flex-fill">
+                                        <div class="card-header">
+        
+                                            <h5 class="card-title mb-0">Detalles de los formularios</h5>
+                                        </div>
+                                        <table class="table table-hover my-0">
+                                            <thead>
+                                                <tr>
+                                                    
+                                                    <th class="d-none d-xl-table-cell">ID</th>
+                                                    <th class="d-none d-xl-table-cell">Cuadrilla</th>
+                                                    <th class="d-none d-xl-table-cell">Lider</th>
+                                                    <th class="d-none d-xl-table-cell">Departamento</th>
+                                                    <th class="d-none d-xl-table-cell">Provincia</th>
+                                                    <th class="d-none d-xl-table-cell">Distrito</th>
+                                                    <th class="d-none d-xl-table-cell">Empresa</th>
+                                                    <th class="d-none d-xl-table-cell">Estado</th>
+                                                    <th class="d-none d-xl-table-cell">Inspeccionar</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td class="d-none d-xl-table-cell">XX</td>
+                                                    <td class="d-none d-xl-table-cell">3X4Z</td>
+                                                    <td class="d-none d-xl-table-cell">Willy Huallpa</td>
+                                                    <td class="d-none d-xl-table-cell">Lima</td>
+                                                    <td class="d-none d-xl-table-cell">Lima</td>
+                                                    <td class="d-none d-xl-table-cell">San Juan de Lurigancho</td>
+                                                    <td class="d-none d-xl-table-cell">Movistar</td>
+                                                    <td class="d-none d-xl-table-cell"><span class="badge bg-danger">Sin validar</span></td>
+                                                    <td class="d-none d-xl-table-cell">
+                                                        <button type="button" class="btn btn-info" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                                            <i class="align-middle" data-feather="eye"> </i>
+                                                          </button>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="d-none d-xl-table-cell">XX</td>
+                                                    <td class="d-none d-xl-table-cell">3X4Z</td>
+                                                    <td class="d-none d-xl-table-cell">Willy Huallpa</td>
+                                                    <td class="d-none d-xl-table-cell">Lima</td>
+                                                    <td class="d-none d-xl-table-cell">Lima</td>
+                                                    <td class="d-none d-xl-table-cell">San Juan de Lurigancho</td>
+                                                    <td class="d-none d-xl-table-cell">Movistar</td>
+                                                    <td class="d-none d-xl-table-cell"><span class="badge bg-danger">Sin validar</span></td>
+                                                    <td class="d-none d-xl-table-cell">
+                                                        <button type="button" class="btn btn-info" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                                            <i class="align-middle" data-feather="eye"> </i>
+                                                          </button>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="d-none d-xl-table-cell">XX</td>
+                                                    <td class="d-none d-xl-table-cell">3X4Z</td>
+                                                    <td class="d-none d-xl-table-cell">Willy Huallpa</td>
+                                                    <td class="d-none d-xl-table-cell">Lima</td>
+                                                    <td class="d-none d-xl-table-cell">Lima</td>
+                                                    <td class="d-none d-xl-table-cell">San Juan de Lurigancho</td>
+                                                    <td class="d-none d-xl-table-cell">Movistar</td>
+                                                    <td class="d-none d-xl-table-cell"><span class="badge bg-danger">Sin validar</span></td>
+                                                    <td class="d-none d-xl-table-cell">
+                                                        <button type="button" class="btn btn-info" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                                            <i class="align-middle" data-feather="eye"> </i>
+                                                          </button>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="d-none d-xl-table-cell">XX</td>
+                                                    <td class="d-none d-xl-table-cell">3X4Z</td>
+                                                    <td class="d-none d-xl-table-cell">Willy Huallpa</td>
+                                                    <td class="d-none d-xl-table-cell">Lima</td>
+                                                    <td class="d-none d-xl-table-cell">Lima</td>
+                                                    <td class="d-none d-xl-table-cell">San Juan de Lurigancho</td>
+                                                    <td class="d-none d-xl-table-cell">Movistar</td>
+                                                    <td class="d-none d-xl-table-cell"><span class="badge bg-danger">Sin validar</span></td>
+                                                    <td class="d-none d-xl-table-cell">
+                                                        <button type="button" class="btn btn-info" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                                            <i class="align-middle" data-feather="eye"> </i>
+                                                          </button>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="d-none d-xl-table-cell">XX</td>
+                                                    <td class="d-none d-xl-table-cell">3X4Z</td>
+                                                    <td class="d-none d-xl-table-cell">Willy Huallpa</td>
+                                                    <td class="d-none d-xl-table-cell">Lima</td>
+                                                    <td class="d-none d-xl-table-cell">Lima</td>
+                                                    <td class="d-none d-xl-table-cell">San Juan de Lurigancho</td>
+                                                    <td class="d-none d-xl-table-cell">Movistar</td>
+                                                    <td class="d-none d-xl-table-cell"><span class="badge bg-success">Validado</span></td>
+                                                    <td class="d-none d-xl-table-cell">
+                                                        <button type="button" class="btn btn-info" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                                            <i class="align-middle" data-feather="eye"> </i>
+                                                          </button>
+                                                    </td>
+                                                </tr>
+                                                
+                                                
+                                                <!-- Modal -->
+                                                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                                    <div class="modal-dialog">
+                                                    <div class="modal-content">
+                                                        <div class="modal-header">
+                                                        <h5 class="modal-title" id="exampleModalLabel">Formulario 5MK7</h5>
+                                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                        </div>
+                                                        <div class="modal-body">
+                                                            <form>
+                                                                <fieldset disabled>
+                                                                  <div class="mb-3">
+                                                                    <label for="disabledTextInput" class="form-label">Disabled input</label>
+                                                                    <input type="text" id="disabledTextInput" class="form-control" placeholder="Disabled input">
+                                                                  </div>
+                                                                  <div class="mb-3">
+                                                                    <label for="disabledTextInput" class="form-label">Disabled input</label>
+                                                                    <input type="text" id="disabledTextInput" class="form-control" placeholder="Disabled input">
+                                                                  </div>
+                                                                  <div class="mb-3">
+                                                                    <label for="disabledTextInput" class="form-label">Disabled input</label>
+                                                                    <input type="text" id="disabledTextInput" class="form-control" placeholder="Disabled input">
+                                                                  </div>
+                                                                  <div class="mb-3">
+                                                                    <label for="disabledTextInput" class="form-label">Disabled input</label>
+                                                                    <input type="text" id="disabledTextInput" class="form-control" placeholder="Disabled input">
+                                                                  </div>
+                                                                  <div class="mb-3">
+                                                                    <label for="disabledTextInput" class="form-label">Disabled input</label>
+                                                                    <input type="text" id="disabledTextInput" class="form-control" placeholder="Disabled input">
+                                                                  </div>
+                                                            
+                                                                </fieldset>
+                                                              </form>  
+                                                              <div class="modal-footer">
+                                                                <button type="button" class="btn btn-info" data-bs-dismiss="modal">Validar</button>
+                                                                
+                                                                <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cerrar</button>
+                                                              </div>                                                                  
+                                                        </div>
+                                                    </div>
+                                                    </div>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                        
+                            </div>
+                        </div>
+                    </main>
 
 
                 <!-- FINALIZACIÓN DEL CONTENIDO (TERMINA JUSTO ANTES DEL FOOTER) :-->
