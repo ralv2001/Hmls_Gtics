@@ -74,7 +74,7 @@
             <!--DESPLEGABLE DE DASHBOARD (EJEMPLO)-->
 
             <!--Desplegable Usuarios-->
-            <li class="sidebar-item">
+            <li class="sidebar-item active">
               <a class="sidebar-link" data-bs-toggle="collapse" href="#collapseUsuarios" role="button"
                  aria-expanded="false" aria-controls="collapseUsuarios">
 
@@ -106,7 +106,7 @@
             <!--Desplegable Usuarios-->
 
             <!--Desplegable Proveedores-->
-            <li class="sidebar-item active">
+            <li class="sidebar-item">
               <a class="sidebar-link" data-bs-toggle="collapse" href="#collapseProveedores" role="button"
                  aria-expanded="false" aria-controls="collapseProveedores">
 
@@ -435,7 +435,7 @@
           <section>
             <div class="card">
               <div class="card-body">
-                <h2 class="mb-4">Lista de Proveedores Baneados</h2> <!-- Título agregado -->
+                <h2 class="mb-4">Lista de Usuarios Baneados</h2> <!-- Título agregado -->
 
                 <div class="d-flex justify-content-between align-items-center mb-3">
                   <div class="w-50 d-flex align-items-center">
@@ -456,7 +456,7 @@
 
                   <div>
                     <div>
-                      <a href="Administrador_PestanaProveedores.html" class="btn btn-light">Lista de Proveedores</a>
+                      <a href="Administrador_PestanaUsuarios.html" class="btn btn-light">Lista de Usuarios</a>
                     </div>
                   </div>
 
@@ -468,7 +468,7 @@
                       <th scope="col" class="col-n">N°</th>
                       <th scope="col" class="col-foto">Foto de perfil</th>
                       <th scope="col" class="col-nombre">Nombre</th>
-                      <th scope="col" class="col-rango">Slogan</th>
+                      <th scope="col" class="col-rango">Rango</th>
                       <th scope="col" class="col-acciones">Acciones</th>
                     </tr>
                   </thead>
@@ -476,12 +476,12 @@
                     <tr>
                       <th scope="row">1</th>
                       <td class="centered-content">
-                        <div class="custom-image-container" style="background-image: url('img/iconosbarbaros/choristar.jpeg');"></div>
+                        <div class="custom-image-container" style="background-image: url('img/iconosbarbaros/rosamelano.jpeg');"></div>
                       </td>
-                      <td>Choristar</td>
-                      <td class="text-limited tamano-tabla-slogan">"Compartida la vida es menos"</td>
+                      <td>Rosa Melano</td>
+                      <td class="text-limited tamano-tabla-slogan">Analista</td>
                       <td class="tamano-tabla-acciones">
-                        <a class="btn btn-success mr-2" data-toggle="tooltip" data-placement="top" title="Desbanear proveedor" onclick="confirmDesbanear();">
+                        <a class="btn btn-success mr-2" data-toggle="tooltip" data-placement="top" title="Desbanear usuario" onclick="confirmDesbanear();">
                           <i data-feather="refresh-ccw"></i>
                         </a>
                       </td>
@@ -489,12 +489,12 @@
                     <tr>
                       <th scope="row">2</th>
                       <td class="centered-content">
-                        <div class="custom-image-container" style="background-image: url('img/iconosbarbaros/clarobasura.jpeg');"></div>
+                        <div class="custom-image-container" style="background-image: url('img/iconosbarbaros/elvergalarga.jpg');"></div>
                       </td>
-                      <td>Clarín</td>
-                      <td class="text-limited tamano-tabla-slogan">"Tú vas al último"</td>
+                      <td>Elver Galarga</td>
+                      <td class="text-limited tamano-tabla-slogan">Técnico</td>
                       <td class="tamano-tabla-acciones">
-                        <a class="btn btn-success mr-2" data-toggle="tooltip" data-placement="top" title="Desbanear proveedor" onclick="confirmDesbanear();">
+                        <a class="btn btn-success mr-2" data-toggle="tooltip" data-placement="top" title="Desbanear usuario" onclick="confirmDesbanear();">
                           <i data-feather="refresh-ccw"></i>
                         </a>
                       </td>
@@ -503,12 +503,12 @@
                     <tr>
                       <th scope="row">3</th>
                       <td class="centered-content">
-                        <div class="custom-image-container" style="background-image: url('img/iconosbarbaros/entel-peru.jpg');"></div>
+                        <div class="custom-image-container" style="background-image: url('img/iconosbarbaros/benitocamelo.jpeg');"></div>
                       </td>
-                      <td>Enel</td>
-                      <td class="text-limited tamano-tabla-slogan">"No vivas"</td>
+                      <td>Benito Camelo</td>
+                      <td class="text-limited tamano-tabla-slogan">Supervisor</td>
                       <td class="tamano-tabla-acciones">
-                        <a class="btn btn-success mr-2" data-toggle="tooltip" data-placement="top" title="Desbanear proveedor" onclick="confirmDesbanear();">
+                        <a class="btn btn-success mr-2" data-toggle="tooltip" data-placement="top" title="Desbanear usuario" onclick="confirmDesbanear();">
                           <i data-feather="refresh-ccw"></i>
                         </a>
                       </td>
@@ -517,12 +517,12 @@
                     <tr>
                       <th scope="row">4</th>
                       <td class="centered-content">
-                        <div class="custom-image-container" style="background-image: url('img/iconosbarbaros/bitel.jpg');"></div>
+                        <div class="custom-image-container" style="background-image: url('img/iconosbarbaros/zampateste.jpeg');"></div>
                       </td>
-                      <td>Dicktel</td>
-                      <td class="text-limited tamano-tabla-slogan">"Ni tu madre te escucha, mucho menos nosotros"</td>
+                      <td>Zampa Teste</td>
+                      <td class="text-limited tamano-tabla-slogan">Analista</td>
                       <td class="tamano-tabla-acciones">
-                        <a class="btn btn-success mr-2" data-toggle="tooltip" data-placement="top" title="Desbanear proveedor" onclick="confirmDesbanear();">
+                        <a class="btn btn-success mr-2" data-toggle="tooltip" data-placement="top" title="Desbanear usuario" onclick="confirmDesbanear();">
                           <i data-feather="refresh-ccw"></i>
                         </a>
                       </td>
@@ -531,12 +531,12 @@
                     <tr>
                       <th scope="row">5</th>
                       <td class="centered-content">
-                        <div class="custom-image-container" style="background-image: url('img/iconosbarbaros/winhorrible.jpg');"></div>
+                        <div class="custom-image-container" style="background-image: url('img/iconosbarbaros/deboramelo.jpeg');"></div>
                       </td>
-                      <td>Loose</td>
-                      <td class="text-limited tamano-tabla-slogan">"Ustedes son mala publicidad"</td>
+                      <td>Debora Melo</td>
+                      <td class="text-limited tamano-tabla-slogan">Supervisor</td>
                       <td class="tamano-tabla-acciones">
-                        <a class="btn btn-success mr-2" data-toggle="tooltip" data-placement="top" title="Desbanear proveedor" onclick="confirmDesbanear();">
+                        <a class="btn btn-success mr-2" data-toggle="tooltip" data-placement="top" title="Desbanear usuario" onclick="confirmDesbanear();">
                           <i data-feather="refresh-ccw"></i>
                         </a>
                       </td>
@@ -610,11 +610,11 @@
 
     <script>
       function confirmDesbanear() {
-        var confirmacion = confirm("¿Estás seguro que deseas desbanear a este proveedor?");
+        var confirmacion = confirm("¿Estás seguro que deseas desbanear a este usuario?");
 
         if (confirmacion) {
           // Aquí puedes agregar la lógica para desbanear al usuario
-          alert("Proveedor desbaneado exitosamente.");
+          alert("Usuario desbaneado exitosamente.");
         } else {
           alert("Operación cancelada");
         }

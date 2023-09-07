@@ -1,16 +1,66 @@
+table td {
+    padding: 0;
+    border: none;
+    vertical-align: middle; /* Asegura que el contenido se centre verticalmente en la celda */
+}
+
+.centered-content {
+    display: flex;
+    justify-content: center; /* Centrar horizontalmente */
+    align-items: center; /* Centrar verticalmente */
+    height: 100%; /* Ocupa todo el espacio vertical disponible en la celda */
+    width: 100%; /* Ocupa todo el espacio horizontal disponible en la celda */
+}
+
 .custom-image-container {
     width: 60px;
     height: 60px;
     background-position: center;
-    background-size: contain;
+    background-size: cover; /* Cambio de 'contain' a 'cover' para asegurarse de que la imagen llene el contenedor */
     background-repeat: no-repeat;
+    border-radius: 50%; /* Hace que la imagen tenga bordes redondeados */
 }
+
+/*
 .tamano-tabla-slogan {
     width: 65%;
 }
-.tamano-tabla-acciones {
+*/
+
+/*.tamano-tabla-acciones {
     width: 120px;
 }
+*/
+
 .custom-flex-auto {
     flex: auto;
+}
+
+/* Estilos para la tabla con anchos fijos */
+.table-fixed-width {
+    width: 100%;
+}
+
+.col-n {
+    width: 5%;
+}
+
+.col-foto {
+    width: 10%;
+}
+
+.col-nombre {
+    width: 40%;
+}
+
+.col-rango {
+    width: 35%;
+}
+
+.col-acciones {
+    width: 30%;
+}
+
+table.table-responsive{
+    display: inline-table;
 }
