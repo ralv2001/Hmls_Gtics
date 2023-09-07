@@ -34,8 +34,7 @@
 
             <ul class="sidebar-nav">
 
-                <!--DESPLEGABLE -->
-                <li class="sidebar-item active">
+                <li class="sidebar-item">
                     <a class="sidebar-link" data-bs-toggle="collapse" href="#collapseExample" role="button"
                        aria-expanded="false" aria-controls="collapseExample">
 
@@ -52,37 +51,48 @@
                                 </a>
                             </li>
                             <li class="sidebar-item" style="padding: 0 0 0 2.5rem;">
-                                <a class="sidebar-link" href="pages-profile.html">
+                                <a class="sidebar-link" href="agregaSitios.html">
                                     <span class="align-middle">Agregar sitio</span>
                                 </a>
                             </li>
                         </ul>
                     </div>
                 </li>
-                <!--DESPLEGABLE -->
 
-                <li class="sidebar-item">
-                    <a class="sidebar-link" href="pages-profile.html">
-                        <i class="align-middle" data-feather="user"></i> <span
+                <li class="sidebar-item active">
+                    <a class="sidebar-link" data-bs-toggle="collapse" href="#collapseExample2" role="button"
+                       aria-expanded="false" aria-controls="collapseExample2">
+
+                        <i class="align-middle" data-feather="sliders"></i> <span
                             class="align-middle">Lista de equipos</span>
+                        <i data-feather="chevron-down" style="margin-left: auto;"></i>
                     </a>
-                    <ul class="sub-menu">
-                        <li><a href="listaEquiposInventario.html">Inventario de equipos</a></li>
-                        <li><a href="listaEquiposAgregar.html">Agregar equipos</a></li>
-                    </ul>
+
+                    <div class="collapse" id="collapseExample2">
+                        <ul class="sidebar-nav">
+                            <li class="sidebar-item" style="padding: 0 0 0 2.5rem;">
+                                <a class="sidebar-link" href="listaEquiposInventario.html">
+                                    <span class="align-middle">Inventario de equipos</span>
+                                </a>
+                            </li>
+                            <li class="sidebar-item" style="padding: 0 0 0 2.5rem;">
+                                <a class="sidebar-link" href="listaEquiposAgregar.html">
+                                    <span class="align-middle">Agregar equipos</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
                 </li>
 
                 <li class="sidebar-item">
                     <a class="sidebar-link" href="pages-sign-in.html">
-                        <i class="align-middle" data-feather="log-in"></i> <span
-                            class="align-middle">Lista de tickets</span>
+                        <i class="align-middle" data-feather="log-in"></i> <span class="align-middle">Lista de tickets</span>
                     </a>
                 </li>
 
                 <li class="sidebar-item">
                     <a class="sidebar-link" href="pages-sign-up.html">
-                        <i class="align-middle" data-feather="user-plus"></i> <span
-                            class="align-middle">Lista de mapas</span>
+                        <i class="align-middle" data-feather="user-plus"></i> <span class="align-middle">Lista de mapas</span>
                     </a>
                 </li>
 
