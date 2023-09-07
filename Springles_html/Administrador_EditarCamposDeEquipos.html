@@ -71,9 +71,10 @@
             -->
 
             <!--DESPLEGABLE DE DASHBOARD (EJEMPLO)-->
+            <!--Administrador_PestanaUsuarios.html-->
 
             <!--Desplegable Usuarios-->
-            <li class="sidebar-item">
+            <li class="sidebar-item active">
               <a class="sidebar-link" data-bs-toggle="collapse" href="#collapseUsuarios" role="button"
                  aria-expanded="false" aria-controls="collapseUsuarios">
 
@@ -135,7 +136,7 @@
             </li>
 
             <!--Desplegable Sitios-->
-            <li class="sidebar-item active">
+            <li class="sidebar-item">
               <a class="sidebar-link" data-bs-toggle="collapse" href="#collapseSitios" role="button"
                  aria-expanded="false" aria-controls="collapseSitios">
 
@@ -429,45 +430,53 @@
 
         <!--CONTENIDO DE LA PÁGINA (EMPIEZA CON EL MAIN CLASS CONTENT) : -->
         <!--<main class="content">-->
+
         <main class="content">
-          <div class="container-fluid"> <!-- Cambiado a container-fluid -->
+          <div class="container-fluid">
             <div class="card">
               <div class="card-body">
-                <h2 class="mb-4">Crear Sitio</h2> <!-- Clase añadida para margen -->
-                <form method="POST" enctype="multipart/form-data" onsubmit="return confirm('¿Está seguro que desea guardar los cambios?');">
-                  <div class="form-group">
-                    <label for="nombre">Nombre:</label>
-                    <input type="text" class="form-control" id="nombre" name="nombre">
-                  </div>
-                  <div class="form-group">
-                    <label for="direccion">Dirección:</label>
-                    <input type="text" class="form-control" id="direccion" name="direccion">
-                  </div>
-                  <div class="form-group">
-                    <label for="telefono">Teléfono de Contacto:</label>
-                    <input type="text" class="form-control" id="telefono" name="telefono">
-                  </div>
-                  <div class="form-group">
-                    <label for="email">Email de Contacto:</label>
-                    <input type="email" class="form-control" id="email" name="email">
-                  </div>
-                  <div class="form-group">
-                    <label for="slogan">Descripción:</label>
-                    <input type="text" class="form-control" id="slogan" name="slogan">
-                  </div>
-                  <div class="form-group">
-                    <label for="foto">Foto:</label>
-                    <input type="file" class="form-control-file" id="foto" name="foto" onchange="previewImage(event)">
-                  </div>
-                  <div class="form-group">
-                    <img id="preview" src="img/iconosbarbaros/fotoenblanco.jpg" alt="Vista previa de la imagen" style="max-width:200px; max-height:200px;">
-                  </div>
-                  <button type="submit" class="btn btn-primary">Guardar</button>
-                </form>
+                <h2 class="mb-4">Editar campos de equipos</h2>
+
+                <p>A continuación, se listan los campos del equipo:</p>
+                <ul>
+                  <li>Marca</li>
+                  <li>Modelo</li>
+                  <li>Versión</li>
+                  <li>Tamaño</li>
+                  <li>Altura</li>
+                </ul>
+
+                <button class="btn btn-info mb-4">Ver Lista de Campos agregados dinámicamente</button>
+
+                <div class="form-group">
+                  <label for="agregarCampo">Agregar más campos:</label>
+                  <select class="form-control" id="agregarCampo">
+                    <option value="opcion1">Opción 1</option>
+                    <option value="opcion2">Opción 2</option>
+                    <option value="opcion3">Opción 3</option>
+                    <!-- Puedes añadir más opciones según sea necesario -->
+                  </select>
+                </div>
+
+                <button type="button" class="btn btn-primary" onclick="confirmarAgregarCampo();">AÑADIR CAMPO</button>
+
+                <script>
+                  function confirmarAgregarCampo() {
+                    var r = confirm("¿Está seguro que desea añadir el campo?");
+                    if (r == true) {
+                      // Aquí puedes agregar el código para añadir el campo dinámicamente
+                      alert("Campo agregado exitosamente");
+                    } else {
+                      alert("Operación cancelada");
+                    }
+                  }
+                </script>
+
               </div>
+            </div>
           </div>
-        </div>
         </main>
+
 
         <!-- FINALIZACIÓN DEL CONTENIDO (TERMINA JUSTO ANTES DEL FOOTER) :-->
         <!-- <footer class="footer"> -->
@@ -504,17 +513,6 @@
     </div>
 
     <script src="js/app.js"></script>
-
-    <script>
-      function previewImage(event) {
-        var reader = new FileReader();
-        reader.onload = function(){
-          var output = document.getElementById('preview');
-          output.src = reader.result;
-        }
-        reader.readAsDataURL(event.target.files[0]);
-      }
-    </script>
 
     <script>
       document.addEventListener("DOMContentLoaded", function () {
@@ -739,12 +737,15 @@
     </script>
 
     <script>
-      $(document).ready(function() {
-        // Escucha el evento 'show.bs.collapse' en cualquier desplegable
-        $('.collapse').on('show.bs.collapse', function() {
-          // Cierra todos los otros desplegables al abrir uno
-          $('.collapse').not(this).collapse('hide');
-        });
+      // Controlador de eventos para el ícono de chevron
+      document.getElementById("toggleChevron").addEventListener("click", function(){
+        const collapseElement = document.getElementById("collapseExample");
+        const isCollapsed = collapseElement.classList.contains('show');
+        if(isCollapsed) {
+          collapseElement.classList.remove('show');
+        } else {
+          collapseElement.classList.add('show');
+        }
       });
     </script>
 
@@ -758,6 +759,7 @@
         });
       });
     </script>
+
 
   </body>
 
