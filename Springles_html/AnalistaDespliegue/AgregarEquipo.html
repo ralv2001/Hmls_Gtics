@@ -92,12 +92,12 @@
 						<div class="collapse" id="collapseExample2">
 							<ul class="sidebar-nav">
 								<li class="sidebar-item" style="padding: 0 0 0 2.5rem;">
-									<a class="sidebar-link" href="listaEquiposInventario.html">
+									<a class="sidebar-link" href="InventarioEquipos.html">
 										<span class="align-middle">Inventario de equipos</span>
 									</a>
 								</li>
 								<li class="sidebar-item" style="padding: 0 0 0 2.5rem;">
-									<a class="sidebar-link" href="listaEquiposAgregar.html">
+									<a class="sidebar-link" href="AgregarEquipo.html">
 										<span class="align-middle">Agregar equipos</span>
 									</a>
 								</li>
@@ -305,52 +305,46 @@
 						<h1 class="h3 mb-3"><strong>Agregar un nuevo equipo al inventario</strong></h1>
 					</div>
 
-							<div class="card flex-fill">
 
-								<form class="row g-3">
-									<div class="col-12">
-										<label for="inputAddress1" class="form-label fw-bold fs-5">Tipo de Equipo:</label>
-										<input type="text" class="form-control" id="inputAddress1">
-									</div>
-									<div class="col-12">
-										<label for="inputAddress2" class="form-label fw-bold fs-5">Número de Serie:</label>
-										<input type="text" class="form-control" id="inputAddress2">
-									</div>
-									<div class="col-12">
-										<label for="inputAddress3" class="form-label fw-bold fs-5">Marca:</label>
-										<input type="text" class="form-control" id="inputAddress3" >
-									</div>
-									<div class="col-12">
-										<label for="inputAddress4" class="form-label fw-bold fs-5">Modelo:</label>
-										<input type="text" class="form-control" id="inputAddress4">
-									</div>
-									<div class="col-12">
-										<label for="inputAddress5" class="form-label fw-bold fs-5">Velocidad de Conexión:</label>
-										<input type="text" class="form-control" id="inputAddress5">
-									</div>
-									<div class="mb-3">
-										<label for="formFile" class="form-label fw-bold fs-5">Imagen del equipo:</label>
-										<input class="form-control" type="file" id="formFile">
-									</div>
+					<div class="card">
+						<div class="card-body">
+							<main class="content">
+								<div class="container">
+									<!--<form action="/Administrador_PestanaProveedores.html" method="POST" enctype="multipart/form-data" onsubmit="return confirm('¿Está seguro que desea guardar los cambios?');"> -->
 
-									<!--<div class="col-md-4">
-										<label for="inputState" class="form-label">State</label>
-										<select id="inputState" class="form-select">
-											<option selected>Choose...</option>
-											<option>...</option>
-										</select>
-									</div-->
-
-									<div class="row justify-content-center mt-4">
-										<div class="col-md-6 text-center">
-											<button type="submit" class="btn btn-primary">Agregar nuevo equipo</button>
+									<form class="row g-3">
+										<div class="col-12">
+											<label for="inputAddress1" class="form-label fw-bold fs-5">Tipo de Equipo:</label>
+											<input type="text" class="form-control" id="inputAddress1">
 										</div>
-										<div class="col-md-6 text-center">
-											<button type="submit" class="btn btn-primary">Cancelar</button>
+										<div class="col-12">
+											<label for="inputAddress2" class="form-label fw-bold fs-5">Número de Serie:</label>
+											<input type="text" class="form-control" id="inputAddress2">
 										</div>
-									</div>
-								</form>
-							</div>
+										<div class="col-12">
+											<label for="inputAddress3" class="form-label fw-bold fs-5">Marca:</label>
+											<input type="text" class="form-control" id="inputAddress3" >
+										</div>
+										<div class="col-12">
+											<label for="inputAddress4" class="form-label fw-bold fs-5">Modelo:</label>
+											<input type="text" class="form-control" id="inputAddress4">
+										</div>
+										<div class="col-12">
+											<label for="inputAddress5" class="form-label fw-bold fs-5">Velocidad de Conexión:</label>
+											<input type="text" class="form-control" id="inputAddress5">
+										</div>
+										<div class="mb-3">
+											<label for="formFile" class="form-label fw-bold fs-5">Imagen del equipo:</label>
+											<input class="form-control" type="file" id="formFile">
+										</div>
+
+										<div class="text-center">
+											<a href="InventarioEquipos.html" class="btn btn-primary">Agregar nuevo equipo</a>
+											<a href="InventarioEquipos.html" class="btn btn-primary">Cancelar</a>
+										</div>
+									</form>
+								</div>
+
 
 
 				</div>
