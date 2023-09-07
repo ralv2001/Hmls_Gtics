@@ -18,8 +18,12 @@
         <title>AdminKit Demo - Bootstrap 5 Admin Template</title>
 
         <link href="css/app.css" rel="stylesheet">
+        <link href="css/estilosfinos.css" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
         <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
 
     </head>
 
@@ -69,28 +73,126 @@
 
                         <!--DESPLEGABLE DE DASHBOARD (EJEMPLO)-->
 
-                        <li class="sidebar-item active">
-                            <a class="sidebar-link" href="Administrador_PestanaUsuarios.html">
+                        <!--Desplegable Usuarios-->
+                        <li class="sidebar-item">
+                            <a class="sidebar-link" data-bs-toggle="collapse" href="#collapseUsuarios" role="button"
+                               aria-expanded="false" aria-controls="collapseUsuarios">
+
                                 <i class="align-middle" data-feather="users"></i> <span class="align-middle">Usuarios</span>
+                                <i data-feather="chevron-down" style="margin-left: auto;"></i>
                             </a>
-                        </li>
 
+                            <div class="collapse" id="collapseUsuarios">
+                                <ul class="sidebar-nav">
+                                    <li class="sidebar-item" style="padding: 0 0 0 2.5rem;">
+                                        <a class="sidebar-link" href="Administrador_PestanaUsuarios.html">
+                                            <span class="align-middle">Lista de Usuarios</span>
+                                        </a>
+                                    </li>
+                                    <li class="sidebar-item" style="padding: 0 0 0 2.5rem;">
+                                        <a class="sidebar-link" href="Administrador_CrearUsuario.html">
+                                            <span class="align-middle">Crear Usuario</span>
+                                        </a>
+                                    </li>
+                                    <li class="sidebar-item" style="padding: 0 0 0 2.5rem;">
+                                        <a class="sidebar-link" href="Administrador_BaneadosUsuarios.html">
+                                            <span class="align-middle">Lista de baneados</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+
+                        </li>
+                        <!--Desplegable Usuarios-->
+
+                        <!--Desplegable Proveedores-->
                         <li class="sidebar-item">
-                            <a class="sidebar-link" href="Administrador_PestanaProveedores.html">
+                            <a class="sidebar-link" data-bs-toggle="collapse" href="#collapseProveedores" role="button"
+                               aria-expanded="false" aria-controls="collapseProveedores">
+
                                 <i class="align-middle" data-feather="archive"></i> <span class="align-middle">Proveedores</span>
+                                <i data-feather="chevron-down" style="margin-left: auto;"></i>
                             </a>
+
+                            <div class="collapse" id="collapseProveedores">
+                                <ul class="sidebar-nav">
+                                    <li class="sidebar-item" style="padding: 0 0 0 2.5rem;">
+                                        <a class="sidebar-link" href="Administrador_PestanaProveedores.html">
+                                            <span class="align-middle">Lista de Proveedores</span>
+                                        </a>
+                                    </li>
+                                    <li class="sidebar-item" style="padding: 0 0 0 2.5rem;">
+                                        <a class="sidebar-link" href="Administrador_CrearProveedor.html">
+                                            <span class="align-middle">Crear Proveedor</span>
+                                        </a>
+                                    </li>
+                                    <li class="sidebar-item" style="padding: 0 0 0 2.5rem;">
+                                        <a class="sidebar-link" href="Administrador_BaneadosProveedores.html">
+                                            <span class="align-middle">Lista de Baneados</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
                         </li>
 
+                        <!--Desplegable Sitios-->
                         <li class="sidebar-item">
-                            <a class="sidebar-link" href="Administrador_PestanaSitios.html">
+                            <a class="sidebar-link" data-bs-toggle="collapse" href="#collapseSitios" role="button"
+                               aria-expanded="false" aria-controls="collapseSitios">
+
                                 <i class="align-middle" data-feather="server"></i> <span class="align-middle">Sitios</span>
+                                <i data-feather="chevron-down" style="margin-left: auto;"></i>
                             </a>
+
+                            <div class="collapse" id="collapseSitios">
+                                <ul class="sidebar-nav">
+                                    <li class="sidebar-item" style="padding: 0 0 0 2.5rem;">
+                                        <a class="sidebar-link" href="Administrador_PestanaSitios.html">
+                                            <span class="align-middle">Lista de Sitios</span>
+                                        </a>
+                                    </li>
+                                    <li class="sidebar-item" style="padding: 0 0 0 2.5rem;">
+                                        <a class="sidebar-link" href="Administrador_CrearSitio.html">
+                                            <span class="align-middle">Crear Sitio</span>
+                                        </a>
+                                    </li>
+                                    <li class="sidebar-item" style="padding: 0 0 0 2.5rem;">
+                                        <a class="sidebar-link" href="Administrador_EditarCamposdeSitios.html">
+                                            <span class="align-middle">Editar Campos</span>
+                                        </a>
+                                    </li>
+                                    <li class="sidebar-item" style="padding: 0 0 0 2.5rem;">
+                                        <a class="sidebar-link" href="Administrador_MapaDeSitios.html">
+                                            <span class="align-middle">Mapa de Sitios</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
                         </li>
 
-                        <li class="sidebar-item">
-                            <a class="sidebar-link" href="Administrador_PestanaEquipos.html">
+                        <!--Desplegable Equipos-->
+                        <li class="sidebar-item active">
+                            <a class="sidebar-link" data-bs-toggle="collapse" href="#collapseEquipos" role="button"
+                               aria-expanded="false" aria-controls="collapseEquipos">
+
                                 <i class="align-middle" data-feather="database"></i> <span class="align-middle">Equipos</span>
+                                <i data-feather="chevron-down" style="margin-left: auto;"></i>
                             </a>
+
+                            <div class="collapse" id="collapseEquipos">
+                                <ul class="sidebar-nav">
+                                    <li class="sidebar-item" style="padding: 0 0 0 2.5rem;">
+                                        <a class="sidebar-link" href="Administrador_PestanaEquipos.html">
+                                            <span class="align-middle">Lista de Equipos</span>
+                                        </a>
+                                    </li>
+                                    <li class="sidebar-item" style="padding: 0 0 0 2.5rem;">
+                                        <a class="sidebar-link" href="Administrador_CrearEquipo.html">
+                                            <span class="align-middle">Crear Equipo</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
                         </li>
 
                         <li class="sidebar-header">
@@ -141,7 +243,7 @@
                     <div class="navbar-collapse collapse">
                         <ul class="navbar-nav navbar-align">
                             <li class="nav-item dropdown">
-                                <a class="nav-icon dropdown-toggle" href="#" id="alertsDropdown" data-bs-toggle="dropdown">
+                                <a class="nav-icon custom-dropdown-toggle" href="#" id="alertsDropdown" data-bs-toggle="dropdown">
                                     <div class="position-relative">
                                         <i class="align-middle" data-feather="bell"></i>
                                         <span class="indicator">4</span>
@@ -211,7 +313,7 @@
                                 </div>
                             </li>
                             <li class="nav-item dropdown">
-                                <a class="nav-icon dropdown-toggle" href="#" id="messagesDropdown" data-bs-toggle="dropdown">
+                                <a class="nav-icon custom-dropdown-toggle" href="#" id="messagesDropdown" data-bs-toggle="dropdown">
                                     <div class="position-relative">
                                         <i class="align-middle" data-feather="message-square"></i>
                                     </div>
@@ -288,11 +390,11 @@
                                 </div>
                             </li>
                             <li class="nav-item dropdown">
-                                <a class="nav-icon dropdown-toggle d-inline-block d-sm-none" href="#" data-bs-toggle="dropdown">
+                                <a class="nav-icon custom-dropdown-toggle d-inline-block d-sm-none" href="#" data-bs-toggle="dropdown">
                                     <i class="align-middle" data-feather="settings"></i>
                                 </a>
 
-                                <a class="nav-link dropdown-toggle d-none d-sm-inline-block" href="#" data-bs-toggle="dropdown">
+                                <a class="nav-link custom-dropdown-toggle d-none d-sm-inline-block" href="#" data-bs-toggle="dropdown">
                                     <img src="img/avatars/avatar.jpg" class="avatar img-fluid rounded me-1" alt="Charles Hall"/>
                                     <span class="text-dark">Ricardo Alvarado</span>
                                 </a>
@@ -329,6 +431,165 @@
                 <!--CONTENIDO DE LA PÁGINA (EMPIEZA CON EL MAIN CLASS CONTENT) : -->
                 <!--<main class="content">-->
 
+                <main class="content">
+                    <section>
+                        <div class="card">
+                            <div class="card-body">
+                                <h2 class="mb-4">Lista de Equipos</h2> <!-- Título agregado -->
+
+                                <div class="d-flex justify-content-between align-items-center mb-3">
+                                    <div class="w-50 d-flex align-items-center">
+                                        <div class="mr-2 custom-flex-auto">
+                                            <div class="input-group">
+                                                <div class="input-group-prepend">
+                                                    <div class="input-group-text">
+                                                        <i data-feather="search" style="height: 20px;"></i>
+                                                    </div>
+                                                </div>
+                                                <input type="text" class="form-control form-control-lg" id="inlineFormInputGroup" placeholder="Buscar Equipo">
+                                            </div>
+                                        </div>
+                                        <button type="button" class="btn btn-primary btn-sm">
+                                            <i data-feather="list"></i>
+                                        </button>
+                                    </div>
+
+                                    <div>
+                                        <div>
+                                            <!--  <a href="Administrador_BaneadosProveedores.html" class="btn btn-light">Lista de baneados</a>    -->
+                                            <a href="Administrador_CrearProveedor.html" class="btn btn-primary">
+                                                <i data-feather="plus"></i> Crear Equipo
+                                            </a>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                                <table class="table table-hover table-striped table-bordered table-responsive mt-3 table-fixed-width">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col" class="col-n">N°</th>
+                                            <th scope="col" class="col-foto">Foto de perfil</th>
+                                            <th scope="col" class="col-nombre">Nombre</th>
+                                            <th scope="col" class="col-rango">Cantidad en sitios</th>
+                                            <th scope="col" class="col-acciones">Acciones</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <th scope="row">1</th>
+                                            <td class="centered-content">
+                                                <div class="custom-image-container" style="background-image: url('img/iconosbarbaros/router.jpg');"></div>
+                                            </td>
+                                            <td>Routers</td>
+                                            <td class="text-limited tamano-tabla-slogan">1</td>
+                                            <td class="tamano-tabla-acciones">
+                                                <a href="Administrador_EditarProveedores.html" class="btn btn-primary mr-2" data-toggle="tooltip" data-placement="top" title="Editar campos">
+                                                    <i data-feather="edit-3"></i>
+                                                </a>
+                                                <button type="button" class="btn btn-danger" data-toggle="tooltip" data-placement="top" title="Eliminar equipo" onclick="confirmDesactivar()">
+                                                    <i data-feather="trash-2"></i>
+                                                </button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">2</th>
+                                            <td class="centered-content">
+                                                <div class="custom-image-container" style="background-image: url('img/iconosbarbaros/switch.jpg');"></div>
+                                            </td>
+                                            <td>Switches</td>
+                                            <td class="text-limited tamano-tabla-slogan">1</td>
+                                            <td class="tamano-tabla-acciones">
+                                                <a href="Administrador_EditarProveedores.html" class="btn btn-primary mr-2" data-toggle="tooltip" data-placement="top" title="Editar campos">
+                                                    <i data-feather="edit-3"></i>
+                                                </a>
+                                                <button type="button" class="btn btn-danger" data-toggle="tooltip" data-placement="top" title="Eliminar equipo" onclick="confirmDesactivar()">
+                                                    <i data-feather="trash-2"></i>
+                                                </button>
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <th scope="row">3</th>
+                                            <td class="centered-content">
+                                                <div class="custom-image-container" style="background-image: url('img/iconosbarbaros/accesspoint.jpg');"></div>
+                                            </td>
+                                            <td>Acess Points</td>
+                                            <td class="text-limited tamano-tabla-slogan">1</td>
+                                            <td class="tamano-tabla-acciones">
+                                                <a href="Administrador_EditarProveedores.html" class="btn btn-primary mr-2" data-toggle="tooltip" data-placement="top" title="Editar campos">
+                                                    <i data-feather="edit-3"></i>
+                                                </a>
+                                                <button type="button" class="btn btn-danger" data-toggle="tooltip" data-placement="top" title="Eliminar equipo" onclick="confirmDesactivar()">
+                                                    <i data-feather="trash-2"></i>
+                                                </button>
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <th scope="row">4</th>
+                                            <td class="centered-content">
+                                                <div class="custom-image-container" style="background-image: url('img/iconosbarbaros/radio.jpeg');"></div>
+                                            </td>
+                                            <td>Radios</td>
+                                            <td class="text-limited tamano-tabla-slogan">8</td>
+                                            <td class="tamano-tabla-acciones">
+                                                <a href="Administrador_EditarProveedores.html" class="btn btn-primary mr-2" data-toggle="tooltip" data-placement="top" title="Editar campos">
+                                                    <i data-feather="edit-3"></i>
+                                                </a>
+                                                <button type="button" class="btn btn-danger" data-toggle="tooltip" data-placement="top" title="Eliminar equipo" onclick="confirmDesactivar()">
+                                                    <i data-feather="trash-2"></i>
+                                                </button>
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <th scope="row">5</th>
+                                            <td class="centered-content">
+                                                <div class="custom-image-container" style="background-image: url('img/iconosbarbaros/telefono.jpg');"></div>
+                                            </td>
+                                            <td>Teléfonos</td>
+                                            <td class="text-limited tamano-tabla-slogan">1</td>
+                                            <td class="tamano-tabla-acciones">
+                                                <a href="Administrador_EditarProveedores.html" class="btn btn-primary mr-2" data-toggle="tooltip" data-placement="top" title="Editar campos">
+                                                    <i data-feather="edit-3"></i>
+                                                </a>
+                                                <button type="button" class="btn btn-danger" data-toggle="tooltip" data-placement="top" title="Eliminar equipo" onclick="confirmDesactivar()">
+                                                    <i data-feather="trash-2"></i>
+                                                </button>
+                                            </td>
+                                        </tr>
+
+
+                                    </tbody>
+                                </table>
+                                <div class="d-flex justify-content-center">
+                                    <nav aria-label="Page navigation example">
+                                        <ul class="pagination">
+                                            <li class="page-item"><a class="page-link" href="#">
+                                                <i data-feather="arrow-left"></i>
+                                                Anterior</a></li>
+
+                                            <li class="page-item"><a class="page-link" href="#">1</a></li>
+                                            <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                            <li class="page-item"><a class="page-link" href="#">3</a></li>
+
+                                            <li class="page-item"><a class="page-link" href="#">
+                                                Siguiente <i data-feather="arrow-right"></i>
+                                            </a></li>
+
+
+                                        </ul>
+                                    </nav>
+                                </div>
+
+                            </div>
+                        </div>
+                    </section>
+                </main>
+
+
+
                 <!-- FINALIZACIÓN DEL CONTENIDO (TERMINA JUSTO ANTES DEL FOOTER) :-->
                 <!-- <footer class="footer"> -->
 
@@ -364,6 +625,16 @@
         </div>
 
         <script src="js/app.js"></script>
+
+        <script>
+            function confirmDesactivar() {
+                var confirmacion = confirm("¿Estás seguro que deseas desactivar a este proveedor?");
+                if (confirmacion) {
+                    // Aquí puedes agregar la lógica para desactivar al proveedor
+                    alert("Proveedor desactivado exitosamente.");
+                }
+            }
+        </script>
 
         <script>
             document.addEventListener("DOMContentLoaded", function () {
@@ -583,6 +854,17 @@
                     prevArrow: "<span title=\"Previous month\">&laquo;</span>",
                     nextArrow: "<span title=\"Next month\">&raquo;</span>",
                     defaultDate: defaultDate
+                });
+            });
+        </script>
+
+        <!-- ESTE SCRIPT HACE QUE UN DESPLEGABLE SE ABRA A LA VEZ -->
+        <script>
+            $(document).ready(function() {
+                // Escucha el evento 'show.bs.collapse' en cualquier desplegable
+                $('.collapse').on('show.bs.collapse', function() {
+                    // Cierra todos los otros desplegables al abrir uno
+                    $('.collapse').not(this).collapse('hide');
                 });
             });
         </script>
