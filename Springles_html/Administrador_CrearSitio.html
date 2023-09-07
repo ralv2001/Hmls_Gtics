@@ -18,9 +18,11 @@
     <title>AdminKit Demo - Bootstrap 5 Admin Template</title>
 
     <link href="css/app.css" rel="stylesheet">
+    <link href="css/estilosfinos.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
     <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
   </head>
 
@@ -70,28 +72,126 @@
 
             <!--DESPLEGABLE DE DASHBOARD (EJEMPLO)-->
 
+            <!--Desplegable Usuarios-->
             <li class="sidebar-item active">
-              <a class="sidebar-link" href="Administrador_PestanaUsuarios.html">
+              <a class="sidebar-link" data-bs-toggle="collapse" href="#collapseUsuarios" role="button"
+                 aria-expanded="false" aria-controls="collapseUsuarios">
+
                 <i class="align-middle" data-feather="users"></i> <span class="align-middle">Usuarios</span>
+                <i data-feather="chevron-down" style="margin-left: auto;"></i>
               </a>
-            </li>
 
+              <div class="collapse" id="collapseUsuarios">
+                <ul class="sidebar-nav">
+                  <li class="sidebar-item" style="padding: 0 0 0 2.5rem;">
+                    <a class="sidebar-link" href="Administrador_PestanaUsuarios.html">
+                      <span class="align-middle">Lista de Usuarios</span>
+                    </a>
+                  </li>
+                  <li class="sidebar-item" style="padding: 0 0 0 2.5rem;">
+                    <a class="sidebar-link" href="Administrador_CrearUsuario.html">
+                      <span class="align-middle">Crear Usuario</span>
+                    </a>
+                  </li>
+                  <li class="sidebar-item" style="padding: 0 0 0 2.5rem;">
+                    <a class="sidebar-link" href="Administrador_BaneadosUsuarios.html">
+                      <span class="align-middle">Lista de baneados</span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+
+            </li>
+            <!--Desplegable Usuarios-->
+
+            <!--Desplegable Proveedores-->
             <li class="sidebar-item">
-              <a class="sidebar-link" href="Administrador_PestanaProveedores.html">
+              <a class="sidebar-link" data-bs-toggle="collapse" href="#collapseProveedores" role="button"
+                 aria-expanded="false" aria-controls="collapseProveedores">
+
                 <i class="align-middle" data-feather="archive"></i> <span class="align-middle">Proveedores</span>
+                <i data-feather="chevron-down" style="margin-left: auto;"></i>
               </a>
+
+              <div class="collapse" id="collapseProveedores">
+                <ul class="sidebar-nav">
+                  <li class="sidebar-item" style="padding: 0 0 0 2.5rem;">
+                    <a class="sidebar-link" href="Administrador_PestanaProveedores.html">
+                      <span class="align-middle">Lista de Proveedores</span>
+                    </a>
+                  </li>
+                  <li class="sidebar-item" style="padding: 0 0 0 2.5rem;">
+                    <a class="sidebar-link" href="Administrador_CrearProveedor.html">
+                      <span class="align-middle">Crear Proveedor</span>
+                    </a>
+                  </li>
+                  <li class="sidebar-item" style="padding: 0 0 0 2.5rem;">
+                    <a class="sidebar-link" href="Administrador_BaneadosProveedores.html">
+                      <span class="align-middle">Lista de Baneados</span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
             </li>
 
+            <!--Desplegable Sitios-->
             <li class="sidebar-item">
-              <a class="sidebar-link" href="Administrador_PestanaSitios.html">
+              <a class="sidebar-link" data-bs-toggle="collapse" href="#collapseSitios" role="button"
+                 aria-expanded="false" aria-controls="collapseSitios">
+
                 <i class="align-middle" data-feather="server"></i> <span class="align-middle">Sitios</span>
+                <i data-feather="chevron-down" style="margin-left: auto;"></i>
               </a>
+
+              <div class="collapse" id="collapseSitios">
+                <ul class="sidebar-nav">
+                  <li class="sidebar-item" style="padding: 0 0 0 2.5rem;">
+                    <a class="sidebar-link" href="Administrador_PestanaSitios.html">
+                      <span class="align-middle">Lista de Sitios</span>
+                    </a>
+                  </li>
+                  <li class="sidebar-item" style="padding: 0 0 0 2.5rem;">
+                    <a class="sidebar-link" href="Administrador_CrearSitio.html">
+                      <span class="align-middle">Crear Sitio</span>
+                    </a>
+                  </li>
+                  <li class="sidebar-item" style="padding: 0 0 0 2.5rem;">
+                    <a class="sidebar-link" href="Administrador_EditarCamposdeSitios.html">
+                      <span class="align-middle">Editar Campos</span>
+                    </a>
+                  </li>
+                  <li class="sidebar-item" style="padding: 0 0 0 2.5rem;">
+                    <a class="sidebar-link" href="Administrador_MapaDeSitios.html">
+                      <span class="align-middle">Mapa de Sitios</span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
             </li>
 
+            <!--Desplegable Equipos-->
             <li class="sidebar-item">
-              <a class="sidebar-link" href="Administrador_PestanaEquipos.html">
+              <a class="sidebar-link" data-bs-toggle="collapse" href="#collapseEquipos" role="button"
+                 aria-expanded="false" aria-controls="collapseEquipos">
+
                 <i class="align-middle" data-feather="database"></i> <span class="align-middle">Equipos</span>
+                <i data-feather="chevron-down" style="margin-left: auto;"></i>
               </a>
+
+              <div class="collapse" id="collapseEquipos">
+                <ul class="sidebar-nav">
+                  <li class="sidebar-item" style="padding: 0 0 0 2.5rem;">
+                    <a class="sidebar-link" href="Administrador_PestanaEquipos.html">
+                      <span class="align-middle">Lista de Equipos</span>
+                    </a>
+                  </li>
+                  <li class="sidebar-item" style="padding: 0 0 0 2.5rem;">
+                    <a class="sidebar-link" href="Administrador_CrearEquipo.html">
+                      <span class="align-middle">Crear Equipo</span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
             </li>
 
             <li class="sidebar-header">
@@ -637,6 +737,27 @@
           prevArrow: "<span title=\"Previous month\">&laquo;</span>",
           nextArrow: "<span title=\"Next month\">&raquo;</span>",
           defaultDate: defaultDate
+        });
+      });
+    </script>
+
+    <script>
+      $(document).ready(function() {
+        // Escucha el evento 'show.bs.collapse' en cualquier desplegable
+        $('.collapse').on('show.bs.collapse', function() {
+          // Cierra todos los otros desplegables al abrir uno
+          $('.collapse').not(this).collapse('hide');
+        });
+      });
+    </script>
+
+    <!-- ESTE SCRIPT HACE QUE UN DESPLEGABLE SE ABRA A LA VEZ -->
+    <script>
+      $(document).ready(function() {
+        // Escucha el evento 'show.bs.collapse' en cualquier desplegable
+        $('.collapse').on('show.bs.collapse', function() {
+          // Cierra todos los otros desplegables al abrir uno
+          $('.collapse').not(this).collapse('hide');
         });
       });
     </script>
