@@ -74,7 +74,7 @@
                         <!--Administrador_PestanaUsuarios.html-->
 
                         <!--Desplegable Usuarios-->
-                        <li class="sidebar-item active">
+                        <li class="sidebar-item">
                             <a class="sidebar-link" data-bs-toggle="collapse" href="#collapseUsuarios" role="button"
                                aria-expanded="false" aria-controls="collapseUsuarios">
 
@@ -136,7 +136,7 @@
                         </li>
 
                         <!--Desplegable Sitios-->
-                        <li class="sidebar-item">
+                        <li class="sidebar-item active">
                             <a class="sidebar-link" data-bs-toggle="collapse" href="#collapseSitios" role="button"
                                aria-expanded="false" aria-controls="collapseSitios">
 
@@ -433,48 +433,100 @@
 
                 <main class="content">
                     <h2>Mapa de sitios</h2>
-                    <div style="display: flex;">
-                        <!-- Map Container -->
-                        <div id="map" style="width: 50%; height: 600px;"></div>
 
-                        <!-- Description Box -->
-                        <div id="descriptionBox" style="width: 50%; padding: 20px; border-left: 1px solid #ccc;">
-                            <h4>Descripción del sitio</h4>
-                            <p id="siteDescription">Haz clic en un marcador para ver la descripción del sitio.</p>
+                    <div class="row">
+                        <!-- Mapa -->
+                        <div class="col-md-6">
+                            <div id="map" style="height: 600px;"></div>
+                        </div>
+
+                        <!-- Descripción del sitio seleccionado -->
+                        <div class="col-md-6">
+                            <div id="descriptionBox" style="padding: 20px; border-left: 1px solid #ccc;">
+                                <h4 id="siteName">Selecciona un sitio</h4>
+                                <div id="siteImage" class="mb-3" style="width: 100%; height: 200px; background-size: cover; background-position: center;"></div>
+                                <p id="siteBriefDescription" class="text-muted mb-3">Haz clic en un marcador para ver la descripción detallada del sitio.</p>
+                                <div id="siteActions">
+                                    <!-- Acciones del sitio aquí (Editar, Eliminar) -->
+                                </div>
+                            </div>
                         </div>
                     </div>
 
                     <script>
-                        let currentInfoWindow; // Holds the current open InfoWindow to be able to close it when a new marker is clicked
+                        let currentInfoWindow = null;
 
-                        // Initialize and add the map
                         function initMap() {
-                            const peru = { lat: -9.1900, lng: -75.0152 };
-
-                            const map = new google.maps.Map(document.getElementById('map'), {
-                                zoom: 5,
-                                center: peru
+                            const map = new google.maps.Map(document.getElementById("map"), {
+                                center: { lat: -9.1900, lng: -75.0152 },
+                                zoom: 5
                             });
 
-                            // Array of locations with descriptions
                             const locations = [
-                                { lat: -12.0464, lng: -77.0428, description: 'Lima, la capital de Perú.' },
-                                { lat: -13.531950, lng: -71.967463, description: 'Cusco, el ombligo del mundo.' },
-                                { lat: -16.4090, lng: -71.537451, description: 'Arequipa, la ciudad blanca.' },
-                                { lat: -3.75, lng: -73.25, description: 'Iquitos, la ciudad en la selva.' },
-                                { lat: -8.379147, lng: -74.553866, description: 'Pucallpa, un punto de acceso al río Ucayali.' }
+                                {
+                                    lat: -12.0464,
+                                    lng: -77.0428,
+                                    name: "Sitio FTTH-PL",
+                                    image: "img/iconosbarbaros/sitio1.jpeg",
+                                    description: "Sitio Fiber to the Home en Pueblo Libre",
+                                    actions: [
+                                        { link: "Administrador_EditarSitios.html", tooltip: "Ver inventario", icon: "settings" },
+                                        { callback: "confirmDesactivar()", tooltip: "Eliminar sitio", icon: "trash-2" }
+                                    ]
+                                },
+                                {
+                                    lat: -12.0474,
+                                    lng: -77.0438,
+                                    name: "Sitio FTTH-SM",
+                                    image: "img/iconosbarbaros/sitio2.jpeg",
+                                    description: "Sitio Fiber to the Home en San Miguel",
+                                    actions: [
+                                        { link: "Administrador_EditarSitios.html", tooltip: "Ver inventario", icon: "settings" },
+                                        { callback: "confirmDesactivar()", tooltip: "Eliminar sitio", icon: "trash-2" }
+                                    ]
+                                },
+                                {
+                                    lat: -12.0484,
+                                    lng: -77.0448,
+                                    name: "Sitio TLF-PL",
+                                    image: "img/iconosbarbaros/sitio3.jpeg",
+                                    description: "Sitio de telefonía en Pueblo Libre",
+                                    actions: [
+                                        { link: "Administrador_EditarSitios.html", tooltip: "Ver inventario", icon: "settings" },
+                                        { callback: "confirmDesactivar()", tooltip: "Eliminar sitio", icon: "trash-2" }
+                                    ]
+                                },
+                                {
+                                    lat: -12.0494,
+                                    lng: -77.0458,
+                                    name: "Sitio TLF-SM",
+                                    image: "img/iconosbarbaros/sitio4.jpeg",
+                                    description: "Sitio de telefonía en San Miguel",
+                                    actions: [
+                                        { link: "Administrador_EditarSitios.html", tooltip: "Ver inventario", icon: "settings" },
+                                        { callback: "confirmDesactivar()", tooltip: "Eliminar sitio", icon: "trash-2" }
+                                    ]
+                                },
+                                {
+                                    lat: -12.0504,
+                                    lng: -77.0468,
+                                    name: "Sitio RADIO-SJM",
+                                    image: "img/iconosbarbaros/sitio5.jpeg",
+                                    description: "Sitio de Radio en San Juan de Miraflores",
+                                    actions: [
+                                        { link: "Administrador_EditarSitios.html", tooltip: "Ver inventario", icon: "settings" },
+                                        { callback: "confirmDesactivar()", tooltip: "Eliminar sitio", icon: "trash-2" }
+                                    ]
+                                }
                             ];
 
-                            // Add markers for each location in the array
                             locations.forEach(location => {
                                 const marker = new google.maps.Marker({
                                     position: location,
                                     map: map
                                 });
 
-                                // Add click listener to the marker for pop-up and update description box
                                 marker.addListener('click', () => {
-                                    // If there's an open InfoWindow, close it
                                     if(currentInfoWindow) {
                                         currentInfoWindow.close();
                                     }
@@ -485,16 +537,36 @@
                                     infowindow.open(map, marker);
                                     currentInfoWindow = infowindow;
 
-                                    // Update the description box content
-                                    document.getElementById("siteDescription").textContent = location.description;
+                                    document.getElementById("siteName").textContent = location.name;
+                                    document.getElementById("siteImage").style.backgroundImage = `url('${location.image}')`;
+                                    document.getElementById("siteBriefDescription").textContent = location.description;
+
+                                    const actionsDiv = document.getElementById("siteActions");
+                                    actionsDiv.innerHTML = "";
+                                    location.actions.forEach(action => {
+                                        const actionElement = document.createElement("a");
+                                        actionElement.className = action.icon === "trash-2" ? "btn btn-danger mr-2" : "btn btn-primary mr-2";
+                                        actionElement.href = action.link || "#";
+                                        actionElement.setAttribute("data-toggle", "tooltip");
+                                        actionElement.setAttribute("data-placement", "top");
+                                        actionElement.title = action.tooltip;
+                                        if(action.callback) actionElement.setAttribute("onclick", action.callback);
+
+                                        const iconElement = document.createElement("i");
+                                        iconElement.setAttribute("data-feather", action.icon);
+                                        actionElement.appendChild(iconElement);
+
+                                        actionsDiv.appendChild(actionElement);
+                                    });
+                                    feather.replace();
                                 });
                             });
                         }
                     </script>
-
-                    <!-- Load the Google Maps API -->
-                    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCSkZALDDeauhgE9WHeS52ssPOo5xRLZoY&callback=initMap"></script>
+                    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCSkZALDDeauhgE9WHeS52ssPOo5xRLZoY&callback=initMap" async defer></script>
                 </main>
+
+
 
 
 
