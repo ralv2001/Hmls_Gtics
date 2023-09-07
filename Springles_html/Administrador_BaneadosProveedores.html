@@ -481,7 +481,7 @@
                       <td>Choristar</td>
                       <td class="text-limited tamano-tabla-slogan">"Compartida la vida es menos"</td>
                       <td class="tamano-tabla-acciones">
-                        <a href="Administrador_EditarProveedores.html" class="btn btn-success mr-2" data-toggle="tooltip" data-placement="top" title="Desbanear proveedor">
+                        <a class="btn btn-success mr-2" data-toggle="tooltip" data-placement="top" title="Desbanear proveedor" onclick="confirmDesbanear();">
                           <i data-feather="refresh-ccw"></i>
                         </a>
                       </td>
@@ -494,7 +494,7 @@
                       <td>Clarín</td>
                       <td class="text-limited tamano-tabla-slogan">"Tú vas al último"</td>
                       <td class="tamano-tabla-acciones">
-                        <a href="Administrador_EditarProveedores.html" class="btn btn-success mr-2" data-toggle="tooltip" data-placement="top" title="Desbanear proveedor">
+                        <a class="btn btn-success mr-2" data-toggle="tooltip" data-placement="top" title="Desbanear proveedor" onclick="confirmDesbanear();">
                           <i data-feather="refresh-ccw"></i>
                         </a>
                       </td>
@@ -508,7 +508,7 @@
                       <td>Enel</td>
                       <td class="text-limited tamano-tabla-slogan">"No vivas"</td>
                       <td class="tamano-tabla-acciones">
-                        <a href="Administrador_EditarProveedores.html" class="btn btn-success mr-2" data-toggle="tooltip" data-placement="top" title="Desbanear proveedor">
+                        <a class="btn btn-success mr-2" data-toggle="tooltip" data-placement="top" title="Desbanear proveedor" onclick="confirmDesbanear();">
                           <i data-feather="refresh-ccw"></i>
                         </a>
                       </td>
@@ -522,7 +522,7 @@
                       <td>Dicktel</td>
                       <td class="text-limited tamano-tabla-slogan">"Ni tu madre te escucha, mucho menos nosotros"</td>
                       <td class="tamano-tabla-acciones">
-                        <a href="Administrador_EditarProveedores.html" class="btn btn-success mr-2" data-toggle="tooltip" data-placement="top" title="Desbanear proveedor">
+                        <a class="btn btn-success mr-2" data-toggle="tooltip" data-placement="top" title="Desbanear proveedor" onclick="confirmDesbanear();">
                           <i data-feather="refresh-ccw"></i>
                         </a>
                       </td>
@@ -536,7 +536,7 @@
                       <td>Loose</td>
                       <td class="text-limited tamano-tabla-slogan">"Ustedes son mala publicidad"</td>
                       <td class="tamano-tabla-acciones">
-                        <a href="Administrador_EditarProveedores.html" class="btn btn-success mr-2" data-toggle="tooltip" data-placement="top" title="Desbanear proveedor">
+                        <a class="btn btn-success mr-2" data-toggle="tooltip" data-placement="top" title="Desbanear proveedor" onclick="confirmDesbanear();">
                           <i data-feather="refresh-ccw"></i>
                         </a>
                       </td>
@@ -609,14 +609,18 @@
     <script src="js/app.js"></script>
 
     <script>
-      function confirmDesactivar() {
-        var confirmacion = confirm("¿Estás seguro que deseas desactivar a este proveedor?");
+      function confirmDesbanear() {
+        var confirmacion = confirm("¿Estás seguro que deseas desbanear a este proveedor?");
+
         if (confirmacion) {
-          // Aquí puedes agregar la lógica para desactivar al proveedor
-          alert("Proveedor desactivado exitosamente.");
+          // Aquí puedes agregar la lógica para desbanear al usuario
+          alert("Proveedor desbaneado exitosamente.");
+        } else {
+          alert("Operación cancelada");
         }
       }
     </script>
+
 
     <script>
       document.addEventListener("DOMContentLoaded", function () {
