@@ -435,7 +435,7 @@
           <section>
             <div class="card">
               <div class="card-body">
-                <h2 class="mb-4">Lista de Proveedores</h2> <!-- Título agregado -->
+                <h2 class="mb-4">Lista de Usuarios</h2> <!-- Título agregado -->
 
                 <div class="d-flex justify-content-between align-items-center mb-3">
                   <div class="w-50 d-flex align-items-center">
@@ -446,7 +446,7 @@
                             <i data-feather="search" style="height: 20px;"></i>
                           </div>
                         </div>
-                        <input type="text" class="form-control form-control-lg" id="inlineFormInputGroup" placeholder="Buscar Proveedor">
+                        <input type="text" class="form-control form-control-lg" id="inlineFormInputGroup" placeholder="Buscar Usuario">
                       </div>
                     </div>
                     <button type="button" class="btn btn-primary btn-sm">
@@ -458,103 +458,104 @@
                     <div>
                       <a href="Administrador_BaneadosProveedores.html" class="btn btn-light">Lista de baneados</a>
                       <a href="Administrador_CrearProveedor.html" class="btn btn-primary">
-                        <i data-feather="plus"></i> Crear proveedor
+                        <i data-feather="plus"></i> Crear usuario
                       </a>
                     </div>
                   </div>
 
                 </div>
 
-                <table class="table table-hover table-striped table-bordered table-responsive mt-3">
+                <table class="table table-hover table-striped table-bordered table-responsive mt-3 table-fixed-width">
                   <thead>
                     <tr>
-                      <th scope="col">N°</th>
-                      <th scope="col">Foto de perfil</th>
-                      <th scope="col">Nombre</th>
-                      <th scope="col">Slogan</th>
-                      <th scope="col">Acciones</th>
+                      <th scope="col" class="col-n">N°</th>
+                      <th scope="col" class="col-foto">Foto de perfil</th>
+                      <th scope="col" class="col-nombre">Nombre</th>
+                      <th scope="col" class="col-rango">Rango</th>
+                      <th scope="col" class="col-acciones">Acciones</th>
                     </tr>
                   </thead>
                   <tbody>
                     <tr>
-                      <th scope="row">1</th>
-                      <td>
-                        <div class="custom-image-container" style="background-image: url('img/iconosbarbaros/movistar.jpg');"></div>
+                      <th class="col-n" scope="row">1</th>
+                      <td class="centered-content">
+                        <div class="custom-image-container" style="background-image: url('img/avatars/avatar.jpg'); width: 50px; height: 50px; border-radius: 50%; background-size: cover; background-position: center;"></div>
                       </td>
-                      <td>Movistar</td>
-                      <td class="text-limited tamano-tabla-slogan">"Compartida la vida es más"</td>
-                      <td class="tamano-tabla-acciones">
-                        <a href="Administrador_EditarProveedores.html" class="btn btn-primary mr-2" data-toggle="tooltip" data-placement="top" title="Editar proveedor">
+                      <td class="col-nombre">Williams Acuña</td>
+                      <td class="col-rango">Analista</td>
+                      <td class="col-acciones">
+                        <a href="Administrador_EditarProveedores.html" class="btn btn-primary mr-2" data-toggle="tooltip" data-placement="top" title="Editar usuario">
                           <i data-feather="edit"></i>
                         </a>
-                        <button type="button" class="btn btn-danger" data-toggle="tooltip" data-placement="top" title="Desactivar proveedor" onclick="confirmDesactivar()">
-                          <i data-feather="slash"></i>
-                        </button>
-                      </td>
-                    </tr>
-                    <tr>
-                      <th scope="row">2</th>
-                      <td>
-                        <div class="custom-image-container" style="background-image: url('img/iconosbarbaros/claro-logo-3.jpg');"></div>
-                      </td>
-                      <td>Claro</td>
-                      <td class="text-limited tamano-tabla-slogan">"Para tí primero"</td>
-                      <td class="tamano-tabla-acciones">
-                        <a href="Administrador_EditarProveedores.html" class="btn btn-primary mr-2" data-toggle="tooltip" data-placement="top" title="Editar proveedor">
-                          <i data-feather="edit"></i>
-                        </a>
-                        <button type="button" class="btn btn-danger" data-toggle="tooltip" data-placement="top" title="Desactivar proveedor" onclick="confirmDesactivar()">
+                        <button type="button" class="btn btn-danger" data-toggle="tooltip" data-placement="top" title="Desactivar usuario" onclick="confirmDesactivar()">
                           <i data-feather="slash"></i>
                         </button>
                       </td>
                     </tr>
 
                     <tr>
-                      <th scope="row">3</th>
-                      <td>
-                        <div class="custom-image-container" style="background-image: url('img/iconosbarbaros/entel-peru.jpg');"></div>
+                      <th class="col-n" scope="row">2</th>
+                      <td class="centered-content">
+                        <div class="custom-image-container" style="background-image: url('img/avatars/avatar-2.jpg'); width: 50px; height: 50px; border-radius: 50%; background-size: cover; background-position: center;"></div>
                       </td>
-                      <td>Entel</td>
-                      <td class="text-limited tamano-tabla-slogan">"Vive Mejor Conectado"</td>
-                      <td class="tamano-tabla-acciones">
-                        <a href="Administrador_EditarProveedores.html" class="btn btn-primary mr-2" data-toggle="tooltip" data-placement="top" title="Editar proveedor">
+                      <td class="col-nombre">Stephano Huamán</td>
+                      <td class="col-rango">Técnico</td>
+                      <td class="col-acciones">
+                        <a href="Administrador_EditarProveedores.html" class="btn btn-primary mr-2" data-toggle="tooltip" data-placement="top" title="Editar usuario">
                           <i data-feather="edit"></i>
                         </a>
-                        <button type="button" class="btn btn-danger" data-toggle="tooltip" data-placement="top" title="Desactivar proveedor" onclick="confirmDesactivar()">
+                        <button type="button" class="btn btn-danger" data-toggle="tooltip" data-placement="top" title="Desactivar usuario" onclick="confirmDesactivar()">
                           <i data-feather="slash"></i>
                         </button>
                       </td>
                     </tr>
 
                     <tr>
-                      <th scope="row">4</th>
-                      <td>
-                        <div class="custom-image-container" style="background-image: url('img/iconosbarbaros/bitel.jpg');"></div>
+                      <th class="col-n" scope="row">3</th>
+                      <td class="centered-content">
+                        <div class="custom-image-container" style="background-image: url('img/avatars/avatar-3.jpg'); width: 50px; height: 50px; border-radius: 50%; background-size: cover; background-position: center;"></div>
                       </td>
-                      <td>Bitel</td>
-                      <td class="text-limited tamano-tabla-slogan">"Te escuchamos siempre"</td>
-                      <td class="tamano-tabla-acciones">
-                        <a href="Administrador_EditarProveedores.html" class="btn btn-primary mr-2" data-toggle="tooltip" data-placement="top" title="Editar proveedor">
+                      <td class="col-nombre">Diana Miranda</td>
+                      <td class="col-rango">Técnico</td>
+                      <td class="col-acciones">
+                        <a href="Administrador_EditarProveedores.html" class="btn btn-primary mr-2" data-toggle="tooltip" data-placement="top" title="Editar usuario">
                           <i data-feather="edit"></i>
                         </a>
-                        <button type="button" class="btn btn-danger" data-toggle="tooltip" data-placement="top" title="Desactivar proveedor" onclick="confirmDesactivar()">
+                        <button type="button" class="btn btn-danger" data-toggle="tooltip" data-placement="top" title="Desactivar usuario" onclick="confirmDesactivar()">
                           <i data-feather="slash"></i>
                         </button>
                       </td>
                     </tr>
 
                     <tr>
-                      <th scope="row">5</th>
-                      <td>
-                        <div class="custom-image-container" style="background-image: url('img/iconosbarbaros/wininternet.jpg');"></div>
+                      <th class="col-n" scope="row">4</th>
+                      <td class="centered-content">
+                        <div class="custom-image-container" style="background-image: url('img/avatars/avatar-4.jpg'); width: 50px; height: 50px; border-radius: 50%; background-size: cover; background-position: center;"></div>
                       </td>
-                      <td>Win</td>
-                      <td class="text-limited tamano-tabla-slogan">"La mejor publicidad siempre serán ustedes"</td>
-                      <td class="tamano-tabla-acciones">
-                        <a href="Administrador_EditarProveedores.html" class="btn btn-primary mr-2" data-toggle="tooltip" data-placement="top" title="Editar proveedor">
+                      <td class="col-nombre">Luciana Chilet</td>
+                      <td class="col-rango">Analista</td>
+                      <td class="col-acciones">
+                        <a href="Administrador_EditarProveedores.html" class="btn btn-primary mr-2" data-toggle="tooltip" data-placement="top" title="Editar usuario">
                           <i data-feather="edit"></i>
                         </a>
-                        <button type="button" class="btn btn-danger" data-toggle="tooltip" data-placement="top" title="Desactivar proveedor" onclick="confirmDesactivar()">
+                        <button type="button" class="btn btn-danger" data-toggle="tooltip" data-placement="top" title="Desactivar usuario" onclick="confirmDesactivar()">
+                          <i data-feather="slash"></i>
+                        </button>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <th class="col-n" scope="row">5</th>
+                      <td class="centered-content">
+                        <div class="custom-image-container" style="background-image: url('img/avatars/avatar-5.jpg'); width: 50px; height: 50px; border-radius: 50%; background-size: cover; background-position: center;"></div>
+                      </td>
+                      <td class="col-nombre">Fernanda Ramirez</td>
+                      <td class="col-rango">Supervisor</td>
+                      <td class="col-acciones">
+                        <a href="Administrador_EditarProveedores.html" class="btn btn-primary mr-2" data-toggle="tooltip" data-placement="top" title="Editar usuario">
+                          <i data-feather="edit"></i>
+                        </a>
+                        <button type="button" class="btn btn-danger" data-toggle="tooltip" data-placement="top" title="Desactivar usuario" onclick="confirmDesactivar()">
                           <i data-feather="slash"></i>
                         </button>
                       </td>
