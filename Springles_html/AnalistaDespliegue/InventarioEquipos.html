@@ -9,8 +9,18 @@
 	<meta name="author" content="AdminKit">
 	<meta name="keywords" content="adminkit, bootstrap, bootstrap 5, admin, dashboard, template, responsive, css, sass, html, theme, front-end, ui kit, web">
 	<style>
+		.underline-link {
+			text-decoration: underline;
+		}
 		.sidebar-item {
 			position: relative;
+		}
+		.pagination-container {
+			text-align: center;
+		}
+
+		.pagination {
+			display: inline-block;
 		}
 
 		.sub-menu {
@@ -34,7 +44,7 @@
 	<link rel="shortcut icon" href="/Springles_html/img/icons/icon-48x48.png" />
 
 	<link rel="canonical" href="https://demo-basic.adminkit.io/" />
-
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 	<title>AdminKit Demo - Bootstrap 5 Admin Template</title>
 
 	<link href="/Springles_html/css/app.css" rel="stylesheet">
@@ -81,23 +91,23 @@
 					</li>
 
 					<li class="sidebar-item active">
-						<a class="sidebar-link" data-bs-toggle="collapse" href="#collapseExample2" role="button"
-						   aria-expanded="false" aria-controls="collapseExample2">
+						<a class="sidebar-link" data-bs-toggle="collapse" href="#collapseExample1" role="button"
+						   aria-expanded="false" aria-controls="collapseExample">
 
 							<i class="align-middle" data-feather="sliders"></i> <span
 								class="align-middle">Lista de equipos</span>
 							<i data-feather="chevron-down" style="margin-left: auto;"></i>
 						</a>
 
-						<div class="collapse" id="collapseExample2">
+						<div class="collapse" id="collapseExample1">
 							<ul class="sidebar-nav">
 								<li class="sidebar-item" style="padding: 0 0 0 2.5rem;">
-									<a class="sidebar-link" href="listaEquiposInventario.html">
+									<a class="sidebar-link" href="InventarioEquipos.html">
 										<span class="align-middle">Inventario de equipos</span>
 									</a>
 								</li>
 								<li class="sidebar-item" style="padding: 0 0 0 2.5rem;">
-									<a class="sidebar-link" href="listaEquiposAgregar.html">
+									<a class="sidebar-link" href="AgregarEquipo.html">
 										<span class="align-middle">Agregar equipos</span>
 									</a>
 								</li>
@@ -282,7 +292,7 @@
               </a>
 
 							<a class="nav-link dropdown-toggle d-none d-sm-inline-block" href="#" data-bs-toggle="dropdown">
-                <img src="img/avatars/avatar.jpg" class="avatar img-fluid rounded me-1" alt="Charles Hall" /> <span class="text-dark">Charles Hall</span>
+                <img src="../img/avatars/avatar.jpg" class="avatar img-fluid rounded me-1" alt="Charles Hall" /> <span class="text-dark">Charles Hall</span>
               </a>
 							<div class="dropdown-menu dropdown-menu-end">
 								<a class="dropdown-item" href="pages-profile.html"><i class="align-middle me-1" data-feather="user"></i> Profile</a>
@@ -300,56 +310,146 @@
 			</nav>
 
 			<main class="content">
+
 				<div class="container-fluid p-0">
-					<div class="container text-center mt-1">
-						<h1 class="h3 mb-3"><strong>Agregar un nuevo equipo al inventario</strong></h1>
+
+					<div class="card-body">
+						<h1 class="h1"><strong>Lista de Equipos</strong></h1>
 					</div>
+					<div class="container py-2">
+						<!--Barra de busqueda-->
+						<div class="">
+							<div class="col-md-5 mx-3">
+								<div class="fw-light h5">Buscar equipos por tipo de equipo o marca</div>
+								<div class="input-group input-group-lg mb-3">
+									<input class="form-control border rounded-pill" type="search" placeholder="Buscar"
+										   id="example-search-input" >
+								</div>
+							</div>
+						</div>
+						<!--Barra de busqueda-->
+					</div>
+
+
 
 							<div class="card flex-fill">
 
-								<form class="row g-3">
-									<div class="col-12">
-										<label for="inputAddress1" class="form-label fw-bold fs-5">Tipo de Equipo:</label>
-										<input type="text" class="form-control" id="inputAddress1">
-									</div>
-									<div class="col-12">
-										<label for="inputAddress2" class="form-label fw-bold fs-5">Número de Serie:</label>
-										<input type="text" class="form-control" id="inputAddress2">
-									</div>
-									<div class="col-12">
-										<label for="inputAddress3" class="form-label fw-bold fs-5">Marca:</label>
-										<input type="text" class="form-control" id="inputAddress3" >
-									</div>
-									<div class="col-12">
-										<label for="inputAddress4" class="form-label fw-bold fs-5">Modelo:</label>
-										<input type="text" class="form-control" id="inputAddress4">
-									</div>
-									<div class="col-12">
-										<label for="inputAddress5" class="form-label fw-bold fs-5">Velocidad de Conexión:</label>
-										<input type="text" class="form-control" id="inputAddress5">
-									</div>
-									<div class="mb-3">
-										<label for="formFile" class="form-label fw-bold fs-5">Imagen del equipo:</label>
-										<input class="form-control" type="file" id="formFile">
-									</div>
+								<table class="table table-hover my-0">
+									<thead>
+										<tr>
+											<th>Tipo de Equipo</th>
+											<th class="d-none d-xl-table-cell">Número de Serie</th>
+											<th>Marca</th>
+											<th>Modelo</th>
+											<th>Imagen del Equipo</th>
+											<th>Configuración del Equipo</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td class="d-none d-xl-table-cell"><a href="DetallesEquipo.html" class="underline-link">Router</a></td>
+											<td class="d-none d-xl-table-cell">196608</td>
+											<td class="d-none d-md-table-cell">Cisco</td>
+											<td class="d-none d-md-table-cell">AC-1400</td>
+											<td class="d-none d-md-table-cell"><img src="../img/photos/router.jpg"  alt="router" width="80"></td>
+											<td class="d-none d-md-table-cell"><button type="button" class="btn btn-danger" data-toggle="tooltip" data-placement="top" title="Eliminar equipo" onclick="confirmDesactivar()">
+												<i data-feather="trash-2"></i>
+											</button>
 
-									<!--<div class="col-md-4">
-										<label for="inputState" class="form-label">State</label>
-										<select id="inputState" class="form-select">
-											<option selected>Choose...</option>
-											<option>...</option>
-										</select>
-									</div-->
+										</tr>
+										<tr>
+											<td class="d-none d-xl-table-cell"><a href="DetallesEquipo.html" class="underline-link">Router</a></td>
+											<td class="d-none d-xl-table-cell">143251</td>
+											<td class="d-none d-md-table-cell">Cisco</td>
+											<td class="d-none d-md-table-cell">AC-1400</td>
+											<td class="d-none d-md-table-cell"><img src="../img/photos/router.jpg"  alt="router" width="80"></td>
+											<td class="d-none d-md-table-cell"><button type="button" class="btn btn-danger" data-toggle="tooltip" data-placement="top" title="Eliminar equipo" onclick="confirmDesactivar()">
+												<i data-feather="trash-2"></i>
+											</button>
+										</tr>
+										<tr>
+											<td class="d-none d-xl-table-cell"><a href="DetallesEquipo.html" class="underline-link">Access Point</a></td>
+											<td class="d-none d-xl-table-cell">109761</td>
+											<td class="d-none d-md-table-cell">Cisco</td>
+											<td class="d-none d-md-table-cell">AC-1400</td>
+											<td class="d-none d-md-table-cell"><img src="../img/photos/router.jpg"  alt="router" width="80"></td>
+											<td class="d-none d-md-table-cell"><button type="button" class="btn btn-danger" data-toggle="tooltip" data-placement="top" title="Eliminar equipo" onclick="confirmDesactivar()">
+												<i data-feather="trash-2"></i>
+											</button>
+										</tr>
+										<tr>
+											<td class="d-none d-xl-table-cell"><a href="DetallesEquipo.html" class="underline-link">Router</a></td>
+											<td class="d-none d-xl-table-cell">108721</td>
+											<td class="d-none d-md-table-cell">Cisco</td>
+											<td class="d-none d-md-table-cell">AC-1400</td>
+											<td class="d-none d-md-table-cell"><img src="../img/photos/router.jpg"  alt="router" width="80"></td>
+											<td class="d-none d-md-table-cell"><button type="button" class="btn btn-danger" data-toggle="tooltip" data-placement="top" title="Eliminar equipo" onclick="confirmDesactivar()">
+												<i data-feather="trash-2"></i>
+											</button>
+										</tr>
+										<tr>
+											<td class="d-none d-xl-table-cell"><a href="DetallesEquipo.html" class="underline-link">Router</a></td>
+											<td class="d-none d-xl-table-cell">123046</td>
+											<td class="d-none d-md-table-cell">Huawei</td>
+											<td class="d-none d-md-table-cell">AC-1400</td>
+											<td class="d-none d-md-table-cell"><img src="../img/photos/router.jpg"  alt="router" width="80"></td>
+											<td class="d-none d-md-table-cell"><button type="button" class="btn btn-danger" data-toggle="tooltip" data-placement="top" title="Eliminar equipo" onclick="confirmDesactivar()">
+												<i data-feather="trash-2"></i>
+											</button>
+										</tr>
+										<tr>
+											<td class="d-none d-xl-table-cell"><a href="DetallesEquipo.html" class="underline-link">Router</a></td>
+											<td class="d-none d-xl-table-cell">120973</td>
+											<td class="d-none d-md-table-cell">Cisco</td>
+											<td class="d-none d-md-table-cell">AC-1400</td>
+											<td class="d-none d-md-table-cell"><img src="../img/photos/router.jpg"  alt="router" width="80"></td>
+											<td class="d-none d-md-table-cell"><button type="button" class="btn btn-danger" data-toggle="tooltip" data-placement="top" title="Eliminar equipo" onclick="confirmDesactivar()">
+												<i data-feather="trash-2"></i>
+											</button>
+										</tr>
+										<tr>
+											<td class="d-none d-xl-table-cell"><a href="DetallesEquipo.html" class="underline-link">Hub</a></td>
+											<td class="d-none d-xl-table-cell">103317</td>
+											<td class="d-none d-md-table-cell">Cisco</td>
+											<td class="d-none d-md-table-cell">AC-1400</td>
+											<td class="d-none d-md-table-cell"><img src="../img/photos/router.jpg"  alt="router" width="80"></td>
+											<td class="d-none d-md-table-cell"><button type="button" class="btn btn-danger" data-toggle="tooltip" data-placement="top" title="Eliminar equipo" onclick="confirmDesactivar()">
+												<i data-feather="trash-2"></i>
+											</button>
+										</tr>
+										<tr>
+											<td class="d-none d-xl-table-cell"><a href="DetallesEquipo.html" class="underline-link">Switch</a></td>
+											<td class="d-none d-xl-table-cell">102156</td>
+											<td class="d-none d-md-table-cell">Cisco</td>
+											<td class="d-none d-md-table-cell">AC-1400</td>
+											<td class="d-none d-md-table-cell"><img src="../img/photos/router.jpg"  alt="router" width="80"></td>
+											<td class="d-none d-md-table-cell"><button type="button" class="btn btn-danger" data-toggle="tooltip" data-placement="top" title="Eliminar equipo" onclick="confirmDesactivar()">
+												<i data-feather="trash-2"></i>
+											</button>
+										</tr>
+									</tbody>
+								</table>
+								<br>
+								<div class="d-flex justify-content-center">
+									<nav aria-label="Page navigation example">
+										<ul class="pagination">
+											<li class="page-item"><a class="page-link" href="#">
+												<i data-feather="arrow-left"></i>
+												Anterior</a></li>
 
-									<div class="row justify-content-center mt-4">
-										<div class="col-md-6 text-center">
-											<button type="submit" class="btn btn-primary">Agregar nuevo equipo</button>
-										</div>
-										<div class="col-md-6 text-center">
-											<button type="submit" class="btn btn-primary">Cancelar</button>
-										</div>
-									</div>
-								</form>
+											<li class="page-item"><a class="page-link" href="#">1</a></li>
+											<li class="page-item"><a class="page-link" href="#">2</a></li>
+											<li class="page-item"><a class="page-link" href="#">3</a></li>
+
+											<li class="page-item"><a class="page-link" href="#">
+												Siguiente <i data-feather="arrow-right"></i>
+											</a></li>
+
+
+										</ul>
+									</nav>
+								</div>
+
 							</div>
 
 
@@ -390,6 +490,29 @@
 
 
 	<script>
+
+			function confirmDesactivar() {
+				var result = confirm("¿Estás seguro de que deseas borrar este equipo?");
+				if (result) {
+					// Aquí puedes realizar la acción de borrado
+					alert("Equipo borrado correctamente.");
+				} else {
+					alert("Cancelaste el borrado.");
+				}
+		}
+
+		function showConfirmation() {
+			var result = window.confirm("¿Estás seguro de que deseas borrar este equipo?");
+			if (result) {
+				// Aquí puedes realizar la acción de borrado
+				alert("Equipo borrado correctamente.");
+			} else {
+				alert("Cancelaste el borrado.");
+			}
+		}
+		function showMessage() {
+			alert("El equipo se encuentra en uso actualmente, no puede borrar este equipo.");
+		}
 		document.addEventListener("DOMContentLoaded", function() {
 			var ctx = document.getElementById("chartjs-dashboard-line").getContext("2d");
 			var gradient = ctx.createLinearGradient(0, 0, 0, 225);
@@ -610,6 +733,7 @@
 			});
 		});
 	</script>
+
 
 </body>
 

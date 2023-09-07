@@ -9,21 +9,18 @@
     <meta name="author" content="AdminKit">
     <meta name="keywords"
           content="adminkit, bootstrap, bootstrap 5, admin, dashboard, template, responsive, css, sass, html, theme, front-end, ui kit, web">
+
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="shortcut icon" href="../img/icons/icon-48x48.png"/>
 
     <link rel="canonical" href="https://demo-basic.adminkit.io/"/>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
-    <title>Analista</title>
-    <link href="../css/searchBar.css" rel="stylesheet">
+
+    <title>AdminKit Demo - Bootstrap 5 Admin Template</title>
+
     <link href="../css/app.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
-    <style>
-        .navbar-bg {
-            background-color: #406DA3; /* Cambia 'blue' al color que desees */
-        }
-    </style>
 </head>
+
 <body>
 <div class="wrapper">
     <nav id="sidebar" class="sidebar js-sidebar">
@@ -60,35 +57,28 @@
                 </li>
 
                 <li class="sidebar-item active">
-                    <a class="sidebar-link" data-bs-toggle="collapse" href="#collapseExample2" role="button"
-                       aria-expanded="false" aria-controls="collapseExample2">
+                    <a class="sidebar-link" data-bs-toggle="collapse" href="#collapseExample1" role="button"
+                       aria-expanded="false" aria-controls="collapseExample">
 
                         <i class="align-middle" data-feather="sliders"></i> <span
                             class="align-middle">Lista de equipos</span>
                         <i data-feather="chevron-down" style="margin-left: auto;"></i>
                     </a>
-<<<<<<< HEAD
 
-                    <div class="collapse" id="collapseExample2">
+                    <div class="collapse" id="collapseExample1">
                         <ul class="sidebar-nav">
                             <li class="sidebar-item" style="padding: 0 0 0 2.5rem;">
-                                <a class="sidebar-link" href="listaEquiposInventario.html">
+                                <a class="sidebar-link" href="InventarioEquipos.html">
                                     <span class="align-middle">Inventario de equipos</span>
                                 </a>
                             </li>
                             <li class="sidebar-item" style="padding: 0 0 0 2.5rem;">
-                                <a class="sidebar-link" href="listaEquiposAgregar.html">
+                                <a class="sidebar-link" href="AgregarEquipo.html">
                                     <span class="align-middle">Agregar equipos</span>
                                 </a>
                             </li>
                         </ul>
                     </div>
-=======
-                    <ul class="sub-menu">
-                        <li><a href="InventarioEquipos.html">Inventario de equipos</a></li>
-                        <li><a href="AgregarEquipo.html">Agregar equipos</a></li>
-                    </ul>
->>>>>>> 3f85d6ed15fa99f188287fb1495764ff3017466c
                 </li>
 
                 <li class="sidebar-item">
@@ -217,7 +207,7 @@
                                 <a href="#" class="list-group-item">
                                     <div class="row g-0 align-items-center">
                                         <div class="col-2">
-                                            <img src="img/avatars/avatar-5.jpg" class="avatar img-fluid rounded-circle"
+                                            <img src="../img/avatars/avatar-5.jpg" class="avatar img-fluid rounded-circle"
                                                  alt="Vanessa Tucker">
                                         </div>
                                         <div class="col-10 ps-2">
@@ -283,7 +273,7 @@
                         </a>
 
                         <a class="nav-link dropdown-toggle d-none d-sm-inline-block" href="#" data-bs-toggle="dropdown">
-                            <img src="img/avatars/avatar.jpg" class="avatar img-fluid rounded me-1" alt="Charles Hall"/>
+                            <img src="../img/avatars/avatar.jpg" class="avatar img-fluid rounded me-1" alt="Charles Hall"/>
                             <span class="text-dark">Charles Hall</span>
                         </a>
                         <div class="dropdown-menu dropdown-menu-end">
@@ -292,7 +282,6 @@
                             <a class="dropdown-item" href="#"><i class="align-middle me-1" data-feather="pie-chart"></i>
                                 Analytics</a>
                             <div class="dropdown-divider"></div>
-
                             <a class="dropdown-item" href="index.html"><i class="align-middle me-1"
                                                                           data-feather="settings"></i> Settings &
                                 Privacy</a>
@@ -308,70 +297,80 @@
 
         <main class="content">
             <div class="container-fluid p-0">
-                <div class="card-body">
-                    <div class="row">
-                        <div class="d-flex justify-content-end">
-                            <nav aria-label="breadcrumb">
-                                <ol class="breadcrumb">
-                                    <li class="breadcrumb-item"><a href="listaSitios.html">Lista de sitios</a></li>
-                                    <li class="breadcrumb-item active" aria-current="page">Editar sitios</li>
-                                </ol>
-                            </nav>
+
+                <h1 class="h3 mb-3"><strong>Dashboard de tickets</strong></h1>
+
+                <div class="row">
+
+                    <div class="col-xl-6 col-xxl-7">
+                        <div class="card flex-fill w-100">
+                            <div class="card-header">
+
+                                <h5 class="card-title mb-0">Tickets generados durante el 2022</h5>
+                            </div>
+                            <div class="card-body py-3">
+                                <div class="chart chart-sm">
+                                    <canvas id="chartjs-dashboard-line"></canvas>
+                                </div>
+                            </div>
                         </div>
-                        <h1 class="h1 mb-3"><strong>Editar Sitio</strong></h1>
+                    </div>
+                    <div class="col-12 col-md-6 col-xxl-3 d-flex order-2 order-xxl-3">
+                        <div class="card flex-fill w-100">
+                            <div class="card-header">
+
+                                <h5 class="card-title mb-0">Cantidad de tickets atendidos por Empresa</h5>
+                            </div>
+                            <div class="card-body d-flex">
+                                <div class="align-self-center w-100">
+                                    <div class="py-3">
+                                        <div class="chart chart-xs">
+                                            <canvas id="chartjs-dashboard-pie"></canvas>
+                                        </div>
+                                    </div>
+
+                                    <table class="table mb-0">
+                                        <tbody>
+                                        <tr>
+                                            <td>Claro</td>
+                                            <td class="text-end">4306</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Movistar</td>
+                                            <td class="text-end">3801</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Entel</td>
+                                            <td class="text-end">1689</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Bitel</td>
+                                            <td class="text-end">2500</td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
 
-
-                <div class="row">
-                    <!--<div class="col-12 col-lg-12">
-                        <div class="card flex-fill">-->
-                            <div class="card">
-                                <div class="card-body">
-                                    <form>
-                                        <div class="row">
-                                            <div class="col-md-6">
-                                                <div class="card-title">
-                                                    <label for="tipositio" class="card-title mb-1">Tipo de sitio</label>
-                                                </div>
-                                                <input id="tipositio" type="text" class="form-control mb-4" placeholder="Tipo de sitio(Rural o Urbano)">
-                                            </div>
-                                            <div class="col-md-6">
-                                                <div class="card-title">
-                                                    <label for="tipositio" class="card-title mb-1">Tipo de sitio</label>
-                                                </div>
-                                                <input id="tipositio" type="text" class="form-control mb-4" placeholder="Tipo de sitio(Rural o Urbano)">
-                                            </div>
-
-                                        </div>
-
-                                        <div class="row">
-                                            <div class="col-md-8">
-                                                <div class="card-title">
-                                                    <label for="combobox" class="card-title mb-1">Tipo de sitio</label>
-                                                </div>
-                                                <select id="combobox" class="form-select mb-3">
-                                                    <option selected>Open this select menu</option>
-                                                    <option>One</option>
-                                                    <option>Two</option>
-                                                    <option>Three</option>
-                                                </select>
-                                            </div>
-                                            <div class="col-md-4">
-                                                <div class="card-title">
-                                                    <label for="tipositio" class="card-title mb-1">Tipo de sitio</label>
-                                                </div>
-                                                <input id="tipositio" type="text" class="form-control mb-4" placeholder="Tipo de sitio(Rural o Urbano)">
-                                            </div>
-                                        </div>
-                                    </form>
-
+                    <!--<div class="col-12 col-lg-6">
+                        <div class="card">
+                            <div class="card-header">
+                                <h5 class="card-title">Bar Chart</h5>
+                                <h6 class="card-subtitle text-muted">A bar chart provides a way of showing data values represented as vertical bars.</h6>
+                            </div>
+                            <div class="card-body">
+                                <div class="chart">
+                                    <canvas id="chartjs-bar"></canvas>
                                 </div>
                             </div>
-                        <!--</div>
-                    </div>-->
-                </div>
+                        </div>
+                    </div-->
+
+
 
             </div>
         </main>
@@ -408,9 +407,60 @@
     </div>
 </div>
 
-<script src="/Springles_html/js/app.js"></script>
-
-
+<script src="../js/app.js"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        // Bar chart
+        new Chart(document.getElementById("chartjs-bar"), {
+            type: "bar",
+            data: {
+                labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+                datasets: [{
+                    label: "Last year",
+                    backgroundColor: window.theme.primary,
+                    borderColor: window.theme.primary,
+                    hoverBackgroundColor: window.theme.primary,
+                    hoverBorderColor: window.theme.primary,
+                    data: [54, 67, 41, 55, 62, 45, 55, 73, 60, 76, 48, 79],
+                    barPercentage: .75,
+                    categoryPercentage: .5
+                }, {
+                    label: "This year",
+                    backgroundColor: "#dee2e6",
+                    borderColor: "#dee2e6",
+                    hoverBackgroundColor: "#dee2e6",
+                    hoverBorderColor: "#dee2e6",
+                    data: [69, 66, 24, 48, 52, 51, 44, 53, 62, 79, 51, 68],
+                    barPercentage: .75,
+                    categoryPercentage: .5
+                }]
+            },
+            options: {
+                maintainAspectRatio: false,
+                legend: {
+                    display: false
+                },
+                scales: {
+                    yAxes: [{
+                        gridLines: {
+                            display: false
+                        },
+                        stacked: false,
+                        ticks: {
+                            stepSize: 20
+                        }
+                    }],
+                    xAxes: [{
+                        stacked: false,
+                        gridLines: {
+                            color: "transparent"
+                        }
+                    }]
+                }
+            }
+        });
+    });
+</script>
 <script>
     document.addEventListener("DOMContentLoaded", function () {
         var ctx = document.getElementById("chartjs-dashboard-line").getContext("2d");
@@ -421,9 +471,9 @@
         new Chart(document.getElementById("chartjs-dashboard-line"), {
             type: "line",
             data: {
-                labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+                labels: ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"],
                 datasets: [{
-                    label: "Sales ($)",
+                    label: "Tickets",
                     fill: true,
                     backgroundColor: gradient,
                     borderColor: window.theme.primary,
@@ -487,13 +537,14 @@
         new Chart(document.getElementById("chartjs-dashboard-pie"), {
             type: "pie",
             data: {
-                labels: ["Chrome", "Firefox", "IE"],
+                labels: ["Claro", "Movistar", "Entel","Bitel"],
                 datasets: [{
-                    data: [4306, 3801, 1689],
+                    data: [4306, 3801, 1689,2500],
                     backgroundColor: [
                         window.theme.primary,
                         window.theme.warning,
-                        window.theme.danger
+                        window.theme.danger,
+                        window.theme.black
                     ],
                     borderWidth: 5
                 }]
@@ -632,7 +683,7 @@
         });
     });
 </script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+
 </body>
 
 </html>

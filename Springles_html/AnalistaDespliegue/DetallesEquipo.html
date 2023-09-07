@@ -11,8 +11,11 @@
 	<style>
 		.sidebar-item {
 			position: relative;
-		}
 
+		}
+		.nav-icon i[data-feather="bell"] {
+			color: #ebeeef; /* Cambia el color del ícono a rojo */
+		}
 		.sub-menu {
 			display: none;
 			position: absolute;
@@ -72,7 +75,7 @@
 									</a>
 								</li>
 								<li class="sidebar-item" style="padding: 0 0 0 2.5rem;">
-									<a class="sidebar-link" href="agregaSitios.html">
+									<a class="sidebar-link" href="pages-profile.html">
 										<span class="align-middle">Agregar sitio</span>
 									</a>
 								</li>
@@ -92,12 +95,12 @@
 						<div class="collapse" id="collapseExample2">
 							<ul class="sidebar-nav">
 								<li class="sidebar-item" style="padding: 0 0 0 2.5rem;">
-									<a class="sidebar-link" href="listaEquiposInventario.html">
+									<a class="sidebar-link" href="InventarioEquipos.html">
 										<span class="align-middle">Inventario de equipos</span>
 									</a>
 								</li>
 								<li class="sidebar-item" style="padding: 0 0 0 2.5rem;">
-									<a class="sidebar-link" href="listaEquiposAgregar.html">
+									<a class="sidebar-link" href="AgregarEquipo.html">
 										<span class="align-middle">Agregar equipos</span>
 									</a>
 								</li>
@@ -148,66 +151,8 @@
 							<a class="nav-icon dropdown-toggle" href="#" id="alertsDropdown" data-bs-toggle="dropdown">
 								<div class="position-relative">
 									<i class="align-middle" data-feather="bell"></i>
-									<span class="indicator">4</span>
 								</div>
 							</a>
-							<div class="dropdown-menu dropdown-menu-lg dropdown-menu-end py-0" aria-labelledby="alertsDropdown">
-								<div class="dropdown-menu-header">
-									4 New Notifications
-								</div>
-								<div class="list-group">
-									<a href="#" class="list-group-item">
-										<div class="row g-0 align-items-center">
-											<div class="col-2">
-												<i class="text-danger" data-feather="alert-circle"></i>
-											</div>
-											<div class="col-10">
-												<div class="text-dark">Update completed</div>
-												<div class="text-muted small mt-1">Restart server 12 to complete the update.</div>
-												<div class="text-muted small mt-1">30m ago</div>
-											</div>
-										</div>
-									</a>
-									<a href="#" class="list-group-item">
-										<div class="row g-0 align-items-center">
-											<div class="col-2">
-												<i class="text-warning" data-feather="bell"></i>
-											</div>
-											<div class="col-10">
-												<div class="text-dark">Lorem ipsum</div>
-												<div class="text-muted small mt-1">Aliquam ex eros, imperdiet vulputate hendrerit et.</div>
-												<div class="text-muted small mt-1">2h ago</div>
-											</div>
-										</div>
-									</a>
-									<a href="#" class="list-group-item">
-										<div class="row g-0 align-items-center">
-											<div class="col-2">
-												<i class="text-primary" data-feather="home"></i>
-											</div>
-											<div class="col-10">
-												<div class="text-dark">Login from 192.186.1.8</div>
-												<div class="text-muted small mt-1">5h ago</div>
-											</div>
-										</div>
-									</a>
-									<a href="#" class="list-group-item">
-										<div class="row g-0 align-items-center">
-											<div class="col-2">
-												<i class="text-success" data-feather="user-plus"></i>
-											</div>
-											<div class="col-10">
-												<div class="text-dark">New connection</div>
-												<div class="text-muted small mt-1">Christina accepted your request.</div>
-												<div class="text-muted small mt-1">14h ago</div>
-											</div>
-										</div>
-									</a>
-								</div>
-								<div class="dropdown-menu-footer">
-									<a href="#" class="text-muted">Show all notifications</a>
-								</div>
-							</div>
 						</li>
 						<li class="nav-item dropdown">
 							<a class="nav-icon dropdown-toggle" href="#" id="messagesDropdown" data-bs-toggle="dropdown">
@@ -237,7 +182,7 @@
 									<a href="#" class="list-group-item">
 										<div class="row g-0 align-items-center">
 											<div class="col-2">
-												<img src="img/avatars/avatar-2.jpg" class="avatar img-fluid rounded-circle" alt="William Harris">
+												<img src="../img/avatars/avatar-2.jpg" class="avatar img-fluid rounded-circle" alt="William Harris">
 											</div>
 											<div class="col-10 ps-2">
 												<div class="text-dark">William Harris</div>
@@ -282,7 +227,7 @@
               </a>
 
 							<a class="nav-link dropdown-toggle d-none d-sm-inline-block" href="#" data-bs-toggle="dropdown">
-                <img src="img/avatars/avatar.jpg" class="avatar img-fluid rounded me-1" alt="Charles Hall" /> <span class="text-dark">Charles Hall</span>
+                <img src="../img/avatars/avatar.jpg" class="avatar img-fluid rounded me-1" alt="Charles Hall" /> <span class="text-dark">Charles Hall</span>
               </a>
 							<div class="dropdown-menu dropdown-menu-end">
 								<a class="dropdown-item" href="pages-profile.html"><i class="align-middle me-1" data-feather="user"></i> Profile</a>
@@ -302,55 +247,61 @@
 			<main class="content">
 				<div class="container-fluid p-0">
 					<div class="container text-center mt-1">
-						<h1 class="h3 mb-3"><strong>Agregar un nuevo equipo al inventario</strong></h1>
+						<h1 class="h3 mb-3"><strong></strong></h1>
 					</div>
 
-							<div class="card flex-fill">
+					<div class="card">
+						<div class="card-body">
+							<main class="content">
+								<div class="container">
+									<h2 class="text-center">Router Router Cisco AC-1400</h2>
+									<!--<form action="/Administrador_PestanaProveedores.html" method="POST" enctype="multipart/form-data" onsubmit="return confirm('¿Está seguro que desea guardar los cambios?');"> -->
 
-								<form class="row g-3">
-									<div class="col-12">
-										<label for="inputAddress1" class="form-label fw-bold fs-5">Tipo de Equipo:</label>
-										<input type="text" class="form-control" id="inputAddress1">
-									</div>
-									<div class="col-12">
-										<label for="inputAddress2" class="form-label fw-bold fs-5">Número de Serie:</label>
-										<input type="text" class="form-control" id="inputAddress2">
-									</div>
-									<div class="col-12">
-										<label for="inputAddress3" class="form-label fw-bold fs-5">Marca:</label>
-										<input type="text" class="form-control" id="inputAddress3" >
-									</div>
-									<div class="col-12">
-										<label for="inputAddress4" class="form-label fw-bold fs-5">Modelo:</label>
-										<input type="text" class="form-control" id="inputAddress4">
-									</div>
-									<div class="col-12">
-										<label for="inputAddress5" class="form-label fw-bold fs-5">Velocidad de Conexión:</label>
-										<input type="text" class="form-control" id="inputAddress5">
-									</div>
-									<div class="mb-3">
-										<label for="formFile" class="form-label fw-bold fs-5">Imagen del equipo:</label>
-										<input class="form-control" type="file" id="formFile">
-									</div>
-
-									<!--<div class="col-md-4">
-										<label for="inputState" class="form-label">State</label>
-										<select id="inputState" class="form-select">
-											<option selected>Choose...</option>
-											<option>...</option>
-										</select>
-									</div-->
-
-									<div class="row justify-content-center mt-4">
-										<div class="col-md-6 text-center">
-											<button type="submit" class="btn btn-primary">Agregar nuevo equipo</button>
+									<form method="POST" enctype="multipart/form-data" onsubmit="return confirm('¿Está seguro que desea guardar los cambios?');">
+										<div class="d-flex justify-content-end">
+											<img src="../img/photos/router.jpg"  alt="router" width="200" class="mx-auto">
 										</div>
-										<div class="col-md-6 text-center">
-											<button type="submit" class="btn btn-primary">Cancelar</button>
+										<br>
+
+										<div class="text-end">
+											<a href="EditarEquipo.html" class="btn btn-primary">Editar Características</a>
 										</div>
-									</div>
-								</form>
-							</div>
+										<br>
+
+										<div class="col-12">
+											<label for="inputAddress1" class="form-label fw-bold fs-5">Tipo de Equipo:</label>
+											<input type="text" class="form-control" id="inputAddress1" placeholder="Router" readonly>
+										</div>
+										<br>
+
+										<div class="col-12">
+											<label for="inputAddress2" class="form-label fw-bold fs-5">Número de Serie:</label>
+											<input type="text" class="form-control" id="inputAddress2" placeholder="196608" readonly>
+										</div>
+										<br>
+
+										<div class="col-12">
+											<label for="inputAddress3" class="form-label fw-bold fs-5">Marca:</label>
+											<input type="text" class="form-control" id="inputAddress3" placeholder="Cisco" readonly>
+										</div>
+										<br>
+										<div class="col-12">
+											<label for="inputAddress4" class="form-label fw-bold fs-5">Modelo:</label>
+											<input type="text" class="form-control" id="inputAddress4" placeholder="AC-1400" readonly>
+										</div>
+										<br>
+
+										<div class="col-12">
+											<label for="inputAddress5" class="form-label fw-bold fs-5">Velocidad de Conexión:</label>
+											<input type="text" class="form-control" id="inputAddress5" placeholder="300 Mbps" readonly>
+										</div>
+										<br>
+
+									</form>
+								</div>
+							</main>
+						</div>
+					</div>
 
 
 				</div>

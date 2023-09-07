@@ -186,7 +186,7 @@
                     </a>
                   </li>
                   <li class="sidebar-item" style="padding: 0 0 0 2.5rem;">
-                    <a class="sidebar-link" href="Administrador_CrearEquipo.html">
+                    <a class="sidebar-link" href="Administrador_CrearTipoDeEquipo.html">
                       <span class="align-middle">Crear Equipo</span>
                     </a>
                   </li>
@@ -429,13 +429,11 @@
 
         <!--CONTENIDO DE LA PÁGINA (EMPIEZA CON EL MAIN CLASS CONTENT) : -->
         <!--<main class="content">-->
-        <div class="card">
-          <div class="card-body">
-            <main class="content">
-              <div class="container">
-                <h2>Editar Sitio</h2>
-                <!--<form action="/Administrador_PestanaProveedores.html" method="POST" enctype="multipart/form-data" onsubmit="return confirm('¿Está seguro que desea guardar los cambios?');"> -->
-
+        <main class="content">
+          <div class="container-fluid"> <!-- Cambiado a container-fluid -->
+            <div class="card">
+              <div class="card-body">
+                <h2 class="mb-4">Editar Sitio</h2> <!-- Clase añadida para margen -->
                 <form method="POST" enctype="multipart/form-data" onsubmit="return confirm('¿Está seguro que desea guardar los cambios?');">
                   <div class="form-group">
                     <label for="nombre">Nombre:</label>
@@ -467,9 +465,10 @@
                   <button type="submit" class="btn btn-primary">Guardar</button>
                 </form>
               </div>
-            </main>
+            </div>
           </div>
-        </div>
+        </main>
+
 
 
         <!-- FINALIZACIÓN DEL CONTENIDO (TERMINA JUSTO ANTES DEL FOOTER) :-->
